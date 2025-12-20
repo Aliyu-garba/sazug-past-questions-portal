@@ -1,0 +1,957 @@
+{
+  "agric-economics-extension": {
+    "100-level": {
+      "first": {
+        "bio101": ["bio101_2023.jpg", "bio101_2024.jpg"],
+        "bio107": ["bio107_2023.jpg", "bio107_2024.jpg"],
+        "phy101": ["phy101_2023.jpg", "phy101_2024.jpg"],
+        "phy107": ["phy107_2023.jpg", "phy107_2024.jpg"],
+        "math101": ["math101_2023.jpg", "math101_2024.jpg"],
+        "chem101": ["chem101_2023.jpg", "chem101_2024.jpg"],
+        "chem107": ["chem107_2023.jpg", "chem107_2024.jpg"],
+        "gst111": ["gst111_2023.jpg", "gst111_2024.jpg"]
+      },
+      "second": {
+        "bio102": ["bio102_2023.jpg", "bio102_2024.jpg"],
+        "bio108": ["bio108_2023.jpg", "bio108_2024.jpg"],
+        "phy102": ["phy102_2023.jpg", "phy102_2024.jpg"],
+        "phy108": ["phy108_2023.jpg", "phy108_2024.jpg"],
+        "math102": ["math102_2023.jpg", "math102_2024.jpg"],
+        "chem102": ["chem102_2023.jpg", "chem102_2024.jpg"],
+        "chem108": ["chem108_2023.jpg", "chem108_2024.jpg"],
+        "gst112": ["gst112_2023.jpg", "gst112_2024.jpg"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "ard201": ["ard201_2023.jpg", "ard201_2024.jpg"],
+        "aea251": ["aea251_2023.jpg", "aea251_2024.jpg"],
+        "agr201": ["agr201_2023.jpg", "agr201_2024.jpg"],
+        "ard203": ["ard203_2023.jpg", "ard203_2024.jpg"],
+        "slm201": ["slm201_2023.jpg", "slm201_2024.jpg"],
+        "agr203": ["agr203_2023.jpg", "agr203_2024.jpg"],
+        "agr205": ["agr205_2023.jpg", "agr205_2024.jpg"],
+        "frm211": ["frm211_2023.jpg", "frm211_2024.jpg"],
+        "anp201": ["anp201_2023.jpg", "anp201_2024.jpg"],
+        "agr207": ["agr207_2023.jpg", "agr207_2024.jpg"],
+        "gst201": ["gst201_2023.jpg", "gst201_2024.jpg"]
+      },
+      "second": {
+        "aea252": ["aea252_2023.jpg", "aea252_2024.jpg"],
+        "ard202": ["ard202_2023.jpg", "ard202_2024.jpg"],
+        "aea254": ["aea254_2023.jpg", "aea254_2024.jpg"],
+        "aea256": ["aea256_2023.jpg", "aea256_2024.jpg"],
+        "anp202": ["anp202_2023.jpg", "anp202_2024.jpg"],
+        "slm202": ["slm202_2023.jpg", "slm202_2024.jpg"],
+        "cpp202": ["cpp202_2023.jpg", "cpp202_2024.jpg"],
+        "agr204": ["agr204_2023.jpg", "agr204_2024.jpg"],
+        "gst202": ["gst202_2023.jpg", "gst202_2024.jpg"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "aea301": ["aea301_2023.jpg", "aea301_2024.jpg"],
+        "aea303": ["aea303_2023.jpg", "aea303_2024.jpg"],
+        "aea305": ["aea305_2023.jpg", "aea305_2024.jpg"],
+        "aea307": ["aea307_2023.jpg", "aea307_2024.jpg"],
+        "aea309": ["aea309_2023.jpg", "aea309_2024.jpg"],
+        "sta305": ["sta305_2023.jpg", "sta305_2024.jpg"],
+        "gst301": ["gst301_2023.jpg", "gst301_2024.jpg"]
+      },
+      "second": {
+        "siwes": "Industrial Training (IT)"
+      }
+    },
+    "400-level": {
+      "first": {
+        "aea401": ["aea401_2023.jpg", "aea401_2024.jpg"],
+        "aea403": ["aea403_2023.jpg", "aea403_2024.jpg"],
+        "aea405": ["aea405_2023.jpg", "aea405_2024.jpg"],
+        "aea407": ["aea407_2023.jpg", "aea407_2024.jpg"],
+        "aea409": ["aea409_2023.jpg", "aea409_2024.jpg"],
+        "aea411": ["aea411_2023.jpg", "aea411_2024.jpg"],
+        "gst401": ["gst401_2023.jpg", "gst401_2024.jpg"]
+      },
+      "second": {
+        "aea402": ["aea402_2023.jpg", "aea402_2024.jpg"],
+        "aea404": ["aea404_2023.jpg", "aea404_2024.jpg"],
+        "aea406": ["aea406_2023.jpg", "aea406_2024.jpg"],
+        "aea408": ["aea408_2023.jpg", "aea408_2024.jpg"],
+        "aea410": ["aea410_2023.jpg", "aea410_2024.jpg"],
+        "aea412": ["aea412_2023.jpg", "aea412_2024.jpg"]
+      }
+    }
+  },
+  "anatomy": {
+    "100-level": {
+      "first": {
+        "bio101": ["bio101_2023.jpg", "bio101_2024.jpg"],
+        "bio107": ["bio107_2023.jpg", "bio107_2024.jpg"],
+        "chm101": ["chm101_2023.jpg", "chm101_2024.jpg"],
+        "chm107": ["chm107_2023.jpg", "chm107_2024.jpg"],
+        "phy101": ["phy101_2023.jpg", "phy101_2024.jpg"],
+        "phy107": ["phy107_2023.jpg", "phy107_2024.jpg"],
+        "math101": ["math101_2023.jpg", "math101_2024.jpg"],
+        "gst111": ["gst111_2023.jpg", "gst111_2024.jpg"]
+      },
+      "second": {
+        "bio102": ["bio102_2023.jpg", "bio102_2024.jpg"],
+        "bio108": ["bio108_2023.jpg", "bio108_2024.jpg"],
+        "chm102": ["chm102_2023.jpg", "chm102_2024.jpg"],
+        "chm108": ["chm108_2023.jpg", "chm108_2024.jpg"],
+        "phy102": ["phy102_2023.jpg", "phy102_2024.jpg"],
+        "phy108": ["phy108_2023.jpg", "phy108_2024.jpg"],
+        "math102": ["math102_2023.jpg", "math102_2024.jpg"],
+        "gst112": ["gst112_2023.jpg", "gst112_2024.jpg"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "ana201": ["ana201_2023.jpg", "ana201_2024.jpg"],
+        "ana203": ["ana203_2023.jpg", "ana203_2024.jpg"],
+        "phy201": ["phy201_2023.jpg", "phy201_2024.jpg"],
+        "bch201": ["bch201_2023.jpg", "bch201_2024.jpg"],
+        "phs201": ["phs201_2023.jpg", "phs201_2024.jpg"],
+        "stb201": ["stb201_2023.jpg", "stb201_2024.jpg"],
+        "gst201": ["gst201_2023.jpg", "gst201_2024.jpg"]
+      },
+      "second": {
+        "ana202": ["ana202_2023.jpg", "ana202_2024.jpg"],
+        "ana204": ["ana204_2023.jpg", "ana204_2024.jpg"],
+        "ana206": ["ana206_2023.jpg", "ana206_2024.jpg"],
+        "bch202": ["bch202_2023.jpg", "bch202_2024.jpg"],
+        "phs202": ["phs202_2023.jpg", "phs202_2024.jpg"],
+        "mic202": ["mic202_2023.jpg", "mic202_2024.jpg"],
+        "gst202": ["gst202_2023.jpg", "gst202_2024.jpg"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "ana301": ["ana301_2023.jpg", "ana301_2024.jpg"],
+        "ana303": ["ana303_2023.jpg", "ana303_2024.jpg"],
+        "ana305": ["ana305_2023.jpg", "ana305_2024.jpg"],
+        "ana307": ["ana307_2023.jpg", "ana307_2024.jpg"],
+        "pgy301": ["pgy301_2023.jpg", "pgy301_2024.jpg"],
+        "pat301": ["pat301_2023.jpg", "pat301_2024.jpg"],
+        "gst301": ["gst301_2023.jpg", "gst301_2024.jpg"]
+      },
+      "second": {
+        "ana302": ["ana302_2023.jpg", "ana302_2024.jpg"],
+        "ana304": ["ana304_2023.jpg", "ana304_2024.jpg"],
+        "ana306": ["ana306_2023.jpg", "ana306_2024.jpg"],
+        "ana308": ["ana308_2023.jpg", "ana308_2024.jpg"],
+        "pgy302": ["pgy302_2023.jpg", "pgy302_2024.jpg"],
+        "imm302": ["imm302_2023.jpg", "imm302_2024.jpg"],
+        "gst302": ["gst302_2023.jpg", "gst302_2024.jpg"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "ana401": ["ana401_2023.jpg", "ana401_2024.jpg"],
+        "ana403": ["ana403_2023.jpg", "ana403_2024.jpg"],
+        "ana405": ["ana405_2023.jpg", "ana405_2024.jpg"],
+        "ana407": ["ana407_2023.jpg", "ana407_2024.jpg"],
+        "ana409": ["ana409_2023.jpg", "ana409_2024.jpg"],
+        "pha401": ["pha401_2023.jpg", "pha401_2024.jpg"],
+        "gst401": ["gst401_2023.jpg", "gst401_2024.jpg"]
+      },
+      "second": {
+        "ana402": ["ana402_2023.jpg", "ana402_2024.jpg"],
+        "ana404": ["ana404_2023.jpg", "ana404_2024.jpg"],
+        "ana406": ["ana406_2023.jpg", "ana406_2024.jpg"],
+        "ana408": ["ana408_2023.jpg", "ana408_2024.jpg"],
+        "ana410": ["ana410_2023.jpg", "ana410_2024.jpg"],
+        "res499": ["res499_2023.jpg", "res499_2024.jpg"]
+      }
+    }
+  },
+  "animal-science": {
+    "100-level": {
+      "first": {
+        "bio101": ["bio101_2023.jpg", "bio101_2024.jpg"],
+        "chm101": ["chm101_2023.jpg", "chm101_2024.jpg"],
+        "mth101": ["mth101_2023.jpg", "mth101_2024.jpg"],
+        "phy101": ["phy101_2023.jpg", "phy101_2024.jpg"],
+        "gst111": ["gst111_2023.jpg", "gst111_2024.jpg"],
+        "eng101": ["eng101_2023.jpg", "eng101_2024.jpg"]
+      },
+      "second": {
+        "bio102": ["bio102_2023.jpg", "bio102_2024.jpg"],
+        "chm102": ["chm102_2023.jpg", "chm102_2024.jpg"],
+        "mth102": ["mth102_2023.jpg", "mth102_2024.jpg"],
+        "phy102": ["phy102_2023.jpg", "phy102_2024.jpg"],
+        "gst112": ["gst112_2023.jpg", "gst112_2024.jpg"],
+        "eng102": ["eng102_2023.jpg", "eng102_2024.jpg"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "ans201": ["ans201_2023.jpg", "ans201_2024.jpg"],
+        "ans211": ["ans211_2023.jpg", "ans211_2024.jpg"],
+        "aec211": ["aec211_2023.jpg", "aec211_2024.jpg"],
+        "bch201": ["bch201_2023.jpg", "bch201_2024.jpg"],
+        "stb201": ["stb201_2023.jpg", "stb201_2024.jpg"],
+        "gst201": ["gst201_2023.jpg", "gst201_2024.jpg"]
+      },
+      "second": {
+        "ans232": ["ans232_2023.jpg", "ans232_2024.jpg"],
+        "ans234": ["ans234_2023.jpg", "ans234_2024.jpg"],
+        "ans252": ["ans252_2023.jpg", "ans252_2024.jpg"],
+        "sta202": ["sta202_2023.jpg", "sta202_2024.jpg"],
+        "fst222": ["fst222_2023.jpg", "fst222_2024.jpg"],
+        "gst202": ["gst202_2023.jpg", "gst202_2024.jpg"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "ans311": ["ans311_2023.jpg", "ans311_2024.jpg"],
+        "ans313": ["ans313_2023.jpg", "ans313_2024.jpg"],
+        "ans321": ["ans321_2023.jpg", "ans321_2024.jpg"],
+        "aec311": ["aec311_2023.jpg", "aec311_2024.jpg"],
+        "ssl311": ["ssl311_2023.jpg", "ssl311_2024.jpg"],
+        "gst301": ["gst301_2023.jpg", "gst301_2024.jpg"]
+      },
+      "second": {
+        "ans312": ["ans312_2023.jpg", "ans312_2024.jpg"],
+        "ans334": ["ans334_2023.jpg", "ans334_2024.jpg"],
+        "ans322": ["ans322_2023.jpg", "ans322_2024.jpg"],
+        "aec322": ["aec322_2023.jpg", "aec322_2024.jpg"],
+        "cs322": ["cs322_2023.jpg", "cs322_2024.jpg"],
+        "gst302": ["gst302_2023.jpg", "gst302_2024.jpg"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "siwes": "Students' Industrial Work Experience Scheme (SIWES)"
+      },
+      "second": {
+        "ans499": ["ans499_2023.jpg", "ans499_2024.jpg"],
+        "ans500": ["ans500_2023.jpg", "ans500_2024.jpg"],
+        "ans502": ["ans502_2023.jpg", "ans502_2024.jpg"],
+        "ans504": ["ans504_2023.jpg", "ans504_2024.jpg"],
+        "ans506": ["ans506_2023.jpg", "ans506_2024.jpg"],
+        "age508": ["age508_2023.jpg", "age508_2024.jpg"]
+      }
+    }
+  },
+  "arabic": {
+    "100-level": {
+      "first": {
+        "arb101": ["arb101_2023.jpg", "arb101_2024.jpg"],
+        "arb103": ["arb103_2023.jpg", "arb103_2024.jpg"],
+        "arb105": ["arb105_2023.jpg", "arb105_2024.jpg"],
+        "fre101": ["fre101_2023.jpg", "fre101_2024.jpg"],
+        "gst111": ["gst111_2023.jpg", "gst111_2024.jpg"],
+        "gst107": ["gst107_2023.jpg", "gst107_2024.jpg"]
+      },
+      "second": {
+        "arb102": ["arb102_2023.jpg", "arb102_2024.jpg"],
+        "arb104": ["arb104_2023.jpg", "arb104_2024.jpg"],
+        "arb106": ["arb106_2023.jpg", "arb106_2024.jpg"],
+        "isg101": ["isg101_2023.jpg", "isg101_2024.jpg"],
+        "fre102": ["fre102_2023.jpg", "fre102_2024.jpg"],
+        "gst112": ["gst112_2023.jpg", "gst112_2024.jpg"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "arb201": ["arb201_2023.jpg", "arb201_2024.jpg"],
+        "arb203": ["arb203_2023.jpg", "arb203_2024.jpg"],
+        "arb205": ["arb205_2023.jpg", "arb205_2024.jpg"],
+        "arb207": ["arb207_2023.jpg", "arb207_2024.jpg"],
+        "arb209": ["arb209_2023.jpg", "arb209_2024.jpg"],
+        "gst201": ["gst201_2023.jpg", "gst201_2024.jpg"]
+      },
+      "second": {
+        "arb202": ["arb202_2023.jpg", "arb202_2024.jpg"],
+        "arb204": ["arb204_2023.jpg", "arb204_2024.jpg"],
+        "arb206": ["arb206_2023.jpg", "arb206_2024.jpg"],
+        "arb208": ["arb208_2023.jpg", "arb208_2024.jpg"],
+        "arb210": ["arb210_2023.jpg", "arb210_2024.jpg"],
+        "gst202": ["gst202_2023.jpg", "gst202_2024.jpg"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "arb301": ["arb301_2023.jpg", "arb301_2024.jpg"],
+        "arb303": ["arb303_2023.jpg", "arb303_2024.jpg"],
+        "arb305": ["arb305_2023.jpg", "arb305_2024.jpg"],
+        "arb307": ["arb307_2023.jpg", "arb307_2024.jpg"],
+        "arb309": ["arb309_2023.jpg", "arb309_2024.jpg"],
+        "gst301": ["gst301_2023.jpg", "gst301_2024.jpg"]
+      },
+      "second": {
+        "arb302": ["arb302_2023.jpg", "arb302_2024.jpg"],
+        "arb304": ["arb304_2023.jpg", "arb304_2024.jpg"],
+        "arb306": ["arb306_2023.jpg", "arb306_2024.jpg"],
+        "arb308": ["arb308_2023.jpg", "arb308_2024.jpg"],
+        "arb310": ["arb310_2023.jpg", "arb310_2024.jpg"],
+        "gst302": ["gst302_2023.jpg", "gst302_2024.jpg"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "arb401": ["arb401_2023.jpg", "arb401_2024.jpg"],
+        "arb403": ["arb403_2023.jpg", "arb403_2024.jpg"],
+        "arb405": ["arb405_2023.jpg", "arb405_2024.jpg"],
+        "arb407": ["arb407_2023.jpg", "arb407_2024.jpg"],
+        "arb409": ["arb409_2023.jpg", "arb409_2024.jpg"],
+        "arb411": ["arb411_2023.jpg", "arb411_2024.jpg"]
+      },
+      "second": {
+        "arb402": ["arb402_2023.jpg", "arb402_2024.jpg"],
+        "arb404": ["arb404_2023.jpg", "arb404_2024.jpg"],
+        "arb406": ["arb406_2023.jpg", "arb406_2024.jpg"],
+        "arb408": ["arb408_2023.jpg", "arb408_2024.jpg"],
+        "arb499": ["arb499_2023.jpg", "arb499_2024.jpg"]
+      }
+    }
+  },
+  "biochemistry": {
+    "100-level": {
+      "first": {
+        "bio101": ["bio101_2023.jpg", "bio101_2024.jpg"],
+        "bio107": ["bio107_2023.jpg", "bio107_2024.jpg"],
+        "chm101": ["chm101_2023.jpg", "chm101_2024.jpg"],
+        "chm107": ["chm107_2023.jpg", "chm107_2024.jpg"],
+        "mth101": ["mth101_2023.jpg", "mth101_2024.jpg"],
+        "phy101": ["phy101_2023.jpg", "phy101_2024.jpg"],
+        "phy107": ["phy107_2023.jpg", "phy107_2024.jpg"],
+        "gst111": ["gst111_2023.jpg", "gst111_2024.jpg"]
+      },
+      "second": {
+        "bio102": ["bio102_2023.jpg", "bio102_2024.jpg"],
+        "bio108": ["bio108_2023.jpg", "bio108_2024.jpg"],
+        "chm102": ["chm102_2023.jpg", "chm102_2024.jpg"],
+        "chm108": ["chm108_2023.jpg", "chm108_2024.jpg"],
+        "mth102": ["mth102_2023.jpg", "mth102_2024.jpg"],
+        "phy102": ["phy102_2023.jpg", "phy102_2024.jpg"],
+        "phy108": ["phy108_2023.jpg", "phy108_2024.jpg"],
+        "gst112": ["gst112_2023.jpg", "gst112_2024.jpg"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "bch201": ["bch201_2023.jpg", "bch201_2024.jpg"],
+        "bch203": ["bch203_2023.jpg", "bch203_2024.jpg"],
+        "chm201": ["chm201_2023.jpg", "chm201_2024.jpg"],
+        "chm207": ["chm207_2023.jpg", "chm207_2024.jpg"],
+        "mcb201": ["mcb201_2023.jpg", "mcb201_2024.jpg"],
+        "bot201": ["bot201_2023.jpg", "bot201_2024.jpg"],
+        "gst201": ["gst201_2023.jpg", "gst201_2024.jpg"]
+      },
+      "second": {
+        "bch202": ["bch202_2023.jpg", "bch202_2024.jpg"],
+        "bch204": ["bch204_2023.jpg", "bch204_2024.jpg"],
+        "chm202": ["chm202_2023.jpg", "chm202_2024.jpg"],
+        "chm208": ["chm208_2023.jpg", "chm208_2024.jpg"],
+        "mcb202": ["mcb202_2023.jpg", "mcb202_2024.jpg"],
+        "zoo202": ["zoo202_2023.jpg", "zoo202_2024.jpg"],
+        "gst202": ["gst202_2023.jpg", "gst202_2024.jpg"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "bch301": ["bch301_2023.jpg", "bch301_2024.jpg"],
+        "bch303": ["bch303_2023.jpg", "bch303_2024.jpg"],
+        "bch305": ["bch305_2023.jpg", "bch305_2024.jpg"],
+        "bch307": ["bch307_2023.jpg", "bch307_2024.jpg"],
+        "bch309": ["bch309_2023.jpg", "bch309_2024.jpg"],
+        "bch311": ["bch311_2023.jpg", "bch311_2024.jpg"],
+        "gst301": ["gst301_2023.jpg", "gst301_2024.jpg"]
+      },
+      "second": {
+        "bch302": ["bch302_2023.jpg", "bch302_2024.jpg"],
+        "bch304": ["bch304_2023.jpg", "bch304_2024.jpg"],
+        "bch306": ["bch306_2023.jpg", "bch306_2024.jpg"],
+        "bch308": ["bch308_2023.jpg", "bch308_2024.jpg"],
+        "bch310": ["bch310_2023.jpg", "bch310_2024.jpg"],
+        "bch312": ["bch312_2023.jpg", "bch312_2024.jpg"],
+        "gst302": ["gst302_2023.jpg", "gst302_2024.jpg"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "bch401": ["bch401_2023.jpg", "bch401_2024.jpg"],
+        "bch403": ["bch403_2023.jpg", "bch403_2024.jpg"],
+        "bch405": ["bch405_2023.jpg", "bch405_2024.jpg"],
+        "bch407": ["bch407_2023.jpg", "bch407_2024.jpg"],
+        "bch409": ["bch409_2023.jpg", "bch409_2024.jpg"],
+        "bch411": ["bch411_2023.jpg", "bch411_2024.jpg"],
+        "gst401": ["gst401_2023.jpg", "gst401_2024.jpg"]
+      },
+      "second": {
+        "bch402": ["bch402_2023.jpg", "bch402_2024.jpg"],
+        "bch404": ["bch404_2023.jpg", "bch404_2024.jpg"],
+        "bch406": ["bch406_2023.jpg", "bch406_2024.jpg"],
+        "bch408": ["bch408_2023.jpg", "bch408_2024.jpg"],
+        "bch410": ["bch410_2023.jpg", "bch410_2024.jpg"],
+        "bch499": ["bch499_2023.jpg", "bch499_2024.jpg"]
+      }
+    }
+  },
+  "bio": {
+    "100-level": {
+      "first": {
+        "bio101": ["bio101_2023.jpg", "bio101_2024.jpg"],
+        "bio107": ["bio107_2023.jpg", "bio107_2024.jpg"],
+        "chm101": ["chm101_2023.jpg", "chm101_2024.jpg"],
+        "chm107": ["chm107_2023.jpg", "chm107_2024.jpg"],
+        "mth101": ["mth101_2023.jpg", "mth101_2024.jpg"],
+        "phy101": ["phy101_2023.jpg", "phy101_2024.jpg"],
+        "phy107": ["phy107_2023.jpg", "phy107_2024.jpg"],
+        "gst111": ["gst111_2023.jpg", "gst111_2024.jpg"]
+      },
+      "second": {
+        "bio102": ["bio102_2023.jpg", "bio102_2024.jpg"],
+        "bio108": ["bio108_2023.jpg", "bio108_2024.jpg"],
+        "chm102": ["chm102_2023.jpg", "chm102_2024.jpg"],
+        "chm108": ["chm108_2023.jpg", "chm108_2024.jpg"],
+        "mth102": ["mth102_2023.jpg", "mth102_2024.jpg"],
+        "phy102": ["phy102_2023.jpg", "phy102_2024.jpg"],
+        "phy108": ["phy108_2023.jpg", "phy108_2024.jpg"],
+        "gst112": ["gst112_2023.jpg", "gst112_2024.jpg"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "bio201": ["bio201_2023.jpg", "bio201_2024.jpg"],
+        "bio203": ["bio203_2023.jpg", "bio203_2024.jpg"],
+        "bio205": ["bio205_2023.jpg", "bio205_2024.jpg"],
+        "bio207": ["bio207_2023.jpg", "bio207_2024.jpg"],
+        "bch201": ["bch201_2023.jpg", "bch201_2024.jpg"],
+        "mcb201": ["mcb201_2023.jpg", "mcb201_2024.jpg"],
+        "gst201": ["gst201_2023.jpg", "gst201_2024.jpg"]
+      },
+      "second": {
+        "bio202": ["bio202_2023.jpg", "bio202_2024.jpg"],
+        "bio204": ["bio204_2023.jpg", "bio204_2024.jpg"],
+        "bio206": ["bio206_2023.jpg", "bio206_2024.jpg"],
+        "bio208": ["bio208_2023.jpg", "bio208_2024.jpg"],
+        "bch202": ["bch202_2023.jpg", "bch202_2024.jpg"],
+        "mcb202": ["mcb202_2023.jpg", "mcb202_2024.jpg"],
+        "gst202": ["gst202_2023.jpg", "gst202_2024.jpg"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "bio301": ["bio301_2023.jpg", "bio301_2024.jpg"],
+        "bio303": ["bio303_2023.jpg", "bio303_2024.jpg"],
+        "bio305": ["bio305_2023.jpg", "bio305_2024.jpg"],
+        "bio307": ["bio307_2023.jpg", "bio307_2024.jpg"],
+        "bio309": ["bio309_2023.jpg", "bio309_2024.jpg"],
+        "gst301": ["gst301_2023.jpg", "gst301_2024.jpg"]
+      },
+      "second": {
+        "bio302": ["bio302_2023.jpg", "bio302_2024.jpg"],
+        "bio304": ["bio304_2023.jpg", "bio304_2024.jpg"],
+        "bio306": ["bio306_2023.jpg", "bio306_2024.jpg"],
+        "bio308": ["bio308_2023.jpg", "bio308_2024.jpg"],
+        "bio310": ["bio310_2023.jpg", "bio310_2024.jpg"],
+        "gst302": ["gst302_2023.jpg", "gst302_2024.jpg"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "bio401": ["bio401_2023.jpg", "bio401_2024.jpg"],
+        "bio403": ["bio403_2023.jpg", "bio403_2024.jpg"],
+        "bio405": ["bio405_2023.jpg", "bio405_2024.jpg"],
+        "bio407": ["bio407_2023.jpg", "bio407_2024.jpg"],
+        "bio409": ["bio409_2023.jpg", "bio409_2024.jpg"],
+        "bio411": ["bio411_2023.jpg", "bio411_2024.jpg"],
+        "gst401": ["gst401_2023.jpg", "gst401_2024.jpg"]
+      },
+      "second": {
+        "bio402": ["bio402_2023.jpg", "bio402_2024.jpg"],
+        "bio404": ["bio404_2023.jpg", "bio404_2024.jpg"],
+        "bio406": ["bio406_2023.jpg", "bio406_2024.jpg"],
+        "bio408": ["bio408_2023.jpg", "bio408_2024.jpg"],
+        "bio499": ["bio499_2023.jpg", "bio499_2024.jpg"]
+      }
+    }
+  },
+  "bio-edu": {
+    "100-level": {
+      "first": {
+        "bio101": ["bio101_2023.jpg", "bio101_2024.jpg"],
+        "bio107": ["bio107_2023.jpg", "bio107_2024.jpg"],
+        "chm101": ["chm101_2023.jpg", "chm101_2024.jpg"],
+        "chm107": ["chm107_2023.jpg", "chm107_2024.jpg"],
+        "mth101": ["mth101_2023.jpg", "mth101_2024.jpg"],
+        "edu101": ["edu101_2023.jpg", "edu101_2024.jpg"],
+        "gst111": ["gst111_2023.jpg", "gst111_2024.jpg"]
+      },
+      "second": {
+        "bio102": ["bio102_2023.jpg", "bio102_2024.jpg"],
+        "bio108": ["bio108_2023.jpg", "bio108_2024.jpg"],
+        "chm102": ["chm102_2023.jpg", "chm102_2024.jpg"],
+        "chm108": ["chm108_2023.jpg", "chm108_2024.jpg"],
+        "mth102": ["mth102_2023.jpg", "mth102_2024.jpg"],
+        "edu102": ["edu102_2023.jpg", "edu102_2024.jpg"],
+        "gst112": ["gst112_2023.jpg", "gst112_2024.jpg"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "bio201": ["bio201_2023.jpg", "bio201_2024.jpg"],
+        "bio203": ["bio203_2023.jpg", "bio203_2024.jpg"],
+        "bio205": ["bio205_2023.jpg", "bio205_2024.jpg"],
+        "edu201": ["edu201_2023.jpg", "edu201_2024.jpg"],
+        "edu203": ["edu203_2023.jpg", "edu203_2024.jpg"],
+        "psy201": ["psy201_2023.jpg", "psy201_2024.jpg"],
+        "gst201": ["gst201_2023.jpg", "gst201_2024.jpg"]
+      },
+      "second": {
+        "bio202": ["bio202_2023.jpg", "bio202_2024.jpg"],
+        "bio204": ["bio204_2023.jpg", "bio204_2024.jpg"],
+        "bio206": ["bio206_2023.jpg", "bio206_2024.jpg"],
+        "edu202": ["edu202_2023.jpg", "edu202_2024.jpg"],
+        "edu204": ["edu204_2023.jpg", "edu204_2024.jpg"],
+        "ted202": ["ted202_2023.jpg", "ted202_2024.jpg"],
+        "gst202": ["gst202_2023.jpg", "gst202_2024.jpg"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "bio301": ["bio301_2023.jpg", "bio301_2024.jpg"],
+        "bio303": ["bio303_2023.jpg", "bio303_2024.jpg"],
+        "sed301": ["sed301_2023.jpg", "sed301_2024.jpg"],
+        "edu301": ["edu301_2023.jpg", "edu301_2024.jpg"],
+        "edu303": ["edu303_2023.jpg", "edu303_2024.jpg"],
+        "eme301": ["eme301_2023.jpg", "eme301_2024.jpg"],
+        "gst301": ["gst301_2023.jpg", "gst301_2024.jpg"]
+      },
+      "second": {
+        "bio302": ["bio302_2023.jpg", "bio302_2024.jpg"],
+        "bio304": ["bio304_2023.jpg", "bio304_2024.jpg"],
+        "sed302": ["sed302_2023.jpg", "sed302_2024.jpg"],
+        "edu302": ["edu302_2023.jpg", "edu302_2024.jpg"],
+        "edu304": ["edu304_2023.jpg", "edu304_2024.jpg"],
+        "ted302": ["ted302_2023.jpg", "ted302_2024.jpg"],
+        "gst302": ["gst302_2023.jpg", "gst302_2024.jpg"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "bio401": ["bio401_2023.jpg", "bio401_2024.jpg"],
+        "sed401": ["sed401_2023.jpg", "sed401_2024.jpg"],
+        "sed403": ["sed403_2023.jpg", "sed403_2024.jpg"],
+        "edu401": ["edu401_2023.jpg", "edu401_2024.jpg"],
+        "edu403": ["edu403_2023.jpg", "edu403_2024.jpg"],
+        "ted401": ["ted401_2023.jpg", "ted401_2024.jpg"],
+        "gst401": ["gst401_2023.jpg", "gst401_2024.jpg"]
+      },
+      "second": {
+        "sed402": ["sed402_2023.jpg", "sed402_2024.jpg"],
+        "sed404": ["sed404_2023.jpg", "sed404_2024.jpg"],
+        "sed406": ["sed406_2023.jpg", "sed406_2024.jpg"],
+        "edu402": ["edu402_2023.jpg", "edu402_2024.jpg"],
+        "ted402": ["ted402_2023.jpg", "ted402_2024.jpg"],
+        "sed499": ["sed499_2023.jpg", "sed499_2024.jpg"]
+      }
+    }
+  },
+  "botany": {
+    "100-level": {
+      "first": {
+        "bot101": ["bot101_2023.jpg", "bot101_2024.jpg"],
+        "bio101": ["bio101_2023.jpg", "bio101_2024.jpg"],
+        "chm101": ["chm101_2023.jpg", "chm101_2024.jpg"],
+        "chm107": ["chm107_2023.jpg", "chm107_2024.jpg"],
+        "mth101": ["mth101_2023.jpg", "mth101_2024.jpg"],
+        "phy101": ["phy101_2023.jpg", "phy101_2024.jpg"],
+        "gst111": ["gst111_2023.jpg", "gst111_2024.jpg"]
+      },
+      "second": {
+        "bot102": ["bot102_2023.jpg", "bot102_2024.jpg"],
+        "bio102": ["bio102_2023.jpg", "bio102_2024.jpg"],
+        "chm102": ["chm102_2023.jpg", "chm102_2024.jpg"],
+        "chm108": ["chm108_2023.jpg", "chm108_2024.jpg"],
+        "mth102": ["mth102_2023.jpg", "mth102_2024.jpg"],
+        "phy102": ["phy102_2023.jpg", "phy102_2024.jpg"],
+        "gst112": ["gst112_2023.jpg", "gst112_2024.jpg"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "bot201": ["bot201_2023.jpg", "bot201_2024.jpg"],
+        "bot203": ["bot203_2023.jpg", "bot203_2024.jpg"],
+        "bot205": ["bot205_2023.jpg", "bot205_2024.jpg"],
+        "bch201": ["bch201_2023.jpg", "bch201_2024.jpg"],
+        "mcb201": ["mcb201_2023.jpg", "mcb201_2024.jpg"],
+        "zoo201": ["zoo201_2023.jpg", "zoo201_2024.jpg"],
+        "gst201": ["gst201_2023.jpg", "gst201_2024.jpg"]
+      },
+      "second": {
+        "bot202": ["bot202_2023.jpg", "bot202_2024.jpg"],
+        "bot204": ["bot204_2023.jpg", "bot204_2024.jpg"],
+        "bot206": ["bot206_2023.jpg", "bot206_2024.jpg"],
+        "bot208": ["bot208_2023.jpg", "bot208_2024.jpg"],
+        "bch202": ["bch202_2023.jpg", "bch202_2024.jpg"],
+        "mcb202": ["mcb202_2023.jpg", "mcb202_2024.jpg"],
+        "gst202": ["gst202_2023.jpg", "gst202_2024.jpg"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "bot301": ["bot301_2023.jpg", "bot301_2024.jpg"],
+        "bot303": ["bot303_2023.jpg", "bot303_2024.jpg"],
+        "bot305": ["bot305_2023.jpg", "bot305_2024.jpg"],
+        "bot307": ["bot307_2023.jpg", "bot307_2024.jpg"],
+        "bot309": ["bot309_2023.jpg", "bot309_2024.jpg"],
+        "sbc301": ["sbc301_2023.jpg", "sbc301_2024.jpg"],
+        "gst301": ["gst301_2023.jpg", "gst301_2024.jpg"]
+      },
+      "second": {
+        "bot302": ["bot302_2023.jpg", "bot302_2024.jpg"],
+        "bot304": ["bot304_2023.jpg", "bot304_2024.jpg"],
+        "bot306": ["bot306_2023.jpg", "bot306_2024.jpg"],
+        "bot308": ["bot308_2023.jpg", "bot308_2024.jpg"],
+        "bot310": ["bot310_2023.jpg", "bot310_2024.jpg"],
+        "sbc302": ["sbc302_2023.jpg", "sbc302_2024.jpg"],
+        "gst302": ["gst302_2023.jpg", "gst302_2024.jpg"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "bot401": ["bot401_2023.jpg", "bot401_2024.jpg"],
+        "bot403": ["bot403_2023.jpg", "bot403_2024.jpg"],
+        "bot405": ["bot405_2023.jpg", "bot405_2024.jpg"],
+        "bot407": ["bot407_2023.jpg", "bot407_2024.jpg"],
+        "bot409": ["bot409_2023.jpg", "bot409_2024.jpg"],
+        "bot411": ["bot411_2023.jpg", "bot411_2024.jpg"],
+        "gst401": ["gst401_2023.jpg", "gst401_2024.jpg"]
+      },
+      "second": {
+        "bot402": ["bot402_2023.jpg", "bot402_2024.jpg"],
+        "bot404": ["bot404_2023.jpg", "bot404_2024.jpg"],
+        "bot406": ["bot406_2023.jpg", "bot406_2024.jpg"],
+        "bot408": ["bot408_2023.jpg", "bot408_2024.jpg"],
+        "bot410": ["bot410_2023.jpg", "bot410_2024.jpg"],
+        "bot499": ["bot499_2023.jpg", "bot499_2024.jpg"]
+      }
+    }
+  },
+  "chem": {
+    "100-level": {
+      "first": {
+        "gst101": ["gst101_2023.jpg", "gst101_2024.jpg"],
+        "gst107": ["gst107_2023.jpg", "gst107_2024.jpg"],
+        "chm101": ["chm101_2023.jpg", "chm101_2024.jpg"],
+        "chm103": ["chm103_2023.jpg", "chm103_2024.jpg"],
+        "chm191": ["chm191_2023.jpg", "chm191_2024.jpg"],
+        "mth101": ["mth101_2023.jpg", "mth101_2024.jpg"],
+        "phy101": ["phy101_2023.jpg", "phy101_2024.jpg"],
+        "phy191": ["phy191_2023.jpg", "phy191_2024.jpg"],
+        "bio101": ["bio101_2023.jpg", "bio101_2024.jpg"],
+        "bio191": ["bio191_2023.jpg", "bio191_2024.jpg"]
+      },
+      "second": {
+        "gst104": ["gst104_2023.jpg", "gst104_2024.jpg"],
+        "chm102": ["chm102_2023.jpg", "chm102_2024.jpg"],
+        "chm192": ["chm192_2023.jpg", "chm192_2024.jpg"],
+        "mth102": ["mth102_2023.jpg", "mth102_2024.jpg"],
+        "phy102": ["phy102_2023.jpg", "phy102_2024.jpg"],
+        "phy192": ["phy192_2023.jpg", "phy192_2024.jpg"],
+        "bio102": ["bio102_2023.jpg", "bio102_2024.jpg"],
+        "bio192": ["bio192_2023.jpg", "bio192_2024.jpg"],
+        "cit104": ["cit104_2023.jpg", "cit104_2024.jpg"],
+        "stt102": ["stt102_2023.jpg", "stt102_2024.jpg"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "gst201": ["gst201_2023.jpg", "gst201_2024.jpg"],
+        "gst203": ["gst203_2023.jpg", "gst203_2024.jpg"],
+        "chm201": ["chm201_2023.jpg", "chm201_2024.jpg"],
+        "chm203": ["chm203_2023.jpg", "chm203_2024.jpg"],
+        "chm205": ["chm205_2023.jpg", "chm205_2024.jpg"],
+        "chm291": ["chm291_2023.jpg", "chm291_2024.jpg"],
+        "mth281": ["mth281_2023.jpg", "mth281_2024.jpg"]
+      },
+      "second": {
+        "gst202": ["gst202_2023.jpg", "gst202_2024.jpg"],
+        "chm202": ["chm202_2023.jpg", "chm202_2024.jpg"],
+        "chm204": ["chm204_2023.jpg", "chm204_2024.jpg"],
+        "chm292": ["chm292_2023.jpg", "chm292_2024.jpg"],
+        "mth212": ["mth212_2023.jpg", "mth212_2024.jpg"],
+        "phy202": ["phy202_2023.jpg", "phy202_2024.jpg"],
+        "phy204": ["phy204_2023.jpg", "phy204_2024.jpg"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "chm301": ["chm301_2023.jpg", "chm301_2024.jpg"],
+        "chm303": ["chm303_2023.jpg", "chm303_2024.jpg"],
+        "chm305": ["chm305_2023.jpg", "chm305_2024.jpg"],
+        "chm307": ["chm307_2023.jpg", "chm307_2024.jpg"],
+        "chm309": ["chm309_2023.jpg", "chm309_2024.jpg"],
+        "chm391": ["chm391_2023.jpg", "chm391_2024.jpg"],
+        "gst302": ["gst302_2023.jpg", "gst302_2024.jpg"]
+      },
+      "second": {
+        "siwes": "Industrial Training (SIWES)"
+      }
+    },
+    "400-level": {
+      "first": {
+        "chm407": ["chm407_2023.jpg", "chm407_2024.jpg"],
+        "chm409": ["chm409_2023.jpg", "chm409_2024.jpg"],
+        "chm411": ["chm411_2023.jpg", "chm411_2024.jpg"],
+        "chm413": ["chm413_2023.jpg", "chm413_2024.jpg"],
+        "chm421": ["chm421_2023.jpg", "chm421_2024.jpg"],
+        "chm423": ["chm423_2023.jpg", "chm423_2024.jpg"]
+      },
+      "second": {
+        "chm400": ["chm400_2023.jpg", "chm400_2024.jpg"],
+        "chm406": ["chm406_2023.jpg", "chm406_2024.jpg"],
+        "chm408": ["chm408_2023.jpg", "chm408_2024.jpg"],
+        "chm414": ["chm414_2023.jpg", "chm414_2024.jpg"],
+        "chm416": ["chm416_2023.jpg", "chm416_2024.jpg"]
+      }
+    }
+  },
+  "chem-edu": {
+    "100-level": {
+      "first": {
+        "chm101": ["chm101_2023.jpg", "chm101_2024.jpg"],
+        "chm107": ["chm107_2023.jpg", "chm107_2024.jpg"],
+        "mth101": ["mth101_2023.jpg", "mth101_2024.jpg"],
+        "phy101": ["phy101_2023.jpg", "phy101_2024.jpg"],
+        "phy107": ["phy107_2023.jpg", "phy107_2024.jpg"],
+        "edu101": ["edu101_2023.jpg", "edu101_2024.jpg"],
+        "gst111": ["gst111_2023.jpg", "gst111_2024.jpg"]
+      },
+      "second": {
+        "chm102": ["chm102_2023.jpg", "chm102_2024.jpg"],
+        "chm108": ["chm108_2023.jpg", "chm108_2024.jpg"],
+        "mth102": ["mth102_2023.jpg", "mth102_2024.jpg"],
+        "phy102": ["phy102_2023.jpg", "phy102_2024.jpg"],
+        "phy108": ["phy108_2023.jpg", "phy108_2024.jpg"],
+        "edu102": ["edu102_2023.jpg", "edu102_2024.jpg"],
+        "gst112": ["gst112_2023.jpg", "gst112_2024.jpg"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "chm201": ["chm201_2023.jpg", "chm201_2024.jpg"],
+        "chm203": ["chm203_2023.jpg", "chm203_2024.jpg"],
+        "chm205": ["chm205_2023.jpg", "chm205_2024.jpg"],
+        "edu201": ["edu201_2023.jpg", "edu201_2024.jpg"],
+        "edu203": ["edu203_2023.jpg", "edu203_2024.jpg"],
+        "psy201": ["psy201_2023.jpg", "psy201_2024.jpg"],
+        "gst201": ["gst201_2023.jpg", "gst201_2024.jpg"]
+      },
+      "second": {
+        "chm202": ["chm202_2023.jpg", "chm202_2024.jpg"],
+        "chm204": ["chm204_2023.jpg", "chm204_2024.jpg"],
+        "chm206": ["chm206_2023.jpg", "chm206_2024.jpg"],
+        "edu202": ["edu202_2023.jpg", "edu202_2024.jpg"],
+        "edu204": ["edu204_2023.jpg", "edu204_2024.jpg"],
+        "ted202": ["ted202_2023.jpg", "ted202_2024.jpg"],
+        "gst202": ["gst202_2023.jpg", "gst202_2024.jpg"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "chm301": ["chm301_2023.jpg", "chm301_2024.jpg"],
+        "chm303": ["chm303_2023.jpg", "chm303_2024.jpg"],
+        "chm305": ["chm305_2023.jpg", "chm305_2024.jpg"],
+        "sed301": ["sed301_2023.jpg", "sed301_2024.jpg"],
+        "edu301": ["edu301_2023.jpg", "edu301_2024.jpg"],
+        "eme301": ["eme301_2023.jpg", "eme301_2024.jpg"],
+        "gst301": ["gst301_2023.jpg", "gst301_2024.jpg"]
+      },
+      "second": {
+        "chm302": ["chm302_2023.jpg", "chm302_2024.jpg"],
+        "chm304": ["chm304_2023.jpg", "chm304_2024.jpg"],
+        "chm306": ["chm306_2023.jpg", "chm306_2024.jpg"],
+        "sed302": ["sed302_2023.jpg", "sed302_2024.jpg"],
+        "edu302": ["edu302_2023.jpg", "edu302_2024.jpg"],
+        "ted302": ["ted302_2023.jpg", "ted302_2024.jpg"],
+        "gst302": ["gst302_2023.jpg", "gst302_2024.jpg"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "chm401": ["chm401_2023.jpg", "chm401_2024.jpg"],
+        "sed401": ["sed401_2023.jpg", "sed401_2024.jpg"],
+        "sed403": ["sed403_2023.jpg", "sed403_2024.jpg"],
+        "edu401": ["edu401_2023.jpg", "edu401_2024.jpg"],
+        "edu403": ["edu403_2023.jpg", "edu403_2024.jpg"],
+        "ted401": ["ted401_2023.jpg", "ted401_2024.jpg"],
+        "gst401": ["gst401_2023.jpg", "gst401_2024.jpg"]
+      },
+      "second": {
+        "sed402": ["sed402_2023.jpg", "sed402_2024.jpg"],
+        "sed404": ["sed404_2023.jpg", "sed404_2024.jpg"],
+        "sed406": ["sed406_2023.jpg", "sed406_2024.jpg"],
+        "edu402": ["edu402_2023.jpg", "edu402_2024.jpg"],
+        "ted402": ["ted402_2023.jpg", "ted402_2024.jpg"],
+        "sed499": ["sed499_2023.jpg", "sed499_2024.jpg"]
+      }
+    }
+  },
+  "crop-science": {
+    "100-level": {
+      "first": {
+        "bio101": ["bio101_2023.jpg", "bio101_2024.jpg"],
+        "chm101": ["chm101_2023.jpg", "chm101_2024.jpg"],
+        "mth101": ["mth101_2023.jpg", "mth101_2024.jpg"],
+        "phy101": ["phy101_2023.jpg", "phy101_2024.jpg"],
+        "gst111": ["gst111_2023.jpg", "gst111_2024.jpg"],
+        "cos101": ["cos101_2023.jpg", "cos101_2024.jpg"]
+      },
+      "second": {
+        "bio102": ["bio102_2023.jpg", "bio102_2024.jpg"],
+        "chm102": ["chm102_2023.jpg", "chm102_2024.jpg"],
+        "chm132": ["chm132_2023.jpg", "chm132_2024.jpg"],
+        "mth102": ["mth102_2023.jpg", "mth102_2024.jpg"],
+        "phy102": ["phy102_2023.jpg", "phy102_2024.jpg"],
+        "gst112": ["gst112_2023.jpg", "gst112_2024.jpg"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "csc211": ["csc211_2023.jpg", "csc211_2024.jpg"],
+        "csc221": ["csc221_2023.jpg", "csc221_2024.jpg"],
+        "ssc211": ["ssc211_2023.jpg", "ssc211_2024.jpg"],
+        "aec211": ["aec211_2023.jpg", "aec211_2024.jpg"],
+        "ans211": ["ans211_2023.jpg", "ans211_2024.jpg"],
+        "gst201": ["gst201_2023.jpg", "gst201_2024.jpg"]
+      },
+      "second": {
+        "csc222": ["csc222_2023.jpg", "csc222_2024.jpg"],
+        "aec202": ["aec202_2023.jpg", "aec202_2024.jpg"],
+        "ans222": ["ans222_2023.jpg", "ans222_2024.jpg"],
+        "fst102": ["fst102_2023.jpg", "fst102_2024.jpg"],
+        "gst202": ["gst202_2023.jpg", "gst202_2024.jpg"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "csc321": ["csc321_2023.jpg", "csc321_2024.jpg"],
+        "csc331": ["csc331_2023.jpg", "csc331_2024.jpg"],
+        "aec301": ["aec301_2023.jpg", "aec301_2024.jpg"],
+        "aex311": ["aex311_2023.jpg", "aex311_2024.jpg"],
+        "ced341": ["ced341_2023.jpg", "ced341_2024.jpg"],
+        "gst301": ["gst301_2023.jpg", "gst301_2024.jpg"]
+      },
+      "second": {
+        "csc322": ["csc322_2023.jpg", "csc322_2024.jpg"],
+        "csc342": ["csc342_2023.jpg", "csc342_2024.jpg"],
+        "agr302": ["agr302_2023.jpg", "agr302_2024.jpg"],
+        "aex312": ["aex312_2023.jpg", "aex312_2024.jpg"],
+        "ced342": ["ced342_2023.jpg", "ced342_2024.jpg"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "csc421": ["csc421_2023.jpg", "csc421_2024.jpg"],
+        "csc431": ["csc431_2023.jpg", "csc431_2024.jpg"],
+        "agr401": ["agr401_2023.jpg", "agr401_2024.jpg"],
+        "scc431": ["scc431_2023.jpg", "scc431_2024.jpg"],
+        "scc441": ["scc441_2023.jpg", "scc441_2024.jpg"],
+        "csc499": ["csc499_2023.jpg", "csc499_2024.jpg"]
+      },
+      "second": {
+        "siwes": "Students' Industrial Work Experience Scheme (SIWES)"
+      }
+    }
+  },
+  "csc": {
+    "100-level": {
+      "first": {
+        "gst111": ["gst111_2023.jpg", "gst111_2024.jpg"],
+        "gst112": ["gst112_2023.jpg", "gst112_2024.jpg"],
+        "gst113": ["gst113_2023.jpg", "gst113_2024.jpg"],
+        "mth101": ["mth101_2023.jpg", "mth101_2024.jpg"],
+        "phy101": ["phy101_2023.jpg", "phy101_2024.jpg"],
+        "phy107": ["phy107_2023.jpg", "phy107_2024.jpg"],
+        "chm101": ["chm101_2023.jpg", "chm101_2024.jpg"],
+        "csc101": ["csc101_2023.jpg", "csc101_2024.jpg"],
+        "csc107": ["csc107_2023.jpg", "csc107_2024.jpg"],
+        "bio101": ["bio101_2023.jpg", "bio101_2024.jpg"]
+      },
+      "second": {
+        "gst121": ["gst121_2023.jpg", "gst121_2024.jpg"],
+        "gst123": ["gst123_2023.jpg", "gst123_2024.jpg"],
+        "mth102": ["mth102_2023.jpg", "mth102_2024.jpg"],
+        "phy102": ["phy102_2023.jpg", "phy102_2024.jpg"],
+        "phy108": ["phy108_2023.jpg", "phy108_2024.jpg"],
+        "chm102": ["chm102_2023.jpg", "chm102_2024.jpg"],
+        "csc102": ["csc102_2023.jpg", "csc102_2024.jpg"],
+        "csc108": ["csc108_2023.jpg", "csc108_2024.jpg"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "gst211": ["gst211_2023.jpg", "gst211_2024.jpg"],
+        "csc201": ["csc201_2023.jpg", "csc201_2024.jpg"],
+        "csc251": ["csc251_2023.jpg", "csc251_2024.jpg"],
+        "csc204": ["csc204_2023.jpg", "csc204_2024.jpg"],
+        "csc254": ["csc254_2023.jpg", "csc254_2024.jpg"],
+        "csc208": ["csc208_2023.jpg", "csc208_2024.jpg"],
+        "csc258": ["csc258_2023.jpg", "csc258_2024.jpg"],
+        "csc212": ["csc212_2023.jpg", "csc212_2024.jpg"],
+        "csc252": ["csc252_2023.jpg", "csc252_2024.jpg"],
+        "gst223": ["gst223_2023.jpg", "gst223_2024.jpg"]
+      },
+      "second": {
+        "csc202": ["csc202_2023.jpg", "csc202_2024.jpg"],
+        "csc252": ["csc252_2023.jpg", "csc252_2024.jpg"],
+        "csc205": ["csc205_2023.jpg", "csc205_2024.jpg"],
+        "csc255": ["csc255_2023.jpg", "csc255_2024.jpg"],
+        "csc218": ["csc218_2023.jpg", "csc218_2024.jpg"],
+        "csc208": ["csc208_2023.jpg", "csc208_2024.jpg"],
+        "get210": ["get210_2023.jpg", "get210_2024.jpg"],
+        "get299": ["get299_2023.jpg", "get299_2024.jpg"],
+        "gst211": ["gst211_2023.jpg", "gst211_2024.jpg"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "csc301": ["csc301_2023.jpg", "csc301_2024.jpg"],
+        "csc314": ["csc314_2023.jpg", "csc314_2024.jpg"],
+        "csc304": ["csc304_2023.jpg", "csc304_2024.jpg"],
+        "csc302": ["csc302_2023.jpg", "csc302_2024.jpg"],
+        "csc333": ["csc333_2023.jpg", "csc333_2024.jpg"],
+        "gst311": ["gst311_2023.jpg", "gst311_2024.jpg"],
+        "csc310": ["csc310_2023.jpg", "csc310_2024.jpg"],
+        "csc321": ["csc321_2023.jpg", "csc321_2024.jpg"],
+        "csc351": ["csc351_2023.jpg", "csc351_2024.jpg"]
+      },
+      "second": {
+        "csc305": ["csc305_2023.jpg", "csc305_2024.jpg"],
+        "csc355": ["csc355_2023.jpg", "csc355_2024.jpg"],
+        "csc315": ["csc315_2023.jpg", "csc315_2024.jpg"],
+        "csc316": ["csc316_2023.jpg", "csc316_2024.jpg"],
+        "csc332": ["csc332_2023.jpg", "csc332_2024.jpg"],
+        "csc352": ["csc352_2023.jpg", "csc352_2024.jpg"],
+        "csc399": ["csc399_2023.jpg", "csc399_2024.jpg"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "csc401": ["csc401_2023.jpg", "csc401_2024.jpg"],
+        "csc403": ["csc403_2023.jpg", "csc403_2024.jpg"],
+        "csc453": ["csc453_2023.jpg", "csc453_2024.jpg"],
+        "csc404": ["csc404_2023.jpg", "csc404_2024.jpg"],
+        "csc454": ["csc454_2023.jpg", "csc454_2024.jpg"],
+        "csc422": ["csc422_2023.jpg", "csc422_2024.jpg"],
+        "csc452": ["csc452_2023.jpg", "csc452_2024.jpg"],
+        "csc441": ["csc441_2023.jpg", "csc441_2024.jpg"],
+        "csc433": ["csc433_2023.jpg", "csc433_2024.jpg"],
+        "csc453": ["csc453_2023.jpg", "csc453_2024.jpg"]
+      },
+      "second": {
+        "csc423": ["csc423_2023.jpg", "csc423_2024.jpg"],
+        "csc453": ["csc453_2023.jpg", "csc453_2024.jpg"],
+        "csc441": ["csc441_2023.jpg", "csc441_2024.jpg"],
+        "csc432": ["csc432_2023.jpg", "csc432_2024.jpg"],
+        "csc452": ["csc452_2023.jpg", "csc452_2024.jpg"],
+        "get499": ["get499_2023.jpg", "get499_2024.jpg"]
+      }
+    }
+  }
+}
