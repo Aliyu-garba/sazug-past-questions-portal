@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAZUG Past Questions Portal | Portfolio Case Study</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a56d4;
+            --secondary: #7209b7;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 0.75rem;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            color: var(--gray);
+            font-size: 1.1rem;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        section {
+            padding: 5rem 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(67, 97, 238, 0.4);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background-color: rgba(67, 97, 238, 0.05);
+            transform: translateY(-3px);
+        }
+        
+        /* Header */
+        header {
+            padding: 4rem 0 2rem;
+            text-align: center;
+            background: linear-gradient(135deg, #f5f7ff 0%, #f0f2ff 100%);
+        }
+        
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray);
+            font-weight: 500;
+        }
+        
+        .meta-item i {
+            color: var(--primary);
+        }
+        
+        /* Overview */
+        .overview {
+            background-color: white;
+        }
+        
+        .overview-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        /* Features */
+        .features {
+            background-color: #f9fafc;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            width: 100%;
+            height: 180px;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            background-color: var(--light-gray);
+        }
+        
+        .feature-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover .feature-icon img {
+            transform: scale(1.05);
+        }
+        
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+        
+        /* Lightbox Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal.active {
+            display: flex;
+            opacity: 1;
+        }
+        
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            position: relative;
+            animation: modalFadeIn 0.3s ease;
+        }
+        
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .modal-img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            font-size: 2.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+            z-index: 1001;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.3);
+            color: #ff6b6b;
+            transform: scale(1.1);
+        }
+        
+        .modal-close i {
+            font-size: 2rem;
+        }
+        
+        /* Technologies */
+        .technologies {
+            background-color: #f9fafc;
+        }
+        
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .tech-badge {
+            background-color: white;
+            padding: 0.8rem 1.8rem;
+            border-radius: 50px;
+            font-weight: 600;
+            color: var(--primary);
+            box-shadow: var(--shadow);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: var(--transition);
+        }
+        
+        .tech-badge:hover {
+            transform: translateY(-5px);
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        /* CTA Section */
+        .cta {
+            text-align: center;
+            background: linear-gradient(135deg, #f5f7ff 0%, #f0f2ff 100%);
+            padding: 4rem 0;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            background-color: var(--dark);
+            color: white;
+        }
+        
+        .copyright {
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 1rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            section {
+                padding: 4rem 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.3rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            .project-meta {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
+            }
+            
+            .feature-icon {
+                height: 150px;
+            }
+            
+            .modal-close {
+                top: 10px;
+                right: 10px;
+                width: 50px;
+                height: 50px;
+            }
+            
+            .modal-close i {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Project Title -->
+    <header>
+        <div class="container">
+            <h1>SAZUG Past Questions Portal</h1>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>Completed: 2023</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Role:Frontend Developer</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-building"></i>
+                    <span>Client: Bauchi State University</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overview Section -->
+    <section class="overview">
+        <div class="container">
+            <div class="overview-content">
+                <h2>Project Overview</h2>
+                <p>SAZUG Past Questions Portal is a comprehensive digital learning system developed for Bauchi State University (BASUG) students. This platform provides an intuitive and efficient way for students to access past examination questions, fresher guides, tutorials, and an AI-powered chatbot for academic assistance.</p>
+                <p>The system features a modern, fully-responsive landing page, a complete student dashboard, and a fast search system to help students find study materials quickly. Designed with a focus on user experience, the platform improves academic performance by making study resources easily accessible and organized in one central location.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card" data-image="landing-page.jpg">
+                    <div class="feature-icon">
+                        <img src="landing-page.jpg" alt="Modern Responsive Landing Page" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    <h3>Modern Responsive Landing Page</h3>
+                    <p>Beautiful, fully-responsive landing page that works seamlessly across all devices and screen sizes.</p>
+                </div>
+                
+                <div class="feature-card" data-image="registration.jpg">
+                    <div class="feature-icon">
+                        <img src="registration.jpg" alt="Student Registration & Login System" onerror="this.src='https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w-800&q=80'">
+                    </div>
+                    <h3>Student Registration & Login System</h3>
+                    <p>Secure authentication system allowing students to create accounts and access personalized content.</p>
+                </div>
+                
+                <div class="feature-card" data-image="dashboard.jpg">
+                    <div class="feature-icon">
+                        <img src="dashboard.jpg" alt="Easy Navigation Dashboard" onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    <h3>Easy Navigation Dashboard</h3>
+                    <p>User-friendly dashboard that provides quick access to all platform features and personalized content.</p>
+                </div>
+                
+                <div class="feature-card" data-image="past-questions.jpg">
+                    <div class="feature-icon">
+                        <img src="past-questions.jpg" alt="Past Questions for All Levels" onerror="this.src='https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    <h3>Past Questions for All Levels</h3>
+                    <p>Comprehensive collection of past examination questions organized by course, level, and semester.</p>
+                </div>
+                
+                <div class="feature-card" data-image="freshers-guide.jpg">
+                    <div class="feature-icon">
+                        <img src="freshers-guide.jpg" alt="Freshers Orientation Guide" onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    <h3>Freshers Orientation Guide</h3>
+                    <p>Special section dedicated to helping new students navigate university life and academic requirements.</p>
+                </div>
+                
+                <div class="feature-card" data-image="tutorials.jpg">
+                    <div class="feature-icon">
+                        <img src="tutorials.jpg" alt="Tutorials Section" onerror="this.src='https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    <h3>Tutorials Section</h3>
+                    <p>Educational tutorials and study guides to help students understand difficult concepts and topics.</p>
+                </div>
+                
+                <div class="feature-card" data-image="chatbot.jpg">
+                    <div class="feature-icon">
+                        <img src="chatbot.jpg" alt="Smart AI Chatbot" onerror="this.src='https://images.unsplash.com/photo-1531746790731-6c087fecd65a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    <h3>Smart AI Chatbot</h3>
+                    <p>AI-powered chatbot that answers student questions, provides study tips, and assists with navigation.</p>
+                </div>
+                
+                <div class="feature-card" data-image="search.jpg">
+                    <div class="feature-icon">
+                        <img src="search.jpg" alt="Fast Search System" onerror="this.src='https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    <h3>Fast Search System</h3>
+                    <p>Advanced search functionality that helps students quickly find specific questions or study materials.</p>
+                </div>
+                
+                <div class="feature-card" data-image="student-tools.jpg">
+                    <div class="feature-icon">
+                        <img src="students-tools.jpg" alt="Student Tools Section" onerror="this.src='https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+                    </div>
+                    <h3>Student Tools Section</h3>
+                    <p>A dedicated section with various academic tools to assist students in their studies and university life.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Used -->
+    <section class="technologies">
+        <div class="container">
+            <h2>Technologies Used</h2>
+            <div class="tech-badges">
+                <div class="tech-badge">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="tech-badge">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-badge">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-badge">
+                    <i class="fab fa-bootstrap"></i>
+                    <span>Bootstrap</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Experience the Platform</h2>
+            <p>Explore the live version of SAZUG Past Questions Portal or check out the source code on GitHub.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary" id="liveDemoBtn">
+                    <i class="fas fa-external-link-alt"></i> Live Demo
+                </a>
+                <a href="#" class="btn btn-secondary" id="githubBtn">
+                    <i class="fab fa-github"></i> View Source Code
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>SAZUG Past Questions Portal - A Digital Learning Platform for Bauchi State University</p>
+            <div class="copyright">
+                &copy; 2023 Portfolio Project. Designed and developed with care.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div class="modal" id="imageModal">
+        <button class="modal-close" id="modalClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-content">
+            <img class="modal-img" id="modalImage" src="" alt="Feature Preview">
+        </div>
+    </div>
+
+    <script>
+        // Demo button functionality
+        document.getElementById('liveDemoBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('Live demo link will be added here. For now, this is a demonstration.');
+        });
+        
+        // GitHub button functionality
+        document.getElementById('githubBtn').addEventListener('click', function(e) {
+            e.preventDefault();
+            alert('GitHub repository link will be added here. This is optional.');
+        });
+        
+        // Lightbox functionality
+        const modal = document.getElementById('imageModal');
+        const modalImage = document.getElementById('modalImage');
+        const modalClose = document.getElementById('modalClose');
+        const featureCards = document.querySelectorAll('.feature-card');
+        
+        // Store the current scroll position before opening modal
+        let scrollPosition = 0;
+        
+        // Open modal when feature card is clicked
+        featureCards.forEach(card => {
+            card.addEventListener('click', function() {
+                const imageName = this.getAttribute('data-image');
+                const imgElement = this.querySelector('img');
+                const currentSrc = imgElement.src;
+                
+                // Store current scroll position
+                scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+                
+                // Try to use the local image first, fallback to current src
+                modalImage.src = imageName;
+                modalImage.onerror = function() {
+                    this.src = currentSrc;
+                };
+                
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+                document.body.style.position = 'fixed';
+                document.body.style.top = `-${scrollPosition}px`;
+                document.body.style.width = '100%';
+            });
+        });
+        
+        // Close modal when close button is clicked
+        modalClose.addEventListener('click', function() {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            document.body.style.position = '';
+            document.body.style.top = '';
+            document.body.style.width = '';
+            
+            // Restore scroll position
+            window.scrollTo(0, scrollPosition);
+        });
+        
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                document.body.style.position = '';
+                document.body.style.top = '';
+                document.body.style.width = '';
+                
+                // Restore scroll position
+                window.scrollTo(0, scrollPosition);
+            }
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                document.body.style.position = '';
+                document.body.style.top = '';
+                document.body.style.width = '';
+                
+                // Restore scroll position
+                window.scrollTo(0, scrollPosition);
+            }
+        });
+        
+        // Add hover effects to feature cards
+        document.querySelectorAll('.feature-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+</body>
+</html>
