@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1ER82HJ6L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D1ER82HJ6L');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | SAZUG Past Questions Portal</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Base Styles */
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --primary-light: #93c5fd;
+      --secondary: #4f46e5;
+      --accent: #10b981;
+      --light: #f9fafb;
+      --dark: #1f2937;
+      --gray: #6b7280;
+      --light-gray: #e5e7eb;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --transition: all 0.3s ease;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: #f8fafc;
+      color: var(--dark);
+      line-height: 1.6;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+    
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      color: white;
+      padding: 1.2rem 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .logo {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+    
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    
+    .nav-links a:hover {
+      color: var(--primary-light);
+    }
+    
+    /* Hero Section */
+    .hero {
+      padding: 4rem 0 2rem;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.05) 0%, rgba(30, 64, 175, 0.05) 100%);
+    }
+    
+    .hero h1 {
+      font-size: 2.8rem;
+      color: var(--primary-dark);
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+    
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--gray);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+    
+    /* Main Content */
+    .contact-content {
+      padding: 4rem 0;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+    }
+    
+    @media (max-width: 900px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    /* Contact Form */
+    .form-container {
+      background: white;
+      padding: 2.5rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+    
+    .form-header {
+      margin-bottom: 2rem;
+    }
+    
+    .form-header h2 {
+      font-size: 1.8rem;
+      color: var(--primary-dark);
+      margin-bottom: 0.5rem;
+    }
+    
+    .form-header p {
+      color: var(--gray);
+    }
+    
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    
+    .full-width {
+      grid-column: span 2;
+    }
+    
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .form-label {
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .form-control {
+      padding: 1rem;
+      border: 1px solid var(--light-gray);
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+    
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+    
+    textarea.form-control {
+      min-height: 180px;
+      resize: vertical;
+    }
+    
+    .submit-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+    }
+    
+    .submit-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(37, 99, 235, 0.25);
+    }
+    
+    /* Contact Info */
+    .info-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    .info-card {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+    }
+    
+    .info-card h3 {
+      font-size: 1.5rem;
+      color: var(--primary-dark);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .contact-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    
+    .contact-method {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .method-icon {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: rgba(37, 99, 235, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary);
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+    
+    .method-details h4 {
+      font-size: 1.1rem;
+      margin-bottom: 0.25rem;
+      color: var(--dark);
+    }
+    
+    .method-details p, .method-details a {
+      color: var(--gray);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .method-details a:hover {
+      color: var(--primary);
+    }
+    
+    /* Quick Actions */
+    .quick-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .action-btn {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.2rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .action-btn i {
+      font-size: 1.5rem;
+    }
+    
+    .action-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    }
+    
+    .whatsapp-btn {
+      background: #25d366;
+    }
+    
+    .email-btn {
+      background: var(--primary);
+    }
+    
+    /* Map Section */
+    .map-section {
+      margin-top: 4rem;
+    }
+    
+    .map-section h2 {
+      font-size: 1.8rem;
+      color: var(--primary-dark);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    
+    .map-container {
+      height: 400px;
+      background: var(--light);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--gray);
+      position: relative;
+    }
+    
+    .map-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.9);
+      z-index: 2;
+    }
+    
+    .map-overlay i {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+    
+    .map-overlay p {
+      font-size: 1.1rem;
+      text-align: center;
+      max-width: 300px;
+    }
+    
+    /* FAQ Section */
+    .faq-section {
+      margin-top: 5rem;
+    }
+    
+    .faq-header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+    
+    .faq-header h2 {
+      font-size: 2rem;
+      color: var(--primary-dark);
+      margin-bottom: 1rem;
+    }
+    
+    .faq-header p {
+      color: var(--gray);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .faq-item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+    }
+    
+    .faq-item h3 {
+      font-size: 1.2rem;
+      color: var(--primary-dark);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .faq-item p {
+      color: var(--gray);
+      line-height: 1.7;
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--dark);
+      color: white;
+      padding: 3rem 0 2rem;
+      margin-top: 5rem;
+    }
+    
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .footer-column h3 {
+      font-size: 1.2rem;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+    
+    .footer-links a {
+      color: #d1d5db;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .footer-links a:hover {
+      color: white;
+    }
+    
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+    
+    .social-link:hover {
+      background: var(--primary);
+      transform: translateY(-3px);
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: #9ca3af;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .nav-links {
+        gap: 1.5rem;
+      }
+      
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+      
+      .contact-form {
+        grid-template-columns: 1fr;
+      }
+      
+      .full-width {
+        grid-column: span 1;
+      }
+      
+      .action-btn {
+        padding: 1rem;
+      }
+    }
+    
+    /* Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .animated {
+      opacity: 0;
+      animation: fadeIn 0.6s ease-out forwards;
+    }
+    
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.6s; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container nav-container">
+      <div class="logo-container">
+        <img src="logo.jpg" alt="SAZUG Logo" class="logo">
+        <div class="brand">SAZUG Past Questions</div>
+      </div>
+      <nav class="nav-links">
+        <a href="home.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1 class="animated">Get in Touch With Us</h1>
+      <p class="animated delay-1">We're here to help you with any questions about our past questions portal. Reach out to us through any channel that's convenient for you.</p>
+    </div>
+  </section>
+
+  <!-- Contact Content -->
+  <section class="contact-content container">
+    <div class="contact-grid">
+      <!-- Contact Form -->
+      <div class="form-container animated delay-1">
+        <div class="form-header">
+          <h2><i class="fas fa-envelope-open-text"></i> Send us a Message</h2>
+          <p>We typically respond within 24 hours</p>
+        </div>
+        
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name" class="form-label"><i class="fas fa-user"></i> Full Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+          </div>
+          
+          <div class="form-group">
+            <label for="email" class="form-label"><i class="fas fa-envelope"></i> Email Address</label>
+            <input type="email" id="email" class="form-control" placeholder="Enter your email address" required>
+          </div>
+          
+          <div class="form-group full-width">
+            <label for="subject" class="form-label"><i class="fas fa-tag"></i> Subject</label>
+            <input type="text" id="subject" class="form-control" placeholder="What is this regarding?" required>
+          </div>
+          
+          <div class="form-group full-width">
+            <label for="message" class="form-label"><i class="fas fa-comment"></i> Message</label>
+            <textarea id="message" class="form-control" placeholder="Please describe your inquiry in detail..." required></textarea>
+          </div>
+          
+          <div class="form-group full-width">
+            <button type="submit" class="submit-btn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+      
+      <!-- Contact Information -->
+      <div class="info-container animated delay-2">
+        <div class="info-card">
+          <h3><i class="fas fa-info-circle"></i> Contact Information</h3>
+          
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="method-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="method-details">
+                <h4>Phone Numbers</h4>
+                <p><a href="tel:08133376629">08133376629</a></p>
+                <p><a href="tel:08032469896">08032469896</a></p>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="method-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="method-details">
+                <h4>Email Address</h4>
+                <p><a href="mailto:basugpastquestion@gmail.com">support@sazug.com</a></p>
+              </div>
+            </div>
+            
+            <div class="contact-method">
+              <div class="method-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="method-details">
+                <h4>Response Time</h4>
+                <p>Within 24 hours</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="info-card">
+          <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+          
+          <div class="quick-actions">
+            <a href="https://wa.me/08133376629" target="_blank" class="action-btn whatsapp-btn">
+              <i class="fab fa-whatsapp"></i>
+              <span>Chat on WhatsApp</span>
+            </a>
+            
+            <a href="mailto:basugpastquestion@gmail.com" class="action-btn email-btn">
+              <i class="fas fa-envelope"></i>
+              <span>Send an Email</span>
+            </a>
+            
+            <a href="https://youtube.com/@basugpastquestionshub?si=pWC-nto6dFuZsdnT" target="_blank" class="action-btn" style="background: #ff0000;">
+              <i class="fab fa-youtube"></i>
+              <span>YouTube Channel</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Map Section -->
+    <div class="map-section animated delay-3">
+      <h2><i class="fas fa-map-marker-alt"></i> Our Location</h2>
+      <div class="map-container">
+        <div class="map-overlay">
+          <i class="fas fa-map-marked-alt"></i>
+          <p>Sa’adu Zungur University, Bauchi</p>
+          <p>Bauchi State, Nigeria</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- FAQ Section -->
+    <div class="faq-section animated delay-3">
+      <div class="faq-header">
+        <h2>Frequently Asked Questions</h2>
+        <p>Quick answers to common questions we receive</p>
+      </div>
+      
+      <div class="faq-grid">
+        <div class="faq-item">
+          <h3><i class="fas fa-question-circle"></i> How quickly do you respond?</h3>
+          <p>We typically respond to all inquiries within 24 hours. For urgent matters, please use our WhatsApp channel.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3><i class="fas fa-question-circle"></i> Can I contribute past questions?</h3>
+          <p>Yes! We welcome contributions from students. Please contact us via email with the materials you'd like to share.</p>
+        </div>
+        
+        <div class="faq-item">
+          <h3><i class="fas fa-question-circle"></i> Is there a cost for accessing materials?</h3>
+          <p>No, our portal is completely free for all SAZUG students as part of our commitment to supporting education.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>SAZUG Past Questions</h3>
+          <p>Providing quality past questions to help students excel in their examinations.</p>
+          <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h3>Contact Info</h3>
+          <ul class="footer-links">
+            <li><i class="fas fa-phone"></i> 08133376629</li>
+            <li><i class="fas fa-envelope"></i> support@sazug.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> Sa’adu Zungur University, Bauchi</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <p>&copy; 2025 SAZUG Past Questions Portal. All Rights Reserved.</p>
+        <p>Powered by AGI – Aliyu Garba Innovations</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Form submission handling
+    document.querySelector('.contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      
+      // Simple validation
+      if (name && email && subject && message) {
+        // In a real application, you would send this data to a server
+        alert('Thank you for your message! We will get back to you soon.');
+        this.reset();
+      } else {
+        alert('Please fill in all required fields.');
+      }
+    });
+
+    // Add animations when scrolling
+    document.addEventListener('DOMContentLoaded', function() {
+      const animatedElements = document.querySelectorAll('.animated');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.visibility = 'visible';
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      animatedElements.forEach(el => {
+        el.style.visibility = 'hidden';
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>

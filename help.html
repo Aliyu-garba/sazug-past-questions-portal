@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAZUG Chat Assistant - Help</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #1f2937;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      flex: 1;
+    }
+    
+    .header {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #4f46e5;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    
+    .back-btn:hover {
+      background: #4338ca;
+      transform: translateY(-2px);
+    }
+    
+    .help-content {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+    }
+    
+    .help-category {
+      margin-bottom: 3rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    
+    .help-category:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+    
+    .category-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #4f46e5;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .category-image {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #e2e8f0;
+    }
+    
+    .category-questions {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+    
+    .help-question {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 1rem;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+    
+    .help-question:hover {
+      background: #e0e7ff;
+      border-color: #4f46e5;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.15);
+    }
+    
+    /* Footer Styles */
+    .footer {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    
+    .footer-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .copyright {
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+    
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+      
+      .header, .help-content, .footer {
+        padding: 1.5rem;
+      }
+      
+      .category-questions {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="text-3xl font-bold text-gray-800">SAZUG Chat Assistant - Help</h1>
+      <p class="text-gray-600 mt-2">Browse all questions you can ask the chatbot</p>
+    </div>
+    
+    <div class="help-content">
+      
+      <!-- About the Portal -->
+      <div class="help-category">
+        <div class="category-title">
+          <img src="logo.jpg" alt="Portal Logo" class="category-image">
+          About the Portal
+        </div>
+        <div class="category-questions">
+          <div class="help-question">Is the portal free to use?</div>
+          <div class="help-question">Can I download the past questions?</div>
+          <div class="help-question">Do I need to sign up or log in?</div>
+          <div class="help-question">When was it created?</div>
+          <div class="help-question">How can I contact the team?</div>
+          <div class="help-question">How can I report a problem or error on the site?</div>
+        </div>
+      </div>
+      
+      <!-- Using the Portal -->
+      <div class="help-category">
+        <div class="category-title">
+          <i class="fas fa-laptop" style="font-size: 1.5rem; color: #4f46e5;"></i>
+          Using the Portal
+        </div>
+        <div class="category-questions">
+          <div class="help-question">How do I use the past questions portal?</div>
+          <div class="help-question">How to access past questions?</div>
+          <div class="help-question">How do I find past questions for my course?</div>
+          <div class="help-question">Can I search by course code or title?</div>
+          <div class="help-question">Can I get past questions by year?</div>
+          <div class="help-question">How do I view or download a past question?</div>
+          <div class="help-question">Are solutions or answers included?</div>
+          <div class="help-question">Can I print the past questions?</div>
+          <div class="help-question">Can I use this portal on my phone?</div>
+          <div class="help-question">What if my course is not listed?</div>
+        </div>
+      </div>
+      
+      <!-- Technical Help -->
+      <div class="help-category">
+        <div class="category-title">
+          <i class="fas fa-tools" style="font-size: 1.5rem; color: #4f46e5;"></i>
+          Technical Help
+        </div>
+        <div class="category-questions">
+          <div class="help-question">The page is not loading what should I do?</div>
+          <div class="help-question">The download button is not working</div>
+          <div class="help-question">I can't find my department or course</div>
+          <div class="help-question">How can I reset my password?</div>
+          <div class="help-question">How can I update my account?</div>
+        </div>
+      </div>
+      
+      <!-- Study Help -->
+      <div class="help-category">
+        <div class="category-title">
+          <i class="fas fa-graduation-cap" style="font-size: 1.5rem; color: #4f46e5;"></i>
+          Study Help
+        </div>
+        <div class="category-questions">
+          <div class="help-question">Do you have tutorials for my course?</div>
+          <div class="help-question">How can I prepare better for exams?</div>
+          <div class="help-question">Do you have guides for 100 level courses?</div>
+          <div class="help-question">Do you have guides for 200 level courses?</div>
+          <div class="help-question">Do you have guides for 300 level courses?</div>
+          <div class="help-question">Can I request new study materials?</div>
+          <div class="help-question">How can I improve my study habits?</div>
+        </div>
+      </div>
+      
+      <!-- General Questions -->
+      <div class="help-category">
+        <div class="category-title">
+          <i class="fas fa-question-circle" style="font-size: 1.5rem; color: #4f46e5;"></i>
+          General Questions
+        </div>
+        <div class="category-questions">
+          <div class="help-question">What is the best way to study past questions?</div>
+          <div class="help-question">Can I share these past questions with friends?</div>
+          <div class="help-question">Is this portal only for university students?</div>
+          <div class="help-question">Which universities are supported?</div>
+          <div class="help-question">How can I contribute questions to the portal?</div>
+          <div class="help-question">Is SAZUG connected to any school officially?</div>
+          <div class="help-question">Who manages the site?</div>
+        </div>
+      </div>
+      
+      <!-- University Information -->
+      <div class="help-category">
+        <div class="category-title">
+          <img src="gate.jpg" alt="University Gate" class="category-image">
+          University Information
+        </div>
+        <div class="category-questions">
+          <div class="help-question">School fees</div>
+          <div class="help-question">Accommodation</div>
+          <div class="help-question">Registration process</div>
+          <div class="help-question">Academic resources</div>
+          <div class="help-question">Campus navigation</div>
+          <div class="help-question">Dress code</div>
+          <div class="help-question">ICT and biometric</div>
+          <div class="help-question">Support and communities</div>
+          <div class="help-question">Opportunities</div>
+        </div>
+      </div>
+      
+      <!-- Study Materials -->
+      <div class="help-category">
+        <div class="category-title">
+          <i class="fas fa-file-pdf" style="font-size: 1.5rem; color: #4f46e5;"></i>
+          Study Materials
+        </div>
+        <div class="category-questions">
+          <div class="help-question">Math101</div>
+          <div class="help-question">Phy101</div>
+          <div class="help-question">Chem101</div>
+          <div class="help-question">GST111</div>
+          <div class="help-question">Phy107</div>
+          <div class="help-question">Chem107</div>
+          <div class="help-question">Bio101</div>
+          <div class="help-question">Bio107</div>
+          <div class="help-question">Math102</div>
+          <div class="help-question">Phy102</div>
+          <div class="help-question">Chem102</div>
+          <div class="help-question">GST112</div>
+          <div class="help-question">Phy108</div>
+          <div class="help-question">Chem108</div>
+          <div class="help-question">Bio102</div>
+          <div class="help-question">Bio108</div>
+        </div>
+      </div>
+      
+      <!-- About AGI -->
+      <div class="help-category">
+        <div class="category-title">
+          <img src="AGI.jpg" alt="AGI Logo" class="category-image">
+          About AGI
+        </div>
+        <div class="category-questions">
+          <div class="help-question">What is AGI?</div>
+          <div class="help-question">Who is the founder of AGI?</div>
+          <div class="help-question">What does AGI stand for?</div>
+          <div class="help-question">What is the vision of AGI?</div>
+          <div class="help-question">What other projects has AGI created?</div>
+          <div class="help-question">How can I follow or support AGI?</div>
+        </div>
+      </div>
+      
+      <!-- Motivational -->
+      <div class="help-category">
+        <div class="category-title">
+          <i class="fas fa-lightbulb" style="font-size: 1.5rem; color: #4f46e5;"></i>
+          Motivational
+        </div>
+        <div class="category-questions">
+          <div class="help-question">What inspired you to create this portal?</div>
+          <div class="help-question">How can I become a tech innovator like you?</div>
+          <div class="help-question">What advice do you have for computer science students?</div>
+          <div class="help-question">How can I learn web development or tech skills like you?</div>
+        </div>
+      </div>
+      
+      <!-- Back to Chat Button -->
+      <div class="mt-8 text-center">
+        <a href="chatbot.html" class="back-btn">
+          <i class="fas fa-arrow-left"></i> Back to Chat
+        </a>
+      </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="footer">
+      <div class="footer-content">
+        <div class="copyright">
+          © 2025 SaZUG Past Questions Portal. All Rights Reserved. | Powered by AGI – Aliyu Garba Innovations.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Make questions clickable to copy to clipboard
+    document.querySelectorAll('.help-question').forEach(question => {
+      question.addEventListener('click', function() {
+        const text = this.textContent;
+        navigator.clipboard.writeText(text).then(() => {
+          // Show copied feedback
+          const originalText = this.textContent;
+          this.textContent = 'Copied!';
+          this.style.background = '#10b981';
+          this.style.color = 'white';
+          
+          setTimeout(() => {
+            this.textContent = originalText;
+            this.style.background = '';
+            this.style.color = '';
+          }, 1500);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

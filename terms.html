@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1ER82HJ6L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D1ER82HJ6L');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use | SAZUG Past Questions Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.8s ease-in-out forwards;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .section-icon {
+      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    }
+    
+    .terms-nav {
+      position: sticky;
+      top: 100px;
+    }
+    
+    /* Mobile menu animation */
+    .mobile-menu {
+      transition: all 0.3s ease-in-out;
+      max-height: 0;
+      overflow: hidden;
+    }
+    
+    .mobile-menu.open {
+      max-height: 300px;
+    }
+  </style>
+</head>
+<body class="gradient-bg min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-10">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <!-- Logo fixed here -->
+        <img src="logo.jpg" alt="SAZUG Logo" class="h-10 w-10 rounded-lg object-cover">
+        <h1 class="text-xl font-semibold text-gray-800">SAZUG Past Questions</h1>
+      </div>
+      
+      <!-- Desktop Navigation Menu -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="home.html" class="text-gray-600 hover:text-blue-600 font-medium">Past Questions</a>
+        <a href="about.html" class="text-gray-600 hover:text-blue-600 font-medium">About</a>
+        <a href="contact.html" class="text-gray-600 hover:text-blue-600 font-medium">Contact</a>
+        <a href="privacy.html" class="text-gray-600 hover:text-blue-600 font-medium">Privacy Policy</a>
+        <a href="terms.html" class="text-blue-600 font-medium">Terms of Use</a>
+      </nav>
+      
+      <!-- Mobile menu button -->
+      <button class="md:hidden text-gray-600 focus:outline-none" id="mobile-menu-button">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile Navigation Menu (initially hidden) -->
+    <div class="mobile-menu bg-white md:hidden" id="mobile-menu">
+      <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+        <a href="home.html" class="text-gray-600 hover:text-blue-600 font-medium py-2">Past Questions</a>
+        <a href="about.html" class="text-gray-600 hover:text-blue-600 font-medium py-2">About</a>
+        <a href="contact.html" class="text-gray-600 hover:text-blue-600 font-medium py-2">Contact</a>
+        <a href="privacy.html" class="text-gray-600 hover:text-blue-600 font-medium py-2">Privacy Policy</a>
+        <a href="terms.html" class="text-blue-600 font-medium py-2">Terms of Use</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow container mx-auto px-4 py-8 max-w-6xl">
+    <div class="text-center mb-12 fade-in">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4">Terms of Use</h1>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">Last updated: january 10, 2026</p>
+      <div class="w-24 h-1 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+    </div>
+
+    <div class="flex flex-col lg:flex-row gap-8">
+      <!-- Navigation Sidebar -->
+      <div class="lg:w-1/4">
+        <div class="terms-nav bg-white rounded-xl shadow-md p-6 hidden lg:block">
+          <h3 class="font-semibold text-gray-800 mb-4 text-lg">Contents</h3>
+          <ul class="space-y-3">
+            <li><a href="#acceptance" class="text-blue-600 hover:text-blue-800 text-sm">1. Acceptance of Terms</a></li>
+            <li><a href="#services" class="text-blue-600 hover:text-blue-800 text-sm">2. Services Description</a></li>
+            <li><a href="#account" class="text-blue-600 hover:text-blue-800 text-sm">3. Account Creation & Security</a></li>
+            <li><a href="#user-responsibilities" class="text-blue-600 hover:text-blue-800 text-sm">4. User Responsibilities</a></li>
+            <li><a href="#intellectual-property" class="text-blue-600 hover:text-blue-800 text-sm">5. Intellectual Property</a></li>
+            <li><a href="#liability" class="text-blue-600 hover:text-blue-800 text-sm">6. Limitations of Liability</a></li>
+            <li><a href="#termination" class="text-blue-600 hover:text-blue-800 text-sm">7. Termination</a></li>
+            <li><a href="#governing-law" class="text-blue-600 hover:text-blue-800 text-sm">8. Governing Law</a></li>
+            <li><a href="#changes" class="text-blue-600 hover:text-blue-800 text-sm">9. Changes to Terms</a></li>
+            <li><a href="#contact" class="text-blue-600 hover:text-blue-800 text-sm">10. Contact Information</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Terms Content -->
+      <div class="lg:w-3/4">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden fade-in">
+          <div class="p-1 bg-gradient-to-r from-blue-600 to-indigo-700"></div>
+          
+          <div class="p-8">
+            <!-- Acceptance of Terms -->
+            <section id="acceptance" class="mb-10 scroll-mt-20">
+              <div class="flex items-center mb-6">
+                <div class="section-icon w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <i class="fas fa-file-signature text-white text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold text-gray-800">1. Acceptance of Terms</h2>
+              </div>
+              
+              <p class="text-gray-700 mb-4">
+                Welcome to the <span class="font-semibold text-blue-600">SAZUG Past Questions Portal</span>. By accessing or using our website, you agree to be bound by these Terms of Use and our Privacy Policy. If you do not agree with any part of these terms, you must not use our services.
+              </p>
+              
+              <p class="text-gray-700">
+                These terms constitute a legally binding agreement between you and SAZUG Past Questions Portal regarding your use of the platform. We reserve the right to modify these terms at any time, and such modifications will be effective immediately upon posting.
+              </p>
+            </section>
+
+            <!-- Services Description -->
+            <section id="services" class="mb-10 scroll-mt-20">
+              <div class="flex items-center mb-6">
+                <div class="section-icon w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <i class="fas fa-book-open text-white text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold text-gray-800">2. Services Description</h2>
+              </div>
+              
+              <p class="text-gray-700 mb-4">
+                SAZUG Past Questions Portal provides access to educational resources, specifically past examination questions from Sa'adu Zungur University (SAZUG). Our services are designed to assist students in their academic preparation.
+              </p>
+              
+              <p class="text-gray-700">
+                We strive to provide accurate and up-to-date materials, but we do not guarantee the completeness or accuracy of all content. The platform is provided on an "as-is" basis for educational purposes only.
+              </p>
+            </section>
+
+            <!-- Account Creation & Security -->
+            <section id="account" class="mb-10 scroll-mt-20">
+              <div class="flex items-center mb-6">
+                <div class="section-icon w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <i class="fas fa-user-lock text-white text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold text-gray-800">3. Account Creation & Security</h2>
+              </div>
+              
+              <p class="text-gray-700 mb-4">
+                In the future, certain features of our platform may require you to create an account by providing your full name, email address, and a secure password.
+                Currently, the SAZUG Past Questions Portal does not store user accounts or passwords on external servers. You are responsible for:</p>
+              
+              <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                <li>Maintaining the confidentiality of your account credentials</li>
+                <li>All activities that occur under your account</li>
+                <li>Providing accurate and complete information during registration</li>
+                <li>Promptly updating your information if it changes</li>
+              </ul>
+              
+              <p class="text-gray-700">
+                You must notify us immediately of any unauthorized use of your account or any other security breach. We reserve the right to disable any user account at our sole discretion if we believe there has been any violation of these terms.
+              </p>
+            </section>
+
+            <!-- User Responsibilities -->
+            <section id="user-responsibilities" class="mb-10 scroll-mt-20">
+              <div class="flex items-center mb-6">
+                <div class="section-icon w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <i class="fas fa-tasks text-white text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold text-gray-800">4. User Responsibilities</h2>
+              </div>
+              
+              <p class="text-gray-700 mb-4">
+                As a user of our platform, you agree to:
+              </p>
+              
+              <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                <li>Use the platform only for lawful purposes and in accordance with these terms</li>
+                <li>Not attempt to gain unauthorized access to any part of the platform</li>
+                <li>Not engage in any activity that disrupts or interferes with our services</li>
+                <li>Not reproduce, duplicate, copy, or resell any part of our platform without permission</li>
+                <li>Not use the platform to distribute any unsolicited promotional or commercial content</li>
+              </ul>
+              
+              <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-4">
+                <div class="flex">
+                  <div class="flex-shrink-0">
+                    <i class="fas fa-exclamation-circle text-yellow-400"></i>
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-sm text-yellow-700">
+                      <strong>Prohibited:</strong> Any attempt to hack, introduce malicious software, spam other users, or interfere with the normal operation of the portal is strictly forbidden and may result in immediate account termination.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Intellectual Property -->
+            <section id="intellectual-property" class="mb-10 scroll-mt-20">
+              <div class="flex items-center mb-6">
+                <div class="section-icon w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <i class="fas fa-copyright text-white text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold text-gray-800">5. Intellectual Property</h2>
+              </div>
+              
+              <p class="text-gray-700 mb-4">
+                The SAZUG Past Questions Portal and its original content, features, and functionality are owned by AGI – Aliyu Garba Innovations and are protected by international copyright, trademark, and other intellectual property laws.
+              </p>
+              
+              <p class="text-gray-700 mb-4">
+                All past questions, study materials, and resources provided on this portal are intended for personal educational use only. You may not:
+              </p>
+              
+              <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                <li>Reproduce, distribute, or sell these materials without explicit written permission</li>
+                <li>Share content on social media or third-party platforms without authorization</li>
+                <li>Modify, create derivative works, or exploit any content for commercial purposes</li>
+              </ul>
+              
+              <p class="text-gray-700">
+                The SAZUG name and logo are trademarks of Sa'adu Zungur University. All other trademarks mentioned on the platform are the property of their respective owners.
+              </p>
+            </section>
+
+            <!-- Limitations of Liability -->
+            <section id="liability" class="mb-10 scroll-mt-20">
+              <div class="flex items-center mb-6">
+                <div class="section-icon w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <i class="fas fa-balance-scale text-white text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold text-gray-800">6. Limitations of Liability</h2>
+              </div>
+              
+              <p class="text-gray-700 mb-4">
+                To the fullest extent permitted by law, SAZUG Past Questions Portal and its affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from:
+              </p>
+              
+              <ul class="list-disc pl-5 text-gray-700 space-y-2 mb-4">
+                <li>Your access to or use of, or inability to access or use, the platform</li>
+                <li>Any conduct or content of any third party on the platform</li>
+                <li>Any unauthorized access to or use of our servers and/or any personal information stored therein</li>
+                <li>Any interruption or cessation of transmission to or from our platform</li>
+                <li>Any bugs, viruses, or similar that may be transmitted to or through our platform</li>
+              </ul>
+              
+              <div class="bg-blue-50 border-l-4 border-blue-400 p-4">
+                <div class="flex">
+                  <div class="flex-shrink-0">
+                    <i class="fas fa-info-circle text-blue-400"></i>
+                  </div>
+                  <div class="ml-3">
+                    <p class="text-sm text-blue-700">
+                      While we strive to provide accurate and up-to-date information, the platform is provided "as is" without any warranties of completeness, accuracy, or timeliness.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Termination -->
+            <section id="termination" class="mb-10 scroll-mt-20">
+              <div class="flex items-center mb-6">
+                <div class="section-icon w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <i class="fas fa-ban text-white text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold text-gray-800">7. Termination</h2>
+              </div>
+              
+              <p class="text-gray-700 mb-4">
+                We may terminate or suspend your account and access to our services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach these Terms of Use.
+              </p>
+              
+              <p class="text-gray-700">
+                Upon termination, your right to use the platform will immediately cease. If you wish to terminate your account, you may simply discontinue using the platform or contact us to request account deletion.
+              </p>
+            </section>
+
+            <!-- Governing Law -->
+            <section id="governing-law" class="mb-10 scroll-mt-20">
+              <div class="flex items-center mb-6">
+                <div class="section-icon w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <i class="fas fa-gavel text-white text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold text-gray-800">8. Governing Law</h2>
+              </div>
+              
+              <p class="text-gray-700">
+                These Terms shall be governed and construed in accordance with the laws of Nigeria, without regard to its conflict of law provisions. Any disputes arising under or in connection with these terms shall be subject to the exclusive jurisdiction of the courts located in Bauchi State, Nigeria.
+              </p>
+            </section>
+
+            <!-- Changes to Terms -->
+            <section id="changes" class="mb-10 scroll-mt-20">
+              <div class="flex items-center mb-6">
+                <div class="section-icon w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <i class="fas fa-sync-alt text-white text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold text-gray-800">9. Changes to Terms</h2>
+              </div>
+              
+              <p class="text-gray-700 mb-4">
+                We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect.
+              </p>
+              
+              <p class="text-gray-700">
+                What constitutes a material change will be determined at our sole discretion. By continuing to access or use our platform after any revisions become effective, you agree to be bound by the revised terms.
+              </p>
+            </section>
+
+            <!-- Contact Information -->
+            <section id="contact" class="scroll-mt-20">
+              <div class="flex items-center mb-6">
+                <div class="section-icon w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+                  <i class="fas fa-envelope text-white text-xl"></i>
+                </div>
+                <h2 class="text-2xl font-semibold text-gray-800">10. Contact Information</h2>
+              </div>
+              
+              <p class="text-gray-700 mb-6">
+                For any questions or concerns regarding these Terms of Use, please contact us at:
+              </p>
+              
+              <div class="bg-gray-50 p-6 rounded-lg">
+                <div class="flex flex-col md:flex-row md:space-x-8">
+                  <div class="flex-1 mb-6 md:mb-0">
+                    <h3 class="font-semibold text-gray-800 mb-4">Contact Details</h3>
+                    
+                    <div class="space-y-4">
+                      <div class="flex items-start">
+                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                          <i class="fas fa-envelope text-blue-600"></i>
+                        </div>
+                        <div>
+                          <p class="text-gray-700 font-medium">Email</p>
+                          <a href="mailto:basugpastquestion@gmail.com" class="text-blue-600 hover:underline">basugpastquestion@gmail.com</a>
+                        </div>
+                      </div>
+                      
+                      <div class="flex items-start">
+                        <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                          <i class="fas fa-phone text-blue-600"></i>
+                        </div>
+                        <div>
+                          <p class="text-gray-700 font-medium">Phone</p>
+                          <a href="tel:08133376629" class="text-blue-600 hover:underline">08133376629</a><br>
+                          <a href="tel:08032469896" class="text-blue-600 hover:underline">08032469896</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="flex-1">
+                    <h3 class="font-semibold text-gray-800 mb-4">Response Time</h3>
+                    <p class="text-gray-700">We strive to respond to all inquiries within <span class="font-semibold">24-48 hours</span> during business days.</p>
+                    
+                    <div class="mt-4 flex items-center bg-blue-50 p-3 rounded-lg">
+                      <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-2">
+                        <i class="fas fa-info text-blue-600 text-xs"></i>
+                      </div>
+                      <p class="text-blue-700 text-sm">For legal notices, please use email with "Legal Notice" in the subject line.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <!-- AGI Company Info Section -->
+        <div class="bg-white rounded-xl shadow-lg p-8 mt-8 fade-in">
+          <div class="text-center mb-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">About AGI – Aliyu Garba Innovations</h2>
+            <div class="w-16 h-1 bg-blue-600 mx-auto rounded-full"></div>
+          </div>
+          
+          <p class="text-gray-700 mb-6 text-center">
+            <strong>AGI</strong> is a globally-focused technology and innovation company led by <strong>Aliyu Garba</strong>. 
+            We specialize in building intelligent digital solutions, cutting-edge software, and web applications that transform 
+            businesses and enhance educational platforms like this portal.
+          </p>
+          
+          <p class="text-gray-700 mb-8 text-center">
+            Our mission is to leverage technology to create real impact, delivering secure, innovative, and user-friendly 
+            solutions for students, educators, and organizations worldwide.
+          </p>
+          
+          <div class="text-center">
+            <a href="company.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-all">
+              Visit AGI Company
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="mb-2">© 2025 SaZUG Past Questions Portal. All Rights Reserved.</p>
+      <p class="text-gray-400">Powered by AGI – Aliyu Garba Innovations Company</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu functionality
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuButton.addEventListener('click', function() {
+      mobileMenu.classList.toggle('open');
+      
+      // Change icon based on menu state
+      const icon = mobileMenuButton.querySelector('i');
+      if (mobileMenu.classList.contains('open')) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      } else {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      }
+    });
+    
+    // Simple fade-in animation for elements
+    document.addEventListener('DOMContentLoaded', function() {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      
+      fadeElements.forEach(element => {
+        element.style.opacity = 0;
+      });
+      
+      setTimeout(() => {
+        fadeElements.forEach((element, index) => {
+          setTimeout(() => {
+            element.style.opacity = 1;
+          }, index * 200);
+        });
+      }, 300);
+      
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href');
+          if (targetId === '#') return;
+          
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            window.scrollTo({
+              top: targetElement.offsetTop - 100,
+              behavior: 'smooth'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

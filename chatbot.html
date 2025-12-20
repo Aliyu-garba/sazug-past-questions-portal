@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAZUG Chat Assistant</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    :root {
+      --primary: #4f46e5;
+      --primary-dark: #4338ca;
+      --accent: #7c3aed;
+      --accent-dark: #6d28d9;
+      --bg-light: #f9fafb;
+      --text-dark: #1f2937;
+      --text-light: #6b7280;
+      --user-msg: #4f46e5;
+      --bot-msg: #f3f4f6;
+    }
+    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: var(--text-dark);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .app-container {
+      display: flex;
+      height: 100vh;
+      max-width: 1400px;
+      margin: 0 auto;
+      background: white;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      border-radius: 0;
+      overflow: hidden;
+    }
+    
+    /* Internet Connection Status */
+    .connection-status {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0.75rem;
+      text-align: center;
+      font-weight: 500;
+      z-index: 100;
+      transition: all 0.3s ease;
+      transform: translateY(-100%);
+    }
+    
+    .connection-status.online {
+      background-color: #10b981;
+      color: white;
+      transform: translateY(0);
+    }
+    
+    .connection-status.offline {
+      background-color: #ef4444;
+      color: white;
+      transform: translateY(0);
+    }
+    
+    .no-internet-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .no-internet-content {
+      background: white;
+      color: var(--text-dark);
+      padding: 2rem;
+      border-radius: 12px;
+      max-width: 500px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Sidebar Styles */
+    .sidebar {
+      width: 280px;
+      background: #f8fafc;
+      border-right: 1px solid #e2e8f0;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease;
+      z-index: 20;
+    }
+    
+    .sidebar-header {
+      padding: 1.5rem;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    
+    .logo-circular {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .sidebar-title {
+      font-weight: 600;
+      font-size: 1.1rem;
+      color: var(--text-dark);
+    }
+    
+    .new-chat-btn {
+      margin: 1rem;
+      padding: 0.75rem 1rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+    
+    .new-chat-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+    }
+    
+    /* NEW: Help button in sidebar */
+    .help-sidebar-btn {
+      margin: 0 1rem 1rem;
+      padding: 0.75rem 1rem;
+      background: #f1f5f9;
+      color: var(--text-dark);
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: center;
+      text-decoration: none;
+    }
+    
+    .help-sidebar-btn:hover {
+      background: #e2e8f0;
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-1px);
+    }
+    
+    .history-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 0.5rem;
+    }
+    
+    .history-item {
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      margin-bottom: 0.5rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: 1px solid transparent;
+      font-size: 0.9rem;
+      position: relative;
+    }
+    
+    .history-item:hover {
+      background: #e2e8f0;
+    }
+    
+    .history-item.active {
+      background: #e0e7ff;
+      border-color: var(--primary);
+    }
+    
+    .history-empty {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: var(--text-light);
+      font-size: 0.9rem;
+    }
+    
+    .delete-history-btn {
+      position: absolute;
+      right: 0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: #ef4444;
+      opacity: 0;
+      transition: all 0.2s;
+      cursor: pointer;
+      padding: 0.25rem;
+      border-radius: 4px;
+    }
+    
+    .history-item:hover .delete-history-btn {
+      opacity: 0.7;
+    }
+    
+    .delete-history-btn:hover {
+      opacity: 1 !important;
+      background: #fef2f2;
+    }
+    
+    /* Main Chat Area */
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+    
+    .chat-header {
+      padding: 1rem 1.5rem;
+      border-bottom: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: white;
+      position: relative;
+    }
+    
+    .chat-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-dark);
+    }
+    
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.25rem;
+      color: var(--text-dark);
+      cursor: pointer;
+    }
+    
+    .chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.5rem;
+      background: #f9fafb;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    
+    .message {
+      max-width: 85%;
+      padding: 1rem 1.25rem;
+      border-radius: 18px;
+      line-height: 1.5;
+      position: relative;
+      animation: fadeIn 0.3s ease-out;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .user-message {
+      align-self: flex-end;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      color: white;
+      border-bottom-right-radius: 6px;
+    }
+    
+    .bot-message {
+      align-self: flex-start;
+      background: white;
+      color: var(--text-dark);
+      border: 1px solid #e2e8f0;
+      border-bottom-left-radius: 6px;
+    }
+    
+    .typing-indicator {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 1.25rem;
+      background: white;
+      border-radius: 18px;
+      border-bottom-left-radius: 6px;
+      align-self: flex-start;
+      max-width: 85%;
+      border: 1px solid #e2e8f0;
+    }
+    
+    .typing-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--text-light);
+      animation: typingAnimation 1.4s infinite ease-in-out;
+    }
+    
+    .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+    .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+    
+    @keyframes typingAnimation {
+      0%, 80%, 100% { transform: scale(0.8); opacity: 0.5; }
+      40% { transform: scale(1); opacity: 1; }
+    }
+    
+    .chat-input-container {
+      padding: 1.5rem;
+      border-top: 1px solid #e2e8f0;
+      background: white;
+    }
+    
+    .input-wrapper {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-end;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .chat-input {
+      flex: 1;
+      padding: 0.875rem 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 16px;
+      font-family: inherit;
+      font-size: 1rem;
+      resize: none;
+      outline: none;
+      transition: all 0.2s;
+      max-height: 120px;
+      background: #f9fafb;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    
+    .chat-input:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+      background: white;
+    }
+    
+    .send-button {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+      color: white;
+      border: none;
+      border-radius: 14px;
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s;
+      flex-shrink: 0;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+    }
+    
+    .send-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
+    }
+    
+    .send-button:active {
+      transform: translateY(0);
+    }
+    
+    .suggested-questions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      padding: 0 1.5rem 1.5rem;
+      background: white;
+      max-width: 800px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    
+    .suggestion {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      color: var(--text-dark);
+    }
+    
+    .suggestion:hover {
+      background: #f1f5f9;
+      border-color: var(--primary);
+      color: var(--primary);
+      transform: translateY(-1px);
+    }
+    
+    .message-time {
+      font-size: 0.75rem;
+      opacity: 0.7;
+      margin-top: 0.5rem;
+      text-align: right;
+    }
+    
+    .bot-message .message-time {
+      text-align: left;
+    }
+    
+    /* Image and PDF Styles */
+    .chat-image {
+      max-width: 100%;
+      border-radius: 12px;
+      margin: 0.75rem 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e2e8f0;
+    }
+    
+    .circular-image {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1rem;
+      display: block;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border: 3px solid #e2e8f0;
+    }
+    
+    .pdf-message {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1rem;
+      margin: 0.75rem 0;
+    }
+    
+    .pdf-download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--primary);
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border-radius: 10px;
+      text-decoration: none;
+      margin-top: 0.5rem;
+      transition: all 0.2s;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+    
+    .pdf-download-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .app-container {
+        height: 100vh;
+        border-radius: 0;
+      }
+      
+      .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        transform: translateX(-100%);
+      }
+      
+      .sidebar.open {
+        transform: translateX(0);
+      }
+      
+      .mobile-menu-btn {
+        display: block;
+      }
+      
+      .chat-messages {
+        padding: 1rem;
+      }
+      
+      .message {
+        max-width: 90%;
+      }
+      
+      .chat-input-container {
+        padding: 1rem;
+      }
+      
+      .suggested-questions {
+        padding: 0 1rem 1rem;
+      }
+      
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 10;
+        display: none;
+      }
+      
+      .overlay.active {
+        display: block;
+      }
+      
+      .circular-image {
+        width: 100px;
+        height: 100px;
+      }
+    }
+    
+    /* Scrollbar Styling */
+    .chat-messages::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    .chat-messages::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    
+    .chat-messages::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 3px;
+    }
+    
+    .chat-messages::-webkit-scrollbar-thumb:hover {
+      background: #94a3b8;
+    }
+  </style>
+</head>
+<body>
+  <!-- Internet Connection Status Bar -->
+  <div class="connection-status" id="connectionStatus"></div>
+  
+  <!-- No Internet Overlay -->
+  <div class="no-internet-overlay" id="noInternetOverlay" style="display: none;">
+    <div class="no-internet-content">
+      <i class="fas fa-wifi fa-3x mb-4" style="color: #ef4444;"></i>
+      <h2 class="text-xl font-bold mb-2">No Internet Connection</h2>
+      <p class="mb-4">The SAZUG Chat Assistant requires an internet connection to function properly.</p>
+      <p>Please check your connection and try again.</p>
+    </div>
+  </div>
+
+  <div class="app-container">
+    <!-- Sidebar with Chat History -->
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <img src="logo.jpg" alt="SAZUG Past Questions Portal Logo" class="logo-circular">
+        <div class="sidebar-title">SAZUG Assistant</div>
+      </div>
+      
+      <button class="new-chat-btn" onclick="startNewChat()">
+        <i class="fas fa-plus"></i>
+        New Chat
+      </button>
+      
+      <!-- NEW: Help button in sidebar - Now links to help.html -->
+      <a href="help.html" class="help-sidebar-btn">
+        <i class="fas fa-question-circle"></i> Help
+      </a>
+      
+      <div class="history-list" id="historyList">
+        <div class="history-empty">No chat history yet</div>
+      </div>
+    </div>
+    
+    <!-- Mobile Overlay -->
+    <div class="overlay" id="overlay" onclick="toggleSidebar()"></div>
+    
+    <!-- Main Chat Area -->
+    <div class="main-content">
+      <div class="chat-header">
+        <button class="mobile-menu-btn" onclick="toggleSidebar()">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="chat-title">Sazug Chat Assistant</div>
+        <div style="width: 40px;"></div> <!-- Spacer for balance -->
+      </div>
+      
+      <div class="chat-messages" id="chatMessages">
+        <!-- Welcome message -->
+        <div class="message bot-message">
+          <div>Hi 👋! I'm your Sazug Chat Assistant. Ask me anything about Sa'adu Zungur University — I'm here to help.</div>
+          <div class="message-time" id="welcomeTime"></div>
+        </div>
+      </div>
+      
+      <!-- Suggested Questions -->
+      <div class="suggested-questions" id="suggestedQuestions">
+        <div class="suggestion" onclick="askQuestion('What are the school fees for freshers?')">School fees</div>
+        <div class="suggestion" onclick="askQuestion('How do I get accommodation?')">Accommodation</div>
+        <div class="suggestion" onclick="askQuestion('What is the registration process?')">Registration</div>
+        <div class="suggestion" onclick="askQuestion('Tell me about AGI')">About AGI</div>
+      </div>
+      
+      <!-- Chat Input -->
+      <div class="chat-input-container">
+        <div class="input-wrapper">
+          <textarea class="chat-input" id="chatInput" placeholder="Message SAZUG Assistant..." rows="1"></textarea>
+          <button class="send-button" id="sendButton">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Internet Connection Check
+    let isOnline = navigator.onLine;
+    const connectionStatus = document.getElementById('connectionStatus');
+    const noInternetOverlay = document.getElementById('noInternetOverlay');
+    const appContainer = document.querySelector('.app-container');
+    
+    // Check initial connection status
+    function checkConnection() {
+      isOnline = navigator.onLine;
+      
+      if (isOnline) {
+        connectionStatus.textContent = 'You are back online';
+        connectionStatus.className = 'connection-status online';
+        noInternetOverlay.style.display = 'none';
+        appContainer.style.display = 'flex';
+        
+        // Hide the status bar after 3 seconds
+        setTimeout(() => {
+          connectionStatus.style.transform = 'translateY(-100%)';
+        }, 3000);
+      } else {
+        connectionStatus.textContent = 'You are currently offline';
+        connectionStatus.className = 'connection-status offline';
+        noInternetOverlay.style.display = 'flex';
+        appContainer.style.display = 'none';
+      }
+    }
+    
+    // Listen for online/offline events
+    window.addEventListener('online', checkConnection);
+    window.addEventListener('offline', checkConnection);
+    
+    // Initial check
+    checkConnection();
+    
+    // Set welcome message time
+    document.getElementById('welcomeTime').textContent = getCurrentTime();
+    
+    // Chat functionality
+    const chatMessages = document.getElementById('chatMessages');
+    const chatInput = document.getElementById('chatInput');
+    const sendButton = document.getElementById('sendButton');
+    
+    // Chat history management
+    let chatHistory = JSON.parse(localStorage.getItem('sazugChatHistory')) || [];
+    let currentChatId = Date.now().toString();
+    
+    // Initialize chat history
+    function initializeChatHistory() {
+      const historyList = document.getElementById('historyList');
+      historyList.innerHTML = '';
+      
+      if (chatHistory.length === 0) {
+        const emptyItem = document.createElement('div');
+        emptyItem.className = 'history-empty';
+        emptyItem.textContent = 'No chat history yet';
+        historyList.appendChild(emptyItem);
+        return;
+      }
+      
+      chatHistory.forEach(chat => {
+        const historyItem = document.createElement('div');
+        historyItem.className = `history-item ${chat.id === currentChatId ? 'active' : ''}`;
+        
+        // Get preview text from first message
+        const previewText = chat.messages.length > 0 
+          ? (chat.messages[0].text.length > 40 
+              ? chat.messages[0].text.substring(0, 40) + '...' 
+              : chat.messages[0].text)
+          : 'New chat';
+        
+        historyItem.innerHTML = `
+          <div class="font-medium text-sm">${new Date(chat.timestamp).toLocaleDateString()}</div>
+          <div class="text-xs text-gray-600 mt-1">${previewText}</div>
+          <button class="delete-history-btn" onclick="deleteChatHistory('${chat.id}')">
+            <i class="fas fa-times"></i>
+          </button>
+        `;
+        historyItem.onclick = (e) => {
+          // Don't load chat if delete button was clicked
+          if (!e.target.closest('.delete-history-btn')) {
+            loadChat(chat.id);
+          }
+        };
+        historyList.appendChild(historyItem);
+      });
+    }
+    
+    // Delete chat history
+    function deleteChatHistory(chatId) {
+      // Prevent deleting the current active chat
+      if (chatId === currentChatId) {
+        alert('Cannot delete the currently active chat. Please start a new chat first.');
+        return;
+      }
+      
+      if (confirm('Are you sure you want to delete this chat?')) {
+        chatHistory = chatHistory.filter(chat => chat.id !== chatId);
+        localStorage.setItem('sazugChatHistory', JSON.stringify(chatHistory));
+        initializeChatHistory();
+      }
+    }
+    
+    // Save current chat to history
+    function saveChatToHistory() {
+      const messages = Array.from(chatMessages.children)
+        .filter(el => el.classList.contains('message'))
+        .map(el => {
+          const isUser = el.classList.contains('user-message');
+          const text = el.querySelector('div:first-child').textContent;
+          return { isUser, text };
+        });
+      
+      const existingChatIndex = chatHistory.findIndex(chat => chat.id === currentChatId);
+      
+      if (existingChatIndex !== -1) {
+        chatHistory[existingChatIndex] = {
+          id: currentChatId,
+          timestamp: Date.now(),
+          messages
+        };
+      } else {
+        chatHistory.unshift({
+          id: currentChatId,
+          timestamp: Date.now(),
+          messages
+        });
+        
+        // Keep only last 20 chats
+        if (chatHistory.length > 20) {
+          chatHistory = chatHistory.slice(0, 20);
+        }
+      }
+      
+      localStorage.setItem('sazugChatHistory', JSON.stringify(chatHistory));
+      initializeChatHistory();
+    }
+    
+    // Load chat from history
+    function loadChat(chatId) {
+      const chat = chatHistory.find(c => c.id === chatId);
+      if (!chat) return;
+      
+      currentChatId = chatId;
+      chatMessages.innerHTML = '';
+      
+      chat.messages.forEach(msg => {
+        addMessage(msg.text, msg.isUser ? 'user' : 'bot');
+      });
+      
+      initializeChatHistory();
+      toggleSidebar();
+      scrollToBottom();
+    }
+    
+    // Start new chat
+    function startNewChat() {
+      currentChatId = Date.now().toString();
+      chatMessages.innerHTML = `
+        <div class="message bot-message">
+          <div>Hi 👋! I'm your Sazug Chat Assistant. Ask me anything about Sa'adu Zungur University — I'm here to help.</div>
+          <div class="message-time">${getCurrentTime()}</div>
+        </div>
+      `;
+      initializeChatHistory();
+      toggleSidebar();
+      scrollToBottom();
+    }
+    
+    // Toggle sidebar
+    function toggleSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+      
+      sidebar.classList.toggle('open');
+      overlay.classList.toggle('active');
+    }
+    
+    // Auto-resize textarea
+    chatInput.addEventListener('input', function() {
+      this.style.height = 'auto';
+      this.style.height = (this.scrollHeight) + 'px';
+    });
+    
+    // Send message on button click
+    sendButton.addEventListener('click', sendMessage);
+    
+    // Send message on Enter key (but allow Shift+Enter for new line)
+    chatInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        sendMessage();
+      }
+    });
+    
+    // Enhanced knowledge base with AGI information and conversation handling
+    const knowledgeBase = {
+      // Small talk and conversation
+      "hi": {
+        answer: "Hello! 👋 How can I help you with Sa'adu Zungur University today?",
+        source: "conversation"
+      },
+      "hello": {
+        answer: "Hi there! 😊 I'm here to assist with any questions about SAZUG. What would you like to know?",
+        source: "conversation"
+      },
+      "how are you": {
+        answer: "I'm doing great, thanks for asking! Ready to help you with any SAZUG-related questions. How can I assist you today?",
+        source: "conversation"
+      },
+      "good morning": {
+        answer: "Good morning! ☀️ Hope you're having a great day. What can I help you with regarding Sa'adu Zungur University?",
+        source: "conversation"
+      },
+      "good afternoon": {
+        answer: "Good afternoon! 😊 How can I assist you with SAZUG today?",
+        source: "conversation"
+      },
+      "good evening": {
+        answer: "Good evening! 🌙 What SAZUG information are you looking for?",
+        source: "conversation"
+      },
+      "thank you": {
+        answer: "You're welcome! 😊 Is there anything else about SAZUG you'd like to know?",
+        source: "conversation"
+      },
+      "who created you": {
+        answer: "I was created by AGI (Aliyu Garba Innovations), a technology company dedicated to developing innovative educational solutions. AGI focuses on creating digital platforms that help students access academic resources more efficiently.",
+        source: "conversation"
+      },
+      "nice to meet you": {
+        answer: "Nice to meet you too! 😊 I'm excited to help you navigate Sa'adu Zungur University.",
+        source: "conversation"
+      },
+      "what's your name": {
+        answer: "I'm the Sazug Chat Assistant! I'm here to help you with everything about Sa'adu Zungur University.",
+        source: "conversation"
+      },
+      "tell me a joke": {
+        answer: "Why did the student bring a ladder to SAZUG? To reach for higher education! 😄 Now, what can I really help you with?",
+        source: "conversation"
+      },
+      "okay": {
+        answer: "Great! Let me know if you have any questions about SAZUG.",
+        source: "conversation"
+      },
+      "i love this bot": {
+        answer: "Aww, thank you! ❤️ I'm glad I can help. Is there anything specific about SAZUG you'd like to know?",
+        source: "conversation"
+      },
+      "you're amazing": {
+        answer: "Thank you! 😊 You're pretty amazing too for taking your education seriously. How can I assist you further?",
+        source: "conversation"
+      },
+      "bye": {
+        answer: "Goodbye! 👋 Feel free to come back anytime you have questions about SAZUG. Have a great day!",
+        source: "conversation"
+      },
+      
+      // AGI Information
+      "agi": {
+        answer: "AGI – Aliyu Garba Innovations is a tech company focused on creating smart digital solutions for students and institutions. It's the brand behind the SAZUG Past Questions Portal.\n\nFrom web applications and mobile solutions to AI-driven educational resources, AGI develops products that help students study smarter, stay organized, and achieve academic success.",
+        image: "materials/AGI.jpg",
+        imageStyle: "circular",
+        source: "AGI Information"
+      },
+      "aliyu garba innovations": {
+        answer: "AGI – Aliyu Garba Innovations is a tech company focused on creating smart digital solutions for students and institutions. It's the brand behind the SAZUG Past Questions Portal.\n\nFrom web applications and mobile solutions to AI-driven educational resources, AGI develops products that help students study smarter, stay organized, and achieve academic success.",
+        image: "materials/AGI.jpg",
+        imageStyle: "circular",
+        source: "AGI Information"
+      },
+      
+      // NEW: Enhanced response for "who created the sazug past questions portal"
+      "who created the sazug past questions portal": {
+        answer: "The SAZUG Past Questions Portal was created by AGI (Aliyu Garba Innovations), a technology company dedicated to developing innovative educational solutions.\n\nAGI focuses on creating digital platforms that help students access academic resources more efficiently. The SAZUG Past Questions Portal is one of their flagship products, designed specifically to help Sa'adu Zungur University students prepare better for their examinations by providing easy access to past questions and study materials.",
+        image: "materials/AGI.jpg",
+        imageStyle: "circular",
+        source: "AGI Information"
+      },
+      "who made the sazug past questions portal": {
+        answer: "The SAZUG Past Questions Portal was created by AGI (Aliyu Garba Innovations), a technology company dedicated to developing innovative educational solutions.\n\nAGI focuses on creating digital platforms that help students access academic resources more efficiently. The SAZUG Past Questions Portal is one of their flagship products, designed specifically to help Sa'adu Zungur University students prepare better for their examinations by providing easy access to past questions and study materials.",
+        image: "materials/AGI.jpg",
+        imageStyle: "circular",
+        source: "AGI Information"
+      },
+      "who developed the sazug past questions portal": {
+        answer: "The SAZUG Past Questions Portal was developed by AGI (Aliyu Garba Innovations), a technology company dedicated to creating innovative educational solutions.\n\nAGI specializes in building digital platforms that enhance the academic experience for students. The SAZUG Past Questions Portal is one of their key products, specifically designed to help Sa'adu Zungur University students excel in their studies by providing organized access to past examination questions and study resources.",
+        image: "materials/AGI.jpg",
+        imageStyle: "circular",
+        source: "AGI Information"
+      },
+      
+      // Founder information with image - UPDATED RESPONSE (From Number Two)
+      "founder of agi": {
+        answer: "AGI was founded by Aliyu Garba, a Computer Science student and tech innovator passionate about building practical digital solutions that make learning easier. He created AGI to inspire creativity, critical thinking, and innovation — starting with tools like the Sazug Past Questions Portal.",
+    
+        imageStyle: "circular",
+        source: "AGI Information"
+      },
+      "who is the founder of agi": {
+        answer: "AGI was founded by Aliyu Garba, a Computer Science student and tech innovator passionate about building practical digital solutions that make learning easier. He created AGI to inspire creativity, critical thinking, and innovation — starting with tools like the Sazug Past Questions Portal.",
+        
+        
+        imageStyle: "circular",
+        source: "AGI Information"
+      },
+      "aliyu garba": {
+        answer: "AGI was founded by Aliyu Garba, a Computer Science student and tech innovator passionate about building practical digital solutions that make learning easier. He created AGI to inspire creativity, critical thinking, and innovation — starting with tools like the Sazug Past Questions Portal.",
+     
+        imageStyle: "circular",
+        source: "AGI Information"
+      },
+      
+      // NEW: How to use the SAZUG Past Questions Portal (From Number Two)
+      "how can i use the sazug past questions portal": {
+        answer: "Using the Sazug Past Questions Portal is simple:\n\n1. Go to the homepage.\n\n2. Choose your course or subject.\n\n3. Select the year or exam type you want.\n\n4. Click 'View' or 'Download' to access the past questions.\n\nYou can also explore tutorials, study guides, and tools to help you prepare better.",
+        source: "SAZUG Past Questions Portal"
+      },
+      "how to use the past questions portal": {
+        answer: "Using the Sazug Past Questions Portal is simple:\n\n1. Go to the homepage.\n\n2. Choose your course or subject.\n\n3. Select the year or exam type you want.\n\n4. Click 'View' or 'Download' to access the past questions.\n\nYou can also explore tutorials, study guides, and tools to help you prepare better.",
+        source: "SAZUG Past Questions Portal"
+      },
+      "how do i use the past questions portal": {
+        answer: "Using the Sazug Past Questions Portal is simple:\n\n1. Go to the homepage.\n\n2. Choose your course or subject.\n\n3. Select the year or exam type you want.\n\n4. Click 'View' or 'Download' to access the past questions.\n\nYou can also explore tutorials, study guides, and tools to help you prepare better.",
+        source: "SAZUG Past Questions Portal"
+      },
+      "how to access past questions": {
+        answer: "Using the Sazug Past Questions Portal is simple:\n\n1. Go to the homepage.\n\n2. Choose your course or subject.\n\n3. Select the year or exam type you want.\n\n4. Click 'View' or 'Download' to access the past questions.\n\nYou can also explore tutorials, study guides, and tools to help you prepare better.",
+        source: "SAZUG Past Questions Portal"
+      },
+      
+      // University images
+      "sa'adu zungur university": {
+        answer: "Here's the main gate of Sa'adu Zungur University:",
+        image: "gate.jpg",
+        source: "SAZUG Information"
+      },
+      "university gate": {
+        answer: "Here's the main gate of Sa'adu Zungur University:",
+        image: "gate.jpg",
+        source: "SAZUG Information"
+      },
+      "sa'adu zungur": {
+        answer: "Sa'adu Zungur was a prominent Nigerian politician, poet, and Islamic scholar from Bauchi who played a significant role in Nigeria's independence movement.",
+        image: "sa'adu-zungur.jpg",
+        source: "Historical Information"
+      },
+      "school badge": {
+        answer: "Here's the official badge of Sa'adu Zungur University:",
+        image: "badge.jpg",
+        source: "SAZUG Information"
+      },
+      "badge": {
+        answer: "Here's the official badge of Sa'adu Zungur University:",
+        image: "badge.jpg",
+        source: "SAZUG Information"
+      },
+      "logo": {
+        answer: "Here's the logo of the SAZUG Past Questions Portal:",
+        image: "logo.jpg",
+        source: "Portal Information"
+      },
+      
+      // SAZUG Past Questions Portal Information
+      "past questions": {
+        answer: "Register or login to the Sazug Past Questions Portal to access past questions for your courses. After signing in, you'll be able to select your department, level, and specific courses.",
+        source: "SAZUG Past Questions Portal"
+      },
+      "access past questions": {
+        answer: "Register or login to the Sazug Past Questions Portal to access past questions for your courses. After signing in, you'll be able to select your department, level, and specific courses.",
+        source: "SAZUG Past Questions Portal"
+      },
+      "find past questions": {
+        answer: "Register or login to the Sazug Past Questions Portal to access past questions for your courses. After signing in, you'll be able to select your department, level, and specific courses.",
+        source: "SAZUG Past Questions Portal"
+      },
+      "sazug past questions portal": {
+        answer: "The SAZUG Past Questions Portal is an innovative platform created by AGI – Aliyu Garba Innovations to help students access past examination questions, study materials, and tutorials for Sa'adu Zungur University. It features department-specific resources, 100-level tutorials, and a user-friendly interface to enhance your academic preparation.",
+        source: "SAZUG Past Questions Portal"
+      },
+      
+      // NEW: About the Portal (From Number One)
+      "what is sazug past questions portal": {
+        answer: "Sazug Past Questions Portal is an online platform created to help students access and study past exam questions, tutorials, and guides easily. It's designed to make learning faster, smarter, and stress-free.",
+        source: "About the Portal"
+      },
+      "is the portal free to use": {
+        answer: "Yes, it's completely free for all students. You can view or download materials without paying a fee.",
+        source: "About the Portal"
+      },
+      "can i download the past questions": {
+        answer: "Yes. Most past questions can be downloaded directly in PDF format so you can read them offline anytime.",
+        source: "About the Portal"
+      },
+      "do i need to sign up or log in": {
+        answer: "Yes. You need to create an account and sign in before you can access the Sazug Past Questions Portal.\n\nNote: This registration is local to your device only — your account isn't stored on a server yet, so it will stay on your current device until online storage is added.",
+        source: "About the Portal"
+      },
+      "when was it created": {
+        answer: "The project started under AGI in 2025 as part of a mission to make learning resources accessible to every student.",
+        source: "About the Portal"
+      },
+      "what does sazug mean": {
+        answer: "\"Sazug\" stands for Sa'adu Zungur University, Gadau.",
+        source: "About the Portal"
+      },
+      "how can i contact the team": {
+        answer: "You can reach out through the Contact Us page or via the official AGI email and social handles listed on the site.",
+        source: "About the Portal"
+      },
+      "how can i report a problem or error on the site": {
+        answer: "Go to the Feedback or Contact section and describe the issue clearly. The team will review and fix it as soon as possible.",
+        source: "About the Portal"
+      },
+
+      // NEW: About AGI (From Number One)
+      "what does agi stand for": {
+        answer: "AGI stands for Aliyu Garba Innovations — a tech initiative focused on creativity, problem-solving, and practical technology.",
+        source: "About AGI"
+      },
+      "what is the vision of agi": {
+        answer: "AGI's vision is \"Innovating the Impossible.\" It aims to inspire creativity, critical thinking, and the development of solutions that make education and technology more accessible.",
+        source: "About AGI"
+      },
+      "what other projects has agi created": {
+        answer: "AGI is developing several educational and digital tools, starting with Sazug Past Questions Portal, and expanding into tutorials, calculators, and study apps.",
+        source: "About AGI"
+      },
+      "how can i follow or support agi": {
+        answer: "You can follow AGI on its official social media pages or share its projects with others. Supporting and giving feedback helps the platform grow.",
+        source: "About AGI"
+      },
+
+      // NEW: Using the Portal / Accessing Content (From Number One)
+      "how do i find past questions for my course": {
+        answer: "From the homepage, select your department or course category, then pick your specific course. Choose the year you want, and click View or Download.",
+        source: "Portal Usage"
+      },
+      "can i search by course code or title": {
+        answer: "Yes. Use the search bar to find your course faster by typing the course name or code.",
+        source: "Portal Usage"
+      },
+      "can i get past questions by year": {
+        answer: "Yes. Each course section includes questions organized by exam year for easier study and reference.",
+        source: "Portal Usage"
+      },
+      "how do i view or download a past question": {
+        answer: "Just click the View button to read it online or Download to save it for offline use.",
+        source: "Portal Usage"
+      },
+      "are solutions or answers included": {
+        answer: "Some questions include answers or marking guides. More solved papers are being added regularly.",
+        source: "Portal Usage"
+      },
+      "can i print the past questions": {
+        answer: "Yes. Once you download a file, you can print it directly from your device.",
+        source: "Portal Usage"
+      },
+      "can i use this portal on my phone": {
+        answer: "Absolutely. The site works smoothly on mobile phones, tablets, and computers.",
+        source: "Portal Usage"
+      },
+      "what if my course is not listed": {
+        answer: "If your course isn't listed yet, go to the Request Section or contact the team. New courses are added frequently based on student requests.",
+        source: "Portal Usage"
+      },
+
+      // NEW: Technical Help (From Number One)
+      "the page is not loading what should i do": {
+        answer: "Try refreshing the page or checking your internet connection. If the problem continues, clear your browser cache or use a different browser.",
+        source: "Technical Help"
+      },
+      "the download button is not working": {
+        answer: "Make sure your browser allows downloads and pop-ups. If it still doesn't work, contact support with the course name and year.",
+        source: "Technical Help"
+      },
+      "i can't find my department or course": {
+        answer: "Check the search bar or related categories. If it's still missing, report it — your course might be added soon.",
+        source: "Technical Help"
+      },
+      "how can i reset my password": {
+        answer: "Once login features are launched, you'll be able to reset your password using your registered email.",
+        source: "Technical Help"
+      },
+      "how can i update my account": {
+        answer: "When user accounts are available, updates can be done through your Profile Settings page.",
+        source: "Technical Help"
+      },
+      "how do i change my profile picture": {
+        answer: "That feature will come with user profiles — soon you'll be able to upload and manage your own avatar.",
+        source: "Technical Help"
+      },
+
+      // NEW: Study Help (From Number One)
+      "do you have tutorials for my course": {
+        answer: "Yes, tutorials are being uploaded for various subjects. You can find them in the Tutorials Section on the portal.",
+        source: "Study Help"
+      },
+      "how can i prepare better for exams": {
+        answer: "Use past questions regularly, review tutorials, and study consistently instead of last-minute cramming. Focus on understanding patterns and concepts.",
+        source: "Study Help"
+      },
+      "do you have guides for 100 level courses": {
+        answer: "Yes. Study guides are organized by level to make it easy for you to find relevant materials.",
+        source: "Study Help"
+      },
+      "do you have guides for 200 level courses": {
+        answer: "Yes. Study guides are organized by level to make it easy for you to find relevant materials.",
+        source: "Study Help"
+      },
+      "do you have guides for 300 level courses": {
+        answer: "Yes. Study guides are organized by level to make it easy for you to find relevant materials.",
+        source: "Study Help"
+      },
+      "can i request new study materials": {
+        answer: "Yes. Go to the Request Form and type in the topic, course, or year you'd like to see added.",
+        source: "Study Help"
+      },
+      "how can i improve my study habits": {
+        answer: "Plan your reading schedule, set daily goals, and study in short focused sessions. Always mix past questions with notes and tutorials.",
+        source: "Study Help"
+      },
+
+      // NEW: General / Random Questions (From Number One)
+      "what is the best way to study past questions": {
+        answer: "Study them like real exams — time yourself, check answers, and review explanations. Repetition builds confidence and understanding.",
+        source: "General Questions"
+      },
+      "can i share these past questions with friends": {
+        answer: "Yes, you can. Learning together helps everyone improve, but please share through the official portal link so others benefit too.",
+        source: "General Questions"
+      },
+      "is this portal only for university students": {
+        answer: "It's mainly built for university students but open to anyone who wants to learn or prepare for related exams.",
+        source: "General Questions"
+      },
+      "which universities are supported": {
+        answer: "Currently, the portal focuses on major Nigerian universities, but more institutions will be added with time.",
+        source: "General Questions"
+      },
+      "how can i contribute questions to the portal": {
+        answer: "You can submit materials through the Contribution Page or contact the admin. All submissions are reviewed before being added.",
+        source: "General Questions"
+      },
+      "is sazug connected to any school officially": {
+        answer: "No, it's an independent educational project by Aliyu Garba Innovations (AGI).",
+        source: "General Questions"
+      },
+      "who manages the site": {
+        answer: "The portal is managed by AGI's development team, led by Aliyu Garba.",
+        source: "General Questions"
+      },
+
+      // NEW: Motivational / Personal Questions (From Number One)
+      "what inspired you to create this portal": {
+        answer: "The idea came from seeing how hard it is for students to find organized past questions and tutorials. The goal was to make learning easier, accessible, and enjoyable for everyone.",
+        source: "Motivational"
+      },
+      "how can i become a tech innovator like you": {
+        answer: "Start small. Learn coding, build projects, and stay curious. Keep practicing and don't wait for perfect conditions — just begin.",
+        source: "Motivational"
+      },
+      "what advice do you have for computer science students": {
+        answer: "Focus on skills, not just grades. Learn by doing — build projects, practice problem-solving, and never stop exploring new tech.",
+        source: "Motivational"
+      },
+      "how can i learn web development or tech skills like you": {
+        answer: "There are free online resources everywhere — start with HTML, CSS, and JavaScript. Practice daily, follow tutorials, and create small projects. Progress will come naturally.",
+        source: "Motivational"
+      },
+      
+      // University Information (from previous knowledge base)
+      "school fees": {
+        answer: "School fees at SAZUG vary by faculty. For freshers, Faculty of Science & Technology: ₦45,000 – ₦60,000, Faculty of Arts & Education: ₦38,000 – ₦50,000, Faculty of Social Sciences: ₦40,000 – ₦55,000, Faculty of Law or Medical Sciences: ₦70,000 – ₦85,000. Always confirm from your faculty or portal before payment.",
+        source: "school-fees.html"
+      },
+      "accommodation": {
+        answer: "SAZUG offers on-campus hostels for 100-level and 400-level students at about ₦15,000 per session. Off-campus options are available for 200-level and 300-level students, ranging from ₦60,000 to ₦200,000+ per year. As a fresher, staying on-campus helps you adjust to university life.",
+        source: "accommodation.html"
+      },
+      "registration": {
+        answer: "Registration involves online steps via the SAZUG portal (https://www.sazug.edu.ng) and physical clearance at your department. You'll need to create an account with your JAMB number, make payments, complete your profile, and submit documents. Your matric number is automatically issued after successful registration.",
+        source: "registration.html"
+      },
+      "academic resources": {
+        answer: "SAZUG provides various academic resources including the Central Library (open Mon-Fri, 8AM-6PM), e-library with access to JSTOR and ResearchGate, course materials from lecturers, past questions, and academic mentorship. The library requires a library card issued after registration.",
+        source: "academic-resources.html"
+      },
+      "campus navigation": {
+        answer: "SAZUG campus includes the Main Administrative Block, Faculty of Science and Technology, Faculty of Social & Management Sciences, Faculty of Arts and Education, Central Library, Medical Center, and hostels. Freshers should familiarize themselves with common lecture venues like Butterfly Building, 500 Seaters, and Pentagon Hall.",
+        source: "campus-navigation.html"
+      },
+      "dress code": {
+        answer: "SAZUG promotes decent dressing. Male students should avoid sagging trousers and sleeveless shirts. Female students should avoid revealing clothes and very short skirts. Students may be denied entry to lecture halls for inappropriate attire.",
+        source: "dress.html"
+      },
+      "ict and biometric": {
+        answer: "Biometric capturing is required for student registration, exam verification, and library access. Visit the ICT center with your admission letter, school fees receipt, and passport photograph. Your biometric data will be linked to your student profile on the university portal.",
+        source: "ict.html"
+      },
+      "support and communities": {
+        answer: "SAZUG offers various support systems including academic advisers, counselling services, Student Representative Council (SRC), religious communities (MSSN and Christian Fellowship), clubs, and WhatsApp groups. The SRC office is located under the Butterfly Building.",
+        source: "support.html"
+      },
+      "opportunities": {
+        answer: "Freshers should explore scholarships (Bauchi State scholarships, federal and private scholarships), campus activities, digital skills development, and health resources. Always complete school forms on time and participate in university events for personal growth.",
+        source: "opportunities.html"
+      },
+      "default": {
+        answer: "I'm not sure about that specific question, but I can help with information about school fees, accommodation, registration, academic resources, campus navigation, dress code, ICT services, student support, opportunities at SAZUG, or about AGI and the Past Questions Portal. What would you like to know?",
+        source: "general"
+      }
+    };
+    
+    // PDF materials mapping
+    const pdfMaterials = {
+      // First semester
+      "math101": { file: "materials/math101.pdf", name: "Mathematics 101" },
+      "phy101": { file: "materials/phy101.pdf", name: "Physics 101" },
+      "chem101": { file: "materials/chem101.pdf", name: "Chemistry 101" },
+      "gst111": { file: "materials/gst111.pdf", name: "GST 111" },
+      "phy107": { file: "materials/phy107.pdf", name: "Physics 107" },
+      "chem107": { file: "materials/chem107.pdf", name: "Chemistry 107" },
+      "bio101": { file: "materials/bio101.pdf", name: "Biology 101" },
+      "bio107": { file: "materials/bio107.pdf", name: "Biology 107" },
+      
+      // Second semester
+      "math102": { file: "materials/math102.pdf", name: "Mathematics 102" },
+      "phy102": { file: "materials/phy102.pdf", name: "Physics 102" },
+      "chem102": { file: "materials/chem102.pdf", name: "Chemistry 102" },
+      "gst112": { file: "materials/gst112.pdf", name: "GST 112" },
+      "phy108": { file: "materials/phy108.pdf", name: "Physics 108" },
+      "chem108": { file: "materials/chem108.pdf", name: "Chemistry 108" },
+      "bio102": { file: "materials/bio102.pdf", name: "Biology 102" },
+      "bio108": { file: "materials/bio108.pdf", name: "Biology 108" }
+    };
+    
+    // Function to send a message
+    function sendMessage() {
+      // Check if user is online before sending message
+      if (!isOnline) {
+        alert('You need an internet connection to send messages. Please check your connection and try again.');
+        return;
+      }
+      
+      const message = chatInput.value.trim();
+      if (message === '') return;
+      
+      // Add user message to chat
+      addMessage(message, 'user');
+      
+      // Clear input and reset height
+      chatInput.value = '';
+      chatInput.style.height = 'auto';
+      
+      // Show typing indicator
+      showTypingIndicator();
+      
+      // Process message and generate response after a short delay
+      setTimeout(() => {
+        // Remove typing indicator
+        removeTypingIndicator();
+        
+        // Generate and add bot response
+        const response = generateResponse(message);
+        addMessage(response.answer, 'bot', response.source, response.image, response.pdf, response.imageStyle);
+        
+        // Save to history
+        saveChatToHistory();
+        
+        // Scroll to bottom
+        scrollToBottom();
+      }, 1500);
+    }
+    
+    // Function to add a message to the chat
+    function addMessage(text, sender, source = null, image = null, pdf = null, imageStyle = null) {
+      const messageDiv = document.createElement('div');
+      messageDiv.className = `message ${sender}-message`;
+      
+      const messageContent = document.createElement('div');
+      
+      // Add image if provided (at the top)
+      if (image) {
+        const imgElement = document.createElement('img');
+        imgElement.src = image;
+        imgElement.alt = "Response image";
+        
+        // Apply circular style if specified
+        if (imageStyle === 'circular') {
+          imgElement.className = 'circular-image';
+        } else {
+          imgElement.className = 'chat-image';
+        }
+        
+        messageContent.appendChild(imgElement);
+      }
+      
+      // Handle line breaks in the response text
+      if (text) {
+        const textElement = document.createElement('div');
+        textElement.innerHTML = text.replace(/\n/g, '<br>');
+        messageContent.appendChild(textElement);
+      }
+      
+      // Add PDF download if provided
+      if (pdf) {
+        const pdfContainer = document.createElement('div');
+        pdfContainer.className = 'pdf-message';
+        pdfContainer.innerHTML = `
+          <b>${pdf.name}</b><br>
+          <a href="${pdf.file}" target="_blank" class="pdf-download-btn">
+            <i class="fas fa-download"></i> Download PDF
+          </a>
+        `;
+        messageContent.appendChild(pdfContainer);
+      }
+      
+      messageDiv.appendChild(messageContent);
+      
+      const messageTime = document.createElement('div');
+      messageTime.className = 'message-time';
+      messageTime.textContent = getCurrentTime();
+      messageDiv.appendChild(messageTime);
+      
+      chatMessages.appendChild(messageDiv);
+      scrollToBottom();
+    }
+    
+    // Function to show typing indicator
+    function showTypingIndicator() {
+      const typingDiv = document.createElement('div');
+      typingDiv.className = 'typing-indicator';
+      typingDiv.id = 'typingIndicator';
+      
+      for (let i = 0; i < 3; i++) {
+        const dot = document.createElement('div');
+        dot.className = 'typing-dot';
+        typingDiv.appendChild(dot);
+      }
+      
+      chatMessages.appendChild(typingDiv);
+      scrollToBottom();
+    }
+    
+    // Function to remove typing indicator
+    function removeTypingIndicator() {
+      const typingIndicator = document.getElementById('typingIndicator');
+      if (typingIndicator) {
+        typingIndicator.remove();
+      }
+    }
+    
+    // Function to generate a response based on user input - IMPROVED VERSION
+    function generateResponse(message) {
+      const lowerMessage = message.toLowerCase();
+
+      // Check for PDF material requests
+      for (const [courseCode, pdfData] of Object.entries(pdfMaterials)) {
+        const variations = [
+          courseCode,
+          courseCode.replace('math', 'mth'),
+          courseCode.replace('math', 'maths'),
+          courseCode.replace('phy', 'physics'),
+          courseCode.replace('chem', 'chemistry'),
+          courseCode.replace('bio', 'biology')
+        ];
+
+        for (const variation of variations) {
+          if (
+            lowerMessage.includes(variation) ||
+            lowerMessage.includes(variation + ' material') ||
+            lowerMessage.includes(variation + ' pdf')
+          ) {
+            return {
+              answer: `Here's the study material you requested:`,
+              pdf: pdfData,
+              source: "Study Materials"
+            };
+          }
+        }
+      }
+
+      // Normalize common variants
+      const normalizedMessage = lowerMessage
+        .replace(/sazug|sa'adu zungur|saadu zungur/gi, 'sazug')
+        .replace(/past question|past questions|past exam|past paper/gi, 'past questions')
+        .replace(/agi|aliyu garba|aliyu garba innovations/gi, 'agi')
+        .replace(/founder|creator|owner/gi, 'founder')
+        .replace(/hi|hello|hey|hi there/gi, 'hi')
+        .replace(/thank you|thanks|thx/gi, 'thank you')
+        .replace(/how are you|how r u|how u doing/gi, 'how are you')
+        .replace(/good morning|gm|morning/gi, 'good morning')
+        .replace(/good afternoon|afternoon/gi, 'good afternoon')
+        .replace(/good evening|evening/gi, 'good evening')
+        .replace(/bye|goodbye|see you/gi, 'bye')
+        .trim();
+
+      // 1) Try exact normalized lookup
+      if (knowledgeBase[normalizedMessage]) {
+        return knowledgeBase[normalizedMessage];
+      }
+
+      // 2) Try substring matching on both normalized and raw message
+      for (const [keyword, data] of Object.entries(knowledgeBase)) {
+        if (
+          normalizedMessage.includes(keyword) ||
+          lowerMessage.includes(keyword)
+        ) {
+          return data;
+        }
+      }
+
+      // 3) Default fallback
+      return knowledgeBase.default;
+    }
+    
+    // Function to get current time in HH:MM format
+    function getCurrentTime() {
+      const now = new Date();
+      return `${now.getHours().toString().padStart(2, '0')}:${now.getMinutes().toString().padStart(2, '0')}`;
+    }
+    
+    // Function to scroll to the bottom of the chat
+    function scrollToBottom() {
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    
+    // Function to ask a question from suggested questions
+    function askQuestion(question) {
+      chatInput.value = question;
+      sendMessage();
+    }
+    
+    // Initialize chat with a welcome message
+    window.addEventListener('load', () => {
+      scrollToBottom();
+      initializeChatHistory();
+    });
+  </script>
+</body>
+</html>

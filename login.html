@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D1ER82HJ6L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D1ER82HJ6L');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | BASUG Past Questions</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            primaryDark: '#1d4ed8',
+            secondary: '#7e22ce',
+            lightBg: '#f0f9ff',
+            surface: '#ffffff',
+            onSurface: '#1f2937',
+            subtle: '#6b7280',
+            success: '#10b981',
+            error: '#ef4444',
+            warning: '#f59e0b'
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in-out',
+            'slide-down': 'slideDown 0.5s ease-out',
+            'pulse-soft': 'pulseSoft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            'float': 'float 6s ease-in-out infinite'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            },
+            slideDown: {
+              '0%': { transform: 'translateY(-10px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' }
+            },
+            pulseSoft: {
+              '0%, 100%': { opacity: '1' },
+              '50%': { opacity: '0.7' }
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-10px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    
+    .form-container {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(20px);
+      border-radius: 1.5rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1), 
+                  0 0 0 1px rgba(255, 255, 255, 0.9) inset;
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 440px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .form-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #2563eb 0%, #7e22ce 100%);
+      border-radius: 3px 3px 0 0;
+    }
+    
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      animation: float 6s ease-in-out infinite;
+    }
+    
+    .logo-badge {
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4), 
+                  0 0 0 4px rgba(255, 255, 255, 0.9);
+    }
+    
+    .logo-badge img {
+      width: 70%;
+      height: 70%;
+      object-fit: contain;
+    }
+    
+    .form-title {
+      text-align: center;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      font-size: 1.875rem;
+      color: #1f2937;
+    }
+    
+    .form-subtitle {
+      text-align: center;
+      color: #6b7280;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+    }
+    
+    .input-group {
+      margin-bottom: 1.5rem;
+    }
+    
+    .input-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      color: #1f2937;
+      font-size: 0.875rem;
+    }
+    
+    .input-field {
+      width: 100%;
+      padding: 1rem 1.25rem;
+      border-radius: 0.75rem;
+      border: 1px solid #e5e7eb;
+      background-color: #f9fafb;
+      transition: all 0.2s ease;
+      font-size: 1rem;
+    }
+    
+    .input-field:focus {
+      outline: none;
+      border-color: #2563eb;
+      background-color: white;
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+    }
+    
+    .input-wrapper {
+      position: relative;
+    }
+    
+    .password-toggle {
+      position: absolute;
+      right: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #6b7280;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: color 0.2s ease;
+    }
+    
+    .password-toggle:hover {
+      color: #2563eb;
+    }
+    
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    
+    .checkbox {
+      width: 1.25rem;
+      height: 1.25rem;
+      border-radius: 0.375rem;
+      border: 1px solid #d1d5db;
+      margin-right: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .checkbox.checked {
+      background-color: #2563eb;
+      border-color: #2563eb;
+    }
+    
+    .checkbox.checked i {
+      display: block;
+      color: white;
+      font-size: 0.75rem;
+    }
+    
+    .checkbox i {
+      display: none;
+    }
+    
+    .checkbox-label {
+      color: #1f2937;
+      font-size: 0.875rem;
+      cursor: pointer;
+    }
+    
+    .submit-btn {
+      width: 100%;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      background: linear-gradient(135deg, #2563eb 0%, #7e22ce 100%);
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+    }
+    
+    .submit-btn:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.4);
+    }
+    
+    .submit-btn:active {
+      transform: translateY(0);
+    }
+    
+    .submit-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .forgot-password {
+      display: block;
+      text-align: right;
+      margin-bottom: 1.5rem;
+      color: #2563eb;
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s ease;
+    }
+    
+    .forgot-password:hover {
+      color: #1d4ed8;
+      text-decoration: underline;
+    }
+    
+    .register-redirect {
+      text-align: center;
+      margin-top: 2rem;
+      color: #6b7280;
+      font-size: 0.875rem;
+    }
+    
+    .register-link {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    
+    .register-link:hover {
+      color: #1d4ed8;
+      text-decoration: underline;
+    }
+    
+    .connection-status {
+      position: fixed;
+      top: 1.25rem;
+      right: 1.25rem;
+      padding: 0.5rem 1rem;
+      border-radius: 1.5rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      animation: slide-down 0.5s ease-out;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.9);
+    }
+    
+    .online {
+      color: #10b981;
+    }
+    
+    .offline {
+      color: #ef4444;
+    }
+    
+    .loading-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.95);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 1.5rem;
+      z-index: 10;
+      backdrop-filter: blur(4px);
+    }
+    
+    .spinner {
+      width: 3rem;
+      height: 3rem;
+      border: 3px solid #e5e7eb;
+      border-top: 3px solid #2563eb;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 1rem;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .message-box {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      text-align: center;
+      font-weight: 500;
+    }
+    
+    .error-message {
+      background-color: rgba(239, 68, 68, 0.1);
+      color: #ef4444;
+    }
+    
+    .success-message {
+      background-color: rgba(16, 185, 129, 0.1);
+      color: #10b981;
+    }
+    
+    @media (max-width: 640px) {
+      .form-container {
+        padding: 2rem 1.5rem;
+      }
+      
+      .form-title {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Connection Status Indicator -->
+  <div id="connectionStatus" class="connection-status online">
+    <i class="fas fa-wifi"></i>
+    <span>Online</span>
+  </div>
+  
+  <div class="form-container animate-slide-down">
+    <!-- Loading Overlay (initially hidden) -->
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+      <div class="spinner"></div>
+      <p class="text-lg font-medium text-gray-700">Logging you in...</p>
+      <p class="text-sm text-gray-500 mt-2">Please wait a moment</p>
+    </div>
+    
+    <!-- Logo -->
+    <div class="logo-container">
+      <div class="logo-badge">
+        <img src="badge.jpg" alt="BASUG Logo">
+      </div>
+    </div>
+
+    <h1 class="form-title">Welcome Back</h1>
+    <p class="form-subtitle">Sign in to access past questions</p>
+
+    <form id="loginForm" class="space-y-4">
+      <div class="input-group">
+        <label for="email" class="input-label">Email Address</label>
+        <input type="email" id="email" placeholder="Enter your email" class="input-field" required>
+      </div>
+      
+      <div class="input-group">
+        <label for="password" class="input-label">Password</label>
+        <div class="input-wrapper">
+          <input type="password" id="password" placeholder="Enter your password" class="input-field pr-12" required>
+          <button type="button" id="togglePassword" class="password-toggle">
+            <i class="far fa-eye"></i>
+          </button>
+        </div>
+      </div>
+
+      <a href="#" class="forgot-password">Forgot password?</a>
+
+      <div class="checkbox-group">
+        <div id="rememberCheckbox" class="checkbox">
+          <i class="fas fa-check"></i>
+        </div>
+        <label for="remember" class="checkbox-label">Remember me</label>
+        <input type="checkbox" id="remember" class="hidden">
+      </div>
+
+      <button type="submit" id="submitButton" class="submit-btn">
+        <i class="fas fa-sign-in-alt"></i>
+        Login
+      </button>
+    </form>
+
+    <div class="register-redirect">
+      <p>Don't have an account? 
+        <a href="register.html" class="register-link">Register here</a>
+      </p>
+    </div>
+
+    <div id="message" class="message-box hidden"></div>
+  </div>
+
+  <script>
+    // DOM Elements
+    const loginForm = document.getElementById("loginForm");
+    const message = document.getElementById("message");
+    const loadingOverlay = document.getElementById("loadingOverlay");
+    const connectionStatus = document.getElementById("connectionStatus");
+    const passwordInput = document.getElementById("password");
+    const submitButton = document.getElementById("submitButton");
+    const rememberCheckbox = document.getElementById("rememberCheckbox");
+    const rememberInput = document.getElementById("remember");
+
+    // Toggle checkbox
+    rememberCheckbox.addEventListener('click', () => {
+      rememberInput.checked = !rememberInput.checked;
+      rememberCheckbox.classList.toggle('checked', rememberInput.checked);
+    });
+
+    // Check internet connection on page load
+    window.addEventListener('load', () => {
+      if (!navigator.onLine) {
+        showMessage("You are currently offline. Internet connection is required to login.", "error");
+        updateConnectionStatus(false);
+      }
+    });
+
+    // Monitor connection status
+    window.addEventListener('online', () => updateConnectionStatus(true));
+    window.addEventListener('offline', () => updateConnectionStatus(false));
+
+    // Update connection status UI
+    function updateConnectionStatus(online) {
+      if (online) {
+        connectionStatus.className = "connection-status online";
+        connectionStatus.innerHTML = '<i class="fas fa-wifi"></i><span>Online</span>';
+      } else {
+        connectionStatus.className = "connection-status offline";
+        connectionStatus.innerHTML = '<i class="fas fa-wifi-slash"></i><span>Offline</span>';
+      }
+    }
+
+    // Show message with different types
+    function showMessage(text, type) {
+      message.textContent = text;
+      message.className = `message-box ${type === 'error' ? 'error-message' : 'success-message'}`;
+      message.classList.remove('hidden');
+      
+      // Auto-hide after 5 seconds if not an error
+      if (type !== 'error') {
+        setTimeout(() => {
+          message.classList.add('hidden');
+        }, 5000);
+      }
+    }
+
+    // Toggle password visibility
+    const togglePassword = document.getElementById("togglePassword");
+    togglePassword.addEventListener("click", () => {
+      const type = passwordInput.getAttribute("type") === "password" ? "text" : "password";
+      passwordInput.setAttribute("type", type);
+      togglePassword.innerHTML = type === "password" ? '<i class="far fa-eye"></i>' : '<i class="far fa-eye-slash"></i>';
+    });
+
+    // Login submit
+    loginForm.addEventListener("submit", async function(e) {
+      e.preventDefault();
+
+      // Check if user is online
+      if (!navigator.onLine) {
+        showMessage("Internet connection required to login. Please check your connection and try again.", "error");
+        return;
+      }
+      
+      const email = document.getElementById("email").value.trim();
+      const password = passwordInput.value.trim();
+
+      // Validate inputs
+      if(!email || !password){
+        showMessage("Please fill in all fields!", "error");
+        return;
+      }
+
+      // Show loading state
+      loadingOverlay.style.display = 'flex';
+      
+      // Simulate network request (in a real app, this would be an API call)
+      try {
+        await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate network delay
+        
+        // Check if user exists in localStorage (simulating database check)
+        const storedUser = localStorage.getItem("basugUser");
+        
+        if (!storedUser) {
+          showMessage("No account found with this email. Please register first.", "error");
+          loadingOverlay.style.display = 'none';
+          return;
+        }
+        
+        const user = JSON.parse(storedUser);
+        
+        if (user.email !== email || user.password !== password) {
+          showMessage("Invalid email or password. Please try again.", "error");
+          loadingOverlay.style.display = 'none';
+          return;
+        }
+        
+        // Show success message
+        showMessage("Login successful! Redirecting to home page...", "success");
+        
+        // Save login state if "Remember me" is checked
+        if (rememberInput.checked) {
+          localStorage.setItem("basugRememberMe", "true");
+        }
+        
+        // Redirect to home.html after a brief delay
+        setTimeout(() => {
+          window.location.href = "home.html";
+        }, 1500);
+      } catch (error) {
+        showMessage("Login failed. Please try again.", "error");
+        loadingOverlay.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy & Data Protection | SAZUG Past Questions Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .gradient-bg {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    }
+    
+    .card-hover {
+      transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    .fade-in {
+      animation: fadeIn 0.8s ease-in-out forwards;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .section-icon {
+      background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+    }
+    
+    /* Mobile menu animation */
+    .mobile-menu {
+      transition: all 0.3s ease;
+      transform-origin: top;
+      transform: scaleY(0);
+      opacity: 0;
+      height: 0;
+    }
+    
+    .mobile-menu.active {
+      transform: scaleY(1);
+      opacity: 1;
+      height: auto;
+    }
+  </style>
+</head>
+<body class="gradient-bg min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-10">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <!-- Logo replaced with actual image -->
+        <div class="h-10 w-10 rounded-lg overflow-hidden">
+          <img src="logo.jpg" alt="SAZUG Logo" class="h-full w-full object-cover">
+        </div>
+        <h1 class="text-xl font-semibold text-gray-800">SAZUG Past Questions</h1>
+      </div>
+      
+      <nav class="hidden md:flex space-x-8">
+        <a href="home.html" class="text-gray-600 hover:text-blue-600 font-medium">Past Questions</a>
+        <a href="about.html" class="text-gray-600 hover:text-blue-600 font-medium">About</a>
+        <a href="contact.html" class="text-gray-600 hover:text-blue-600 font-medium">Contact</a>
+      </nav>
+      
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-button" class="md:hidden text-gray-600">
+        <i class="fas fa-bars text-xl"></i>
+      </button>
+    </div>
+    
+    <!-- Mobile menu dropdown -->
+    <div id="mobile-menu" class="mobile-menu md:hidden bg-white border-t border-gray-200">
+      <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+        <a href="home.html" class="text-gray-600 hover:text-blue-600 font-medium py-2">Past Questions</a>
+        <a href="about.html" class="text-gray-600 hover:text-blue-600 font-medium py-2">About</a>
+        <a href="contact.html" class="text-gray-600 hover:text-blue-600 font-medium py-2">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow container mx-auto px-4 py-8 max-w-4xl">
+    <div class="text-center mb-12 fade-in">
+      <h1 class="text-4xl font-bold text-gray-800 mb-4">Privacy & Data Protection</h1>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">Your privacy is our priority. This policy explains how we collect, use, and protect your personal information.</p>
+      <div class="w-24 h-1 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10 fade-in">
+      <div class="p-1 bg-gradient-to-r from-blue-600 to-indigo-700"></div>
+      
+      <div class="p-8">
+        <!-- Introduction -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Introduction</h2>
+          <p class="text-gray-700 leading-relaxed">
+            At SAZUG Past Questions Portal, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy outlines our practices regarding the collection, use, and protection of your data. By using our platform, you trust us with your information, and we take that responsibility seriously.
+          </p>
+        </div>
+
+        <!-- Information We Collect -->
+        <div class="mb-10">
+          <div class="flex items-center mb-6">
+            <div class="section-icon w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-database text-white text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-800">What We Collect</h2>
+          </div>
+          
+          <p class="text-gray-700 mb-6">We collect minimal information.
+Currently, SAZUG Past Questions Portal does not store personal data on external servers.
+Any information you enter during registration (such as name or email) is saved locally on your device only to personalize your experience.
+When we introduce online accounts and server-based features in the future, this Privacy Policy will be updated to reflect that.
+We also use Google Analytics to collect anonymous information such as pages visited and browser type. This data helps us understand usage trends and improve the site experience:</p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div class="bg-blue-50 p-5 rounded-lg card-hover">
+              <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+                <i class="fas fa-user text-blue-600"></i>
+              </div>
+              <h3 class="font-semibold text-gray-800 mb-2">Full Name</h3>
+              <p class="text-gray-700 text-sm">To personalize your experience and create your account</p>
+            </div>
+            
+            <div class="bg-blue-50 p-5 rounded-lg card-hover">
+              <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+                <i class="fas fa-envelope text-blue-600"></i>
+              </div>
+              <h3 class="font-semibold text-gray-800 mb-2">Email Address</h3>
+              <p class="text-gray-700 text-sm">To communicate important updates and secure your account</p>
+            </div>
+            
+            <div class="bg-blue-50 p-5 rounded-lg card-hover">
+              <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mb-3">
+                <i class="fas fa-lock text-blue-600"></i>
+              </div>
+              <h3 class="font-semibold text-gray-800 mb-2">Password</h3>
+              <p class="text-gray-700 text-sm">To protect your account (encrypted and never stored in plain text)</p>
+            </div>
+          </div>
+          
+          <p class="text-gray-700">
+            We do not collect any additional personal information beyond these three essential data points. Our platform is designed with privacy in mind, minimizing data collection to only what is absolutely necessary.
+          </p>
+        </div>
+
+        <!-- How We Use Your Information -->
+        <div class="mb-10">
+          <div class="flex items-center mb-6">
+            <div class="section-icon w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-cogs text-white text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-800">How We Use Your Information</h2>
+          </div>
+          
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-1">
+                  <i class="fas fa-check text-blue-600 text-xs"></i>
+                </div>
+                <p class="text-gray-700">To create and maintain your account on our platform</p>
+              </li>
+              
+              <li class="flex items-start">
+                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-1">
+                  <i class="fas fa-check text-blue-600 text-xs"></i>
+                </div>
+                <p class="text-gray-700">To provide access to past questions and educational resources</p>
+              </li>
+              
+              <li class="flex items-start">
+                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-1">
+                  <i class="fas fa-check text-blue-600 text-xs"></i>
+                </div>
+                <p class="text-gray-700">To communicate important updates about our services</p>
+              </li>
+              
+              <li class="flex items-start">
+                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-1">
+                  <i class="fas fa-check text-blue-600 text-xs"></i>
+                </div>
+                <p class="text-gray-700">To respond to your inquiries and support requests</p>
+              </li>
+              
+              <li class="flex items-start">
+                <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-3 mt-1">
+                  <i class="fas fa-check text-blue-600 text-xs"></i>
+                </div>
+                <p class="text-gray-700">To ensure platform security and prevent unauthorized access</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Data Security -->
+        <div class="mb-10">
+          <div class="flex items-center mb-6">
+            <div class="section-icon w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-shield-alt text-white text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-800">Data Security</h2>
+          </div>
+          
+          <p class="text-gray-700 mb-6">
+            We implement industry-standard security measures to protect your information from unauthorized access, alteration, or destruction:
+          </p>
+          
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-green-50 p-5 rounded-lg card-hover">
+              <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mb-3">
+                <i class="fas fa-lock text-green-600"></i>
+              </div>
+              <h3 class="font-semibold text-gray-800 mb-2">Encryption</h3>
+              <p class="text-gray-700 text-sm">All data is encrypted in transit using TLS 1.2+ protocols</p>
+            </div>
+            
+            <div class="bg-green-50 p-5 rounded-lg card-hover">
+              <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mb-3">
+                <i class="fas fa-database text-green-600"></i>
+              </div>
+              <h3 class="font-semibold text-gray-800 mb-2">Secure Storage</h3>
+              <p class="text-gray-700 text-sm">Passwords are hashed using bcrypt before storage</p>
+            </div>
+          </div>
+          
+          <p class="text-gray-700 mt-6">
+            We regularly review and update our security practices to ensure the ongoing protection of your information. Our team is trained in data protection best practices, and access to user data is strictly limited to authorized personnel only.
+          </p>
+        </div>
+
+        <!-- User Rights -->
+        <div class="mb-10">
+          <div class="flex items-center mb-6">
+            <div class="section-icon w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-user-check text-white text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-800">User Rights</h2>
+          </div>
+          
+          <p class="text-gray-700 mb-6">
+            You have the following rights regarding your personal data:
+          </p>
+          
+          <div class="bg-purple-50 p-6 rounded-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="flex items-start">
+                <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mr-3 mt-1">
+                  <i class="fas fa-eye text-purple-600 text-xs"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-800 mb-1">Right to Access</h3>
+                  <p class="text-gray-700 text-sm">Request a copy of your personal data</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mr-3 mt-1">
+                  <i class="fas fa-edit text-purple-600 text-xs"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-800 mb-1">Right to Correction</h3>
+                  <p class="text-gray-700 text-sm">Update inaccurate or incomplete information</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mr-3 mt-1">
+                  <i class="fas fa-trash-alt text-purple-600 text-xs"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-800 mb-1">Right to Deletion</h3>
+                  <p class="text-gray-700 text-sm">Request deletion of your personal data</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start">
+                <div class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mr-3 mt-1">
+                  <i class="fas fa-download text-purple-600 text-xs"></i>
+                </div>
+                <div>
+                  <h3 class="font-semibold text-gray-800 mb-1">Right to Portability</h3>
+                  <p class="text-gray-700 text-sm">Receive your data in a machine-readable format</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <p class="text-gray-700 mt-6">
+            To exercise any of these rights, please contact us using the information provided in the Contact Details section.
+          </p>
+        </div>
+
+        <!-- Contact Details -->
+        <div>
+          <div class="flex items-center mb-6">
+            <div class="section-icon w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+              <i class="fas fa-envelope text-white text-xl"></i>
+            </div>
+            <h2 class="text-2xl font-semibold text-gray-800">Contact Details</h2>
+          </div>
+          
+          <p class="text-gray-700 mb-6">
+            If you have any questions about this Privacy Policy or wish to exercise your data rights, please contact our Data Protection Officer:
+          </p>
+          
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <div class="flex flex-col md:flex-row md:space-x-8">
+              <div class="flex-1 mb-6 md:mb-0">
+                <h3 class="font-semibold text-gray-800 mb-4">Contact Information</h3>
+                
+                <div class="space-y-4">
+                  <div class="flex items-start">
+                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                      <i class="fas fa-envelope text-blue-600"></i>
+                    </div>
+                    <div>
+                      <p class="text-gray-700 font-medium">Email</p>
+                      <a href="mailto:basugpastquestion@gmail.com" class="text-blue-600 hover:underline">basugpastquestion@gmail.com</a>
+                    </div>
+                  </div>
+                  
+                  <div class="flex items-start">
+                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                      <i class="fas fa-phone text-blue-600"></i>
+                    </div>
+                    <div>
+                      <p class="text-gray-700 font-medium">Phone</p>
+                      <a href="tel:08133376629" class="text-blue-600 hover:underline">08133376629</a><br>
+                      <a href="tel:08032469896" class="text-blue-600 hover:underline">08032469896</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="flex-1">
+                <h3 class="font-semibold text-gray-800 mb-4">Response Time</h3>
+                <p class="text-gray-700">We strive to respond to all inquiries within <span class="font-semibold">24-48 hours</span> during business days.</p>
+                
+                <div class="mt-4 flex items-center bg-blue-50 p-3 rounded-lg">
+                  <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center mr-2">
+                    <i class="fas fa-info text-blue-600 text-xs"></i>
+                  </div>
+                  <p class="text-blue-700 text-sm">For security purposes, we may request verification before processing certain requests.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center text-gray-600 text-sm mb-8 fade-in">
+      <p>This policy was last updated on january 10, 2026</p>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p class="mb-2">© 2025 SaZUG Past Questions Portal. All Rights Reserved.</p>
+      <p class="text-gray-400">Powered by AGI – Aliyu Garba Innovations Company</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple fade-in animation for elements
+    document.addEventListener('DOMContentLoaded', function() {
+      const fadeElements = document.querySelectorAll('.fade-in');
+      
+      fadeElements.forEach(element => {
+        element.style.opacity = 0;
+      });
+      
+      setTimeout(() => {
+        fadeElements.forEach((element, index) => {
+          setTimeout(() => {
+            element.style.opacity = 1;
+          }, index * 200);
+        });
+      }, 300);
+      
+      // Mobile menu functionality
+      const mobileMenuButton = document.getElementById('mobile-menu-button');
+      const mobileMenu = document.getElementById('mobile-menu');
+      
+      mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('active');
+        
+        // Toggle between hamburger and close icon
+        const icon = mobileMenuButton.querySelector('i');
+        if (mobileMenu.classList.contains('active')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-times');
+        } else {
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      });
+      
+      // Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!mobileMenu.contains(event.target) && event.target !== mobileMenuButton && !mobileMenuButton.contains(event.target)) {
+          mobileMenu.classList.remove('active');
+          const icon = mobileMenuButton.querySelector('i');
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
