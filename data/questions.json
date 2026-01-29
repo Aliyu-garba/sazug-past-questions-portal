@@ -1,0 +1,957 @@
+{
+  "agric-economics-extension": {
+    "100-level": {
+      "first": {
+        "bio101": ["bio101_2023.pdf", "bio101_2024.pdf"],
+        "bio107": ["bio107_2023.pdf", "bio107_2024.pdf"],
+        "phy101": ["phy101_2023.pdf", "phy101_2024.pdf"],
+        "phy107": ["phy107_2023.pdf", "phy107_2024.pdf"],
+        "math101": ["math101_2023.pdf", "math101_2024.pdf"],
+        "chem101": ["chem101_2023.pdf", "chem101_2024.pdf"],
+        "chem107": ["chem107_2023.pdf", "chem107_2024.pdf"],
+        "gst111": ["gst111_2023.pdf", "gst111_2024.pdf"]
+      },
+      "second": {
+        "bio102": ["bio102_2023.pdf", "bio102_2024.pdf"],
+        "bio108": ["bio108_2023.pdf", "bio108_2024.pdf"],
+        "phy102": ["phy102_2023.pdf", "phy102_2024.pdf"],
+        "phy108": ["phy108_2023.pdf", "phy108_2024.pdf"],
+        "math102": ["math102_2023.pdf", "math102_2024.pdf"],
+        "chem102": ["chem102_2023.pdf", "chem102_2024.pdf"],
+        "chem108": ["chem108_2023.pdf", "chem108_2024.pdf"],
+        "gst112": ["gst112_2023.pdf", "gst112_2024.pdf"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "ard201": ["ard201_2023.pdf", "ard201_2024.pdf"],
+        "aea251": ["aea251_2023.pdf", "aea251_2024.pdf"],
+        "agr201": ["agr201_2023.pdf", "agr201_2024.pdf"],
+        "ard203": ["ard203_2023.pdf", "ard203_2024.pdf"],
+        "slm201": ["slm201_2023.pdf", "slm201_2024.pdf"],
+        "agr203": ["agr203_2023.pdf", "agr203_2024.pdf"],
+        "agr205": ["agr205_2023.pdf", "agr205_2024.pdf"],
+        "frm211": ["frm211_2023.pdf", "frm211_2024.pdf"],
+        "anp201": ["anp201_2023.pdf", "anp201_2024.pdf"],
+        "agr207": ["agr207_2023.pdf", "agr207_2024.pdf"],
+        "gst201": ["gst201_2023.pdf", "gst201_2024.pdf"]
+      },
+      "second": {
+        "aea252": ["aea252_2023.pdf", "aea252_2024.pdf"],
+        "ard202": ["ard202_2023.pdf", "ard202_2024.pdf"],
+        "aea254": ["aea254_2023.pdf", "aea254_2024.pdf"],
+        "aea256": ["aea256_2023.pdf", "aea256_2024.pdf"],
+        "anp202": ["anp202_2023.pdf", "anp202_2024.pdf"],
+        "slm202": ["slm202_2023.pdf", "slm202_2024.pdf"],
+        "cpp202": ["cpp202_2023.pdf", "cpp202_2024.pdf"],
+        "agr204": ["agr204_2023.pdf", "agr204_2024.pdf"],
+        "gst202": ["gst202_2023.pdf", "gst202_2024.pdf"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "aea301": ["aea301_2023.pdf", "aea301_2024.pdf"],
+        "aea303": ["aea303_2023.pdf", "aea303_2024.pdf"],
+        "aea305": ["aea305_2023.pdf", "aea305_2024.pdf"],
+        "aea307": ["aea307_2023.pdf", "aea307_2024.pdf"],
+        "aea309": ["aea309_2023.pdf", "aea309_2024.pdf"],
+        "sta305": ["sta305_2023.pdf", "sta305_2024.pdf"],
+        "gst301": ["gst301_2023.pdf", "gst301_2024.pdf"]
+      },
+      "second": {
+        "siwes": "Industrial Training (IT)"
+      }
+    },
+    "400-level": {
+      "first": {
+        "aea401": ["aea401_2023.pdf", "aea401_2024.pdf"],
+        "aea403": ["aea403_2023.pdf", "aea403_2024.pdf"],
+        "aea405": ["aea405_2023.pdf", "aea405_2024.pdf"],
+        "aea407": ["aea407_2023.pdf", "aea407_2024.pdf"],
+        "aea409": ["aea409_2023.pdf", "aea409_2024.pdf"],
+        "aea411": ["aea411_2023.pdf", "aea411_2024.pdf"],
+        "gst401": ["gst401_2023.pdf", "gst401_2024.pdf"]
+      },
+      "second": {
+        "aea402": ["aea402_2023.pdf", "aea402_2024.pdf"],
+        "aea404": ["aea404_2023.pdf", "aea404_2024.pdf"],
+        "aea406": ["aea406_2023.pdf", "aea406_2024.pdf"],
+        "aea408": ["aea408_2023.pdf", "aea408_2024.pdf"],
+        "aea410": ["aea410_2023.pdf", "aea410_2024.pdf"],
+        "aea412": ["aea412_2023.pdf", "aea412_2024.pdf"]
+      }
+    }
+  },
+  "anatomy": {
+    "100-level": {
+      "first": {
+        "bio101": ["bio101_2023.pdf", "bio101_2024.pdf"],
+        "bio107": ["bio107_2023.pdf", "bio107_2024.pdf"],
+        "chm101": ["chm101_2023.pdf", "chm101_2024.pdf"],
+        "chm107": ["chm107_2023.pdf", "chm107_2024.pdf"],
+        "phy101": ["phy101_2023.pdf", "phy101_2024.pdf"],
+        "phy107": ["phy107_2023.pdf", "phy107_2024.pdf"],
+        "math101": ["math101_2023.pdf", "math101_2024.pdf"],
+        "gst111": ["gst111_2023.pdf", "gst111_2024.pdf"]
+      },
+      "second": {
+        "bio102": ["bio102_2023.pdf", "bio102_2024.pdf"],
+        "bio108": ["bio108_2023.pdf", "bio108_2024.pdf"],
+        "chm102": ["chm102_2023.pdf", "chm102_2024.pdf"],
+        "chm108": ["chm108_2023.pdf", "chm108_2024.pdf"],
+        "phy102": ["phy102_2023.pdf", "phy102_2024.pdf"],
+        "phy108": ["phy108_2023.pdf", "phy108_2024.pdf"],
+        "math102": ["math102_2023.pdf", "math102_2024.pdf"],
+        "gst112": ["gst112_2023.pdf", "gst112_2024.pdf"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "ana201": ["ana201_2023.pdf", "ana201_2024.pdf"],
+        "ana203": ["ana203_2023.pdf", "ana203_2024.pdf"],
+        "phy201": ["phy201_2023.pdf", "phy201_2024.pdf"],
+        "bch201": ["bch201_2023.pdf", "bch201_2024.pdf"],
+        "phs201": ["phs201_2023.pdf", "phs201_2024.pdf"],
+        "stb201": ["stb201_2023.pdf", "stb201_2024.pdf"],
+        "gst201": ["gst201_2023.pdf", "gst201_2024.pdf"]
+      },
+      "second": {
+        "ana202": ["ana202_2023.pdf", "ana202_2024.pdf"],
+        "ana204": ["ana204_2023.pdf", "ana204_2024.pdf"],
+        "ana206": ["ana206_2023.pdf", "ana206_2024.pdf"],
+        "bch202": ["bch202_2023.pdf", "bch202_2024.pdf"],
+        "phs202": ["phs202_2023.pdf", "phs202_2024.pdf"],
+        "mic202": ["mic202_2023.pdf", "mic202_2024.pdf"],
+        "gst202": ["gst202_2023.pdf", "gst202_2024.pdf"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "ana301": ["ana301_2023.pdf", "ana301_2024.pdf"],
+        "ana303": ["ana303_2023.pdf", "ana303_2024.pdf"],
+        "ana305": ["ana305_2023.pdf", "ana305_2024.pdf"],
+        "ana307": ["ana307_2023.pdf", "ana307_2024.pdf"],
+        "pgy301": ["pgy301_2023.pdf", "pgy301_2024.pdf"],
+        "pat301": ["pat301_2023.pdf", "pat301_2024.pdf"],
+        "gst301": ["gst301_2023.pdf", "gst301_2024.pdf"]
+      },
+      "second": {
+        "ana302": ["ana302_2023.pdf", "ana302_2024.pdf"],
+        "ana304": ["ana304_2023.pdf", "ana304_2024.pdf"],
+        "ana306": ["ana306_2023.pdf", "ana306_2024.pdf"],
+        "ana308": ["ana308_2023.pdf", "ana308_2024.pdf"],
+        "pgy302": ["pgy302_2023.pdf", "pgy302_2024.pdf"],
+        "imm302": ["imm302_2023.pdf", "imm302_2024.pdf"],
+        "gst302": ["gst302_2023.pdf", "gst302_2024.pdf"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "ana401": ["ana401_2023.pdf", "ana401_2024.pdf"],
+        "ana403": ["ana403_2023.pdf", "ana403_2024.pdf"],
+        "ana405": ["ana405_2023.pdf", "ana405_2024.pdf"],
+        "ana407": ["ana407_2023.pdf", "ana407_2024.pdf"],
+        "ana409": ["ana409_2023.pdf", "ana409_2024.pdf"],
+        "pha401": ["pha401_2023.pdf", "pha401_2024.pdf"],
+        "gst401": ["gst401_2023.pdf", "gst401_2024.pdf"]
+      },
+      "second": {
+        "ana402": ["ana402_2023.pdf", "ana402_2024.pdf"],
+        "ana404": ["ana404_2023.pdf", "ana404_2024.pdf"],
+        "ana406": ["ana406_2023.pdf", "ana406_2024.pdf"],
+        "ana408": ["ana408_2023.pdf", "ana408_2024.pdf"],
+        "ana410": ["ana410_2023.pdf", "ana410_2024.pdf"],
+        "res499": ["res499_2023.pdf", "res499_2024.pdf"]
+      }
+    }
+  },
+  "animal-science": {
+    "100-level": {
+      "first": {
+        "bio101": ["bio101_2023.pdf", "bio101_2024.pdf"],
+        "chm101": ["chm101_2023.pdf", "chm101_2024.pdf"],
+        "mth101": ["mth101_2023.pdf", "mth101_2024.pdf"],
+        "phy101": ["phy101_2023.pdf", "phy101_2024.pdf"],
+        "gst111": ["gst111_2023.pdf", "gst111_2024.pdf"],
+        "eng101": ["eng101_2023.pdf", "eng101_2024.pdf"]
+      },
+      "second": {
+        "bio102": ["bio102_2023.pdf", "bio102_2024.pdf"],
+        "chm102": ["chm102_2023.pdf", "chm102_2024.pdf"],
+        "mth102": ["mth102_2023.pdf", "mth102_2024.pdf"],
+        "phy102": ["phy102_2023.pdf", "phy102_2024.pdf"],
+        "gst112": ["gst112_2023.pdf", "gst112_2024.pdf"],
+        "eng102": ["eng102_2023.pdf", "eng102_2024.pdf"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "ans201": ["ans201_2023.pdf", "ans201_2024.pdf"],
+        "ans211": ["ans211_2023.pdf", "ans211_2024.pdf"],
+        "aec211": ["aec211_2023.pdf", "aec211_2024.pdf"],
+        "bch201": ["bch201_2023.pdf", "bch201_2024.pdf"],
+        "stb201": ["stb201_2023.pdf", "stb201_2024.pdf"],
+        "gst201": ["gst201_2023.pdf", "gst201_2024.pdf"]
+      },
+      "second": {
+        "ans232": ["ans232_2023.pdf", "ans232_2024.pdf"],
+        "ans234": ["ans234_2023.pdf", "ans234_2024.pdf"],
+        "ans252": ["ans252_2023.pdf", "ans252_2024.pdf"],
+        "sta202": ["sta202_2023.pdf", "sta202_2024.pdf"],
+        "fst222": ["fst222_2023.pdf", "fst222_2024.pdf"],
+        "gst202": ["gst202_2023.pdf", "gst202_2024.pdf"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "ans311": ["ans311_2023.pdf", "ans311_2024.pdf"],
+        "ans313": ["ans313_2023.pdf", "ans313_2024.pdf"],
+        "ans321": ["ans321_2023.pdf", "ans321_2024.pdf"],
+        "aec311": ["aec311_2023.pdf", "aec311_2024.pdf"],
+        "ssl311": ["ssl311_2023.pdf", "ssl311_2024.pdf"],
+        "gst301": ["gst301_2023.pdf", "gst301_2024.pdf"]
+      },
+      "second": {
+        "ans312": ["ans312_2023.pdf", "ans312_2024.pdf"],
+        "ans334": ["ans334_2023.pdf", "ans334_2024.pdf"],
+        "ans322": ["ans322_2023.pdf", "ans322_2024.pdf"],
+        "aec322": ["aec322_2023.pdf", "aec322_2024.pdf"],
+        "cs322": ["cs322_2023.pdf", "cs322_2024.pdf"],
+        "gst302": ["gst302_2023.pdf", "gst302_2024.pdf"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "siwes": "Students' Industrial Work Experience Scheme (SIWES)"
+      },
+      "second": {
+        "ans499": ["ans499_2023.pdf", "ans499_2024.pdf"],
+        "ans500": ["ans500_2023.pdf", "ans500_2024.pdf"],
+        "ans502": ["ans502_2023.pdf", "ans502_2024.pdf"],
+        "ans504": ["ans504_2023.pdf", "ans504_2024.pdf"],
+        "ans506": ["ans506_2023.pdf", "ans506_2024.pdf"],
+        "age508": ["age508_2023.pdf", "age508_2024.pdf"]
+      }
+    }
+  },
+  "arabic": {
+    "100-level": {
+      "first": {
+        "arb101": ["arb101_2023.pdf", "arb101_2024.pdf"],
+        "arb103": ["arb103_2023.pdf", "arb103_2024.pdf"],
+        "arb105": ["arb105_2023.pdf", "arb105_2024.pdf"],
+        "fre101": ["fre101_2023.pdf", "fre101_2024.pdf"],
+        "gst111": ["gst111_2023.pdf", "gst111_2024.pdf"],
+        "gst107": ["gst107_2023.pdf", "gst107_2024.pdf"]
+      },
+      "second": {
+        "arb102": ["arb102_2023.pdf", "arb102_2024.pdf"],
+        "arb104": ["arb104_2023.pdf", "arb104_2024.pdf"],
+        "arb106": ["arb106_2023.pdf", "arb106_2024.pdf"],
+        "isg101": ["isg101_2023.pdf", "isg101_2024.pdf"],
+        "fre102": ["fre102_2023.pdf", "fre102_2024.pdf"],
+        "gst112": ["gst112_2023.pdf", "gst112_2024.pdf"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "arb201": ["arb201_2023.pdf", "arb201_2024.pdf"],
+        "arb203": ["arb203_2023.pdf", "arb203_2024.pdf"],
+        "arb205": ["arb205_2023.pdf", "arb205_2024.pdf"],
+        "arb207": ["arb207_2023.pdf", "arb207_2024.pdf"],
+        "arb209": ["arb209_2023.pdf", "arb209_2024.pdf"],
+        "gst201": ["gst201_2023.pdf", "gst201_2024.pdf"]
+      },
+      "second": {
+        "arb202": ["arb202_2023.pdf", "arb202_2024.pdf"],
+        "arb204": ["arb204_2023.pdf", "arb204_2024.pdf"],
+        "arb206": ["arb206_2023.pdf", "arb206_2024.pdf"],
+        "arb208": ["arb208_2023.pdf", "arb208_2024.pdf"],
+        "arb210": ["arb210_2023.pdf", "arb210_2024.pdf"],
+        "gst202": ["gst202_2023.pdf", "gst202_2024.pdf"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "arb301": ["arb301_2023.pdf", "arb301_2024.pdf"],
+        "arb303": ["arb303_2023.pdf", "arb303_2024.pdf"],
+        "arb305": ["arb305_2023.pdf", "arb305_2024.pdf"],
+        "arb307": ["arb307_2023.pdf", "arb307_2024.pdf"],
+        "arb309": ["arb309_2023.pdf", "arb309_2024.pdf"],
+        "gst301": ["gst301_2023.pdf", "gst301_2024.pdf"]
+      },
+      "second": {
+        "arb302": ["arb302_2023.pdf", "arb302_2024.pdf"],
+        "arb304": ["arb304_2023.pdf", "arb304_2024.pdf"],
+        "arb306": ["arb306_2023.pdf", "arb306_2024.pdf"],
+        "arb308": ["arb308_2023.pdf", "arb308_2024.pdf"],
+        "arb310": ["arb310_2023.pdf", "arb310_2024.pdf"],
+        "gst302": ["gst302_2023.pdf", "gst302_2024.pdf"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "arb401": ["arb401_2023.pdf", "arb401_2024.pdf"],
+        "arb403": ["arb403_2023.pdf", "arb403_2024.pdf"],
+        "arb405": ["arb405_2023.pdf", "arb405_2024.pdf"],
+        "arb407": ["arb407_2023.pdf", "arb407_2024.pdf"],
+        "arb409": ["arb409_2023.pdf", "arb409_2024.pdf"],
+        "arb411": ["arb411_2023.pdf", "arb411_2024.pdf"]
+      },
+      "second": {
+        "arb402": ["arb402_2023.pdf", "arb402_2024.pdf"],
+        "arb404": ["arb404_2023.pdf", "arb404_2024.pdf"],
+        "arb406": ["arb406_2023.pdf", "arb406_2024.pdf"],
+        "arb408": ["arb408_2023.pdf", "arb408_2024.pdf"],
+        "arb499": ["arb499_2023.pdf", "arb499_2024.pdf"]
+      }
+    }
+  },
+  "biochemistry": {
+    "100-level": {
+      "first": {
+        "bio101": ["bio101_2023.pdf", "bio101_2024.pdf"],
+        "bio107": ["bio107_2023.pdf", "bio107_2024.pdf"],
+        "chm101": ["chm101_2023.pdf", "chm101_2024.pdf"],
+        "chm107": ["chm107_2023.pdf", "chm107_2024.pdf"],
+        "mth101": ["mth101_2023.pdf", "mth101_2024.pdf"],
+        "phy101": ["phy101_2023.pdf", "phy101_2024.pdf"],
+        "phy107": ["phy107_2023.pdf", "phy107_2024.pdf"],
+        "gst111": ["gst111_2023.pdf", "gst111_2024.pdf"]
+      },
+      "second": {
+        "bio102": ["bio102_2023.pdf", "bio102_2024.pdf"],
+        "bio108": ["bio108_2023.pdf", "bio108_2024.pdf"],
+        "chm102": ["chm102_2023.pdf", "chm102_2024.pdf"],
+        "chm108": ["chm108_2023.pdf", "chm108_2024.pdf"],
+        "mth102": ["mth102_2023.pdf", "mth102_2024.pdf"],
+        "phy102": ["phy102_2023.pdf", "phy102_2024.pdf"],
+        "phy108": ["phy108_2023.pdf", "phy108_2024.pdf"],
+        "gst112": ["gst112_2023.pdf", "gst112_2024.pdf"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "bch201": ["bch201_2023.pdf", "bch201_2024.pdf"],
+        "bch203": ["bch203_2023.pdf", "bch203_2024.pdf"],
+        "chm201": ["chm201_2023.pdf", "chm201_2024.pdf"],
+        "chm207": ["chm207_2023.pdf", "chm207_2024.pdf"],
+        "mcb201": ["mcb201_2023.pdf", "mcb201_2024.pdf"],
+        "bot201": ["bot201_2023.pdf", "bot201_2024.pdf"],
+        "gst201": ["gst201_2023.pdf", "gst201_2024.pdf"]
+      },
+      "second": {
+        "bch202": ["bch202_2023.pdf", "bch202_2024.pdf"],
+        "bch204": ["bch204_2023.pdf", "bch204_2024.pdf"],
+        "chm202": ["chm202_2023.pdf", "chm202_2024.pdf"],
+        "chm208": ["chm208_2023.pdf", "chm208_2024.pdf"],
+        "mcb202": ["mcb202_2023.pdf", "mcb202_2024.pdf"],
+        "zoo202": ["zoo202_2023.pdf", "zoo202_2024.pdf"],
+        "gst202": ["gst202_2023.pdf", "gst202_2024.pdf"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "bch301": ["bch301_2023.pdf", "bch301_2024.pdf"],
+        "bch303": ["bch303_2023.pdf", "bch303_2024.pdf"],
+        "bch305": ["bch305_2023.pdf", "bch305_2024.pdf"],
+        "bch307": ["bch307_2023.pdf", "bch307_2024.pdf"],
+        "bch309": ["bch309_2023.pdf", "bch309_2024.pdf"],
+        "bch311": ["bch311_2023.pdf", "bch311_2024.pdf"],
+        "gst301": ["gst301_2023.pdf", "gst301_2024.pdf"]
+      },
+      "second": {
+        "bch302": ["bch302_2023.pdf", "bch302_2024.pdf"],
+        "bch304": ["bch304_2023.pdf", "bch304_2024.pdf"],
+        "bch306": ["bch306_2023.pdf", "bch306_2024.pdf"],
+        "bch308": ["bch308_2023.pdf", "bch308_2024.pdf"],
+        "bch310": ["bch310_2023.pdf", "bch310_2024.pdf"],
+        "bch312": ["bch312_2023.pdf", "bch312_2024.pdf"],
+        "gst302": ["gst302_2023.pdf", "gst302_2024.pdf"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "bch401": ["bch401_2023.pdf", "bch401_2024.pdf"],
+        "bch403": ["bch403_2023.pdf", "bch403_2024.pdf"],
+        "bch405": ["bch405_2023.pdf", "bch405_2024.pdf"],
+        "bch407": ["bch407_2023.pdf", "bch407_2024.pdf"],
+        "bch409": ["bch409_2023.pdf", "bch409_2024.pdf"],
+        "bch411": ["bch411_2023.pdf", "bch411_2024.pdf"],
+        "gst401": ["gst401_2023.pdf", "gst401_2024.pdf"]
+      },
+      "second": {
+        "bch402": ["bch402_2023.pdf", "bch402_2024.pdf"],
+        "bch404": ["bch404_2023.pdf", "bch404_2024.pdf"],
+        "bch406": ["bch406_2023.pdf", "bch406_2024.pdf"],
+        "bch408": ["bch408_2023.pdf", "bch408_2024.pdf"],
+        "bch410": ["bch410_2023.pdf", "bch410_2024.pdf"],
+        "bch499": ["bch499_2023.pdf", "bch499_2024.pdf"]
+      }
+    }
+  },
+  "bio": {
+    "100-level": {
+      "first": {
+        "bio101": ["bio101_2023.pdf", "bio101_2024.pdf"],
+        "bio107": ["bio107_2023.pdf", "bio107_2024.pdf"],
+        "chm101": ["chm101_2023.pdf", "chm101_2024.pdf"],
+        "chm107": ["chm107_2023.pdf", "chm107_2024.pdf"],
+        "mth101": ["mth101_2023.pdf", "mth101_2024.pdf"],
+        "phy101": ["phy101_2023.pdf", "phy101_2024.pdf"],
+        "phy107": ["phy107_2023.pdf", "phy107_2024.pdf"],
+        "gst111": ["gst111_2023.pdf", "gst111_2024.pdf"]
+      },
+      "second": {
+        "bio102": ["bio102_2023.pdf", "bio102_2024.pdf"],
+        "bio108": ["bio108_2023.pdf", "bio108_2024.pdf"],
+        "chm102": ["chm102_2023.pdf", "chm102_2024.pdf"],
+        "chm108": ["chm108_2023.pdf", "chm108_2024.pdf"],
+        "mth102": ["mth102_2023.pdf", "mth102_2024.pdf"],
+        "phy102": ["phy102_2023.pdf", "phy102_2024.pdf"],
+        "phy108": ["phy108_2023.pdf", "phy108_2024.pdf"],
+        "gst112": ["gst112_2023.pdf", "gst112_2024.pdf"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "bio201": ["bio201_2023.pdf", "bio201_2024.pdf"],
+        "bio203": ["bio203_2023.pdf", "bio203_2024.pdf"],
+        "bio205": ["bio205_2023.pdf", "bio205_2024.pdf"],
+        "bio207": ["bio207_2023.pdf", "bio207_2024.pdf"],
+        "bch201": ["bch201_2023.pdf", "bch201_2024.pdf"],
+        "mcb201": ["mcb201_2023.pdf", "mcb201_2024.pdf"],
+        "gst201": ["gst201_2023.pdf", "gst201_2024.pdf"]
+      },
+      "second": {
+        "bio202": ["bio202_2023.pdf", "bio202_2024.pdf"],
+        "bio204": ["bio204_2023.pdf", "bio204_2024.pdf"],
+        "bio206": ["bio206_2023.pdf", "bio206_2024.pdf"],
+        "bio208": ["bio208_2023.pdf", "bio208_2024.pdf"],
+        "bch202": ["bch202_2023.pdf", "bch202_2024.pdf"],
+        "mcb202": ["mcb202_2023.pdf", "mcb202_2024.pdf"],
+        "gst202": ["gst202_2023.pdf", "gst202_2024.pdf"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "bio301": ["bio301_2023.pdf", "bio301_2024.pdf"],
+        "bio303": ["bio303_2023.pdf", "bio303_2024.pdf"],
+        "bio305": ["bio305_2023.pdf", "bio305_2024.pdf"],
+        "bio307": ["bio307_2023.pdf", "bio307_2024.pdf"],
+        "bio309": ["bio309_2023.pdf", "bio309_2024.pdf"],
+        "gst301": ["gst301_2023.pdf", "gst301_2024.pdf"]
+      },
+      "second": {
+        "bio302": ["bio302_2023.pdf", "bio302_2024.pdf"],
+        "bio304": ["bio304_2023.pdf", "bio304_2024.pdf"],
+        "bio306": ["bio306_2023.pdf", "bio306_2024.pdf"],
+        "bio308": ["bio308_2023.pdf", "bio308_2024.pdf"],
+        "bio310": ["bio310_2023.pdf", "bio310_2024.pdf"],
+        "gst302": ["gst302_2023.pdf", "gst302_2024.pdf"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "bio401": ["bio401_2023.pdf", "bio401_2024.pdf"],
+        "bio403": ["bio403_2023.pdf", "bio403_2024.pdf"],
+        "bio405": ["bio405_2023.pdf", "bio405_2024.pdf"],
+        "bio407": ["bio407_2023.pdf", "bio407_2024.pdf"],
+        "bio409": ["bio409_2023.pdf", "bio409_2024.pdf"],
+        "bio411": ["bio411_2023.pdf", "bio411_2024.pdf"],
+        "gst401": ["gst401_2023.pdf", "gst401_2024.pdf"]
+      },
+      "second": {
+        "bio402": ["bio402_2023.pdf", "bio402_2024.pdf"],
+        "bio404": ["bio404_2023.pdf", "bio404_2024.pdf"],
+        "bio406": ["bio406_2023.pdf", "bio406_2024.pdf"],
+        "bio408": ["bio408_2023.pdf", "bio408_2024.pdf"],
+        "bio499": ["bio499_2023.pdf", "bio499_2024.pdf"]
+      }
+    }
+  },
+  "bio-edu": {
+    "100-level": {
+      "first": {
+        "bio101": ["bio101_2023.pdf", "bio101_2024.pdf"],
+        "bio107": ["bio107_2023.pdf", "bio107_2024.pdf"],
+        "chm101": ["chm101_2023.pdf", "chm101_2024.pdf"],
+        "chm107": ["chm107_2023.pdf", "chm107_2024.pdf"],
+        "mth101": ["mth101_2023.pdf", "mth101_2024.pdf"],
+        "edu101": ["edu101_2023.pdf", "edu101_2024.pdf"],
+        "gst111": ["gst111_2023.pdf", "gst111_2024.pdf"]
+      },
+      "second": {
+        "bio102": ["bio102_2023.pdf", "bio102_2024.pdf"],
+        "bio108": ["bio108_2023.pdf", "bio108_2024.pdf"],
+        "chm102": ["chm102_2023.pdf", "chm102_2024.pdf"],
+        "chm108": ["chm108_2023.pdf", "chm108_2024.pdf"],
+        "mth102": ["mth102_2023.pdf", "mth102_2024.pdf"],
+        "edu102": ["edu102_2023.pdf", "edu102_2024.pdf"],
+        "gst112": ["gst112_2023.pdf", "gst112_2024.pdf"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "bio201": ["bio201_2023.pdf", "bio201_2024.pdf"],
+        "bio203": ["bio203_2023.pdf", "bio203_2024.pdf"],
+        "bio205": ["bio205_2023.pdf", "bio205_2024.pdf"],
+        "edu201": ["edu201_2023.pdf", "edu201_2024.pdf"],
+        "edu203": ["edu203_2023.pdf", "edu203_2024.pdf"],
+        "psy201": ["psy201_2023.pdf", "psy201_2024.pdf"],
+        "gst201": ["gst201_2023.pdf", "gst201_2024.pdf"]
+      },
+      "second": {
+        "bio202": ["bio202_2023.pdf", "bio202_2024.pdf"],
+        "bio204": ["bio204_2023.pdf", "bio204_2024.pdf"],
+        "bio206": ["bio206_2023.pdf", "bio206_2024.pdf"],
+        "edu202": ["edu202_2023.pdf", "edu202_2024.pdf"],
+        "edu204": ["edu204_2023.pdf", "edu204_2024.pdf"],
+        "ted202": ["ted202_2023.pdf", "ted202_2024.pdf"],
+        "gst202": ["gst202_2023.pdf", "gst202_2024.pdf"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "bio301": ["bio301_2023.pdf", "bio301_2024.pdf"],
+        "bio303": ["bio303_2023.pdf", "bio303_2024.pdf"],
+        "sed301": ["sed301_2023.pdf", "sed301_2024.pdf"],
+        "edu301": ["edu301_2023.pdf", "edu301_2024.pdf"],
+        "edu303": ["edu303_2023.pdf", "edu303_2024.pdf"],
+        "eme301": ["eme301_2023.pdf", "eme301_2024.pdf"],
+        "gst301": ["gst301_2023.pdf", "gst301_2024.pdf"]
+      },
+      "second": {
+        "bio302": ["bio302_2023.pdf", "bio302_2024.pdf"],
+        "bio304": ["bio304_2023.pdf", "bio304_2024.pdf"],
+        "sed302": ["sed302_2023.pdf", "sed302_2024.pdf"],
+        "edu302": ["edu302_2023.pdf", "edu302_2024.pdf"],
+        "edu304": ["edu304_2023.pdf", "edu304_2024.pdf"],
+        "ted302": ["ted302_2023.pdf", "ted302_2024.pdf"],
+        "gst302": ["gst302_2023.pdf", "gst302_2024.pdf"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "bio401": ["bio401_2023.pdf", "bio401_2024.pdf"],
+        "sed401": ["sed401_2023.pdf", "sed401_2024.pdf"],
+        "sed403": ["sed403_2023.pdf", "sed403_2024.pdf"],
+        "edu401": ["edu401_2023.pdf", "edu401_2024.pdf"],
+        "edu403": ["edu403_2023.pdf", "edu403_2024.pdf"],
+        "ted401": ["ted401_2023.pdf", "ted401_2024.pdf"],
+        "gst401": ["gst401_2023.pdf", "gst401_2024.pdf"]
+      },
+      "second": {
+        "sed402": ["sed402_2023.pdf", "sed402_2024.pdf"],
+        "sed404": ["sed404_2023.pdf", "sed404_2024.pdf"],
+        "sed406": ["sed406_2023.pdf", "sed406_2024.pdf"],
+        "edu402": ["edu402_2023.pdf", "edu402_2024.pdf"],
+        "ted402": ["ted402_2023.pdf", "ted402_2024.pdf"],
+        "sed499": ["sed499_2023.pdf", "sed499_2024.pdf"]
+      }
+    }
+  },
+  "botany": {
+    "100-level": {
+      "first": {
+        "bot101": ["bot101_2023.pdf", "bot101_2024.pdf"],
+        "bio101": ["bio101_2023.pdf", "bio101_2024.pdf"],
+        "chm101": ["chm101_2023.pdf", "chm101_2024.pdf"],
+        "chm107": ["chm107_2023.pdf", "chm107_2024.pdf"],
+        "mth101": ["mth101_2023.pdf", "mth101_2024.pdf"],
+        "phy101": ["phy101_2023.pdf", "phy101_2024.pdf"],
+        "gst111": ["gst111_2023.pdf", "gst111_2024.pdf"]
+      },
+      "second": {
+        "bot102": ["bot102_2023.pdf", "bot102_2024.pdf"],
+        "bio102": ["bio102_2023.pdf", "bio102_2024.pdf"],
+        "chm102": ["chm102_2023.pdf", "chm102_2024.pdf"],
+        "chm108": ["chm108_2023.pdf", "chm108_2024.pdf"],
+        "mth102": ["mth102_2023.pdf", "mth102_2024.pdf"],
+        "phy102": ["phy102_2023.pdf", "phy102_2024.pdf"],
+        "gst112": ["gst112_2023.pdf", "gst112_2024.pdf"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "bot201": ["bot201_2023.pdf", "bot201_2024.pdf"],
+        "bot203": ["bot203_2023.pdf", "bot203_2024.pdf"],
+        "bot205": ["bot205_2023.pdf", "bot205_2024.pdf"],
+        "bch201": ["bch201_2023.pdf", "bch201_2024.pdf"],
+        "mcb201": ["mcb201_2023.pdf", "mcb201_2024.pdf"],
+        "zoo201": ["zoo201_2023.pdf", "zoo201_2024.pdf"],
+        "gst201": ["gst201_2023.pdf", "gst201_2024.pdf"]
+      },
+      "second": {
+        "bot202": ["bot202_2023.pdf", "bot202_2024.pdf"],
+        "bot204": ["bot204_2023.pdf", "bot204_2024.pdf"],
+        "bot206": ["bot206_2023.pdf", "bot206_2024.pdf"],
+        "bot208": ["bot208_2023.pdf", "bot208_2024.pdf"],
+        "bch202": ["bch202_2023.pdf", "bch202_2024.pdf"],
+        "mcb202": ["mcb202_2023.pdf", "mcb202_2024.pdf"],
+        "gst202": ["gst202_2023.pdf", "gst202_2024.pdf"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "bot301": ["bot301_2023.pdf", "bot301_2024.pdf"],
+        "bot303": ["bot303_2023.pdf", "bot303_2024.pdf"],
+        "bot305": ["bot305_2023.pdf", "bot305_2024.pdf"],
+        "bot307": ["bot307_2023.pdf", "bot307_2024.pdf"],
+        "bot309": ["bot309_2023.pdf", "bot309_2024.pdf"],
+        "sbc301": ["sbc301_2023.pdf", "sbc301_2024.pdf"],
+        "gst301": ["gst301_2023.pdf", "gst301_2024.pdf"]
+      },
+      "second": {
+        "bot302": ["bot302_2023.pdf", "bot302_2024.pdf"],
+        "bot304": ["bot304_2023.pdf", "bot304_2024.pdf"],
+        "bot306": ["bot306_2023.pdf", "bot306_2024.pdf"],
+        "bot308": ["bot308_2023.pdf", "bot308_2024.pdf"],
+        "bot310": ["bot310_2023.pdf", "bot310_2024.pdf"],
+        "sbc302": ["sbc302_2023.pdf", "sbc302_2024.pdf"],
+        "gst302": ["gst302_2023.pdf", "gst302_2024.pdf"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "bot401": ["bot401_2023.pdf", "bot401_2024.pdf"],
+        "bot403": ["bot403_2023.pdf", "bot403_2024.pdf"],
+        "bot405": ["bot405_2023.pdf", "bot405_2024.pdf"],
+        "bot407": ["bot407_2023.pdf", "bot407_2024.pdf"],
+        "bot409": ["bot409_2023.pdf", "bot409_2024.pdf"],
+        "bot411": ["bot411_2023.pdf", "bot411_2024.pdf"],
+        "gst401": ["gst401_2023.pdf", "gst401_2024.pdf"]
+      },
+      "second": {
+        "bot402": ["bot402_2023.pdf", "bot402_2024.pdf"],
+        "bot404": ["bot404_2023.pdf", "bot404_2024.pdf"],
+        "bot406": ["bot406_2023.pdf", "bot406_2024.pdf"],
+        "bot408": ["bot408_2023.pdf", "bot408_2024.pdf"],
+        "bot410": ["bot410_2023.pdf", "bot410_2024.pdf"],
+        "bot499": ["bot499_2023.pdf", "bot499_2024.pdf"]
+      }
+    }
+  },
+  "chem": {
+    "100-level": {
+      "first": {
+        "gst101": ["gst101_2023.pdf", "gst101_2024.pdf"],
+        "gst107": ["gst107_2023.pdf", "gst107_2024.pdf"],
+        "chm101": ["chm101_2023.pdf", "chm101_2024.pdf"],
+        "chm103": ["chm103_2023.pdf", "chm103_2024.pdf"],
+        "chm191": ["chm191_2023.pdf", "chm191_2024.pdf"],
+        "mth101": ["mth101_2023.pdf", "mth101_2024.pdf"],
+        "phy101": ["phy101_2023.pdf", "phy101_2024.pdf"],
+        "phy191": ["phy191_2023.pdf", "phy191_2024.pdf"],
+        "bio101": ["bio101_2023.pdf", "bio101_2024.pdf"],
+        "bio191": ["bio191_2023.pdf", "bio191_2024.pdf"]
+      },
+      "second": {
+        "gst104": ["gst104_2023.pdf", "gst104_2024.pdf"],
+        "chm102": ["chm102_2023.pdf", "chm102_2024.pdf"],
+        "chm192": ["chm192_2023.pdf", "chm192_2024.pdf"],
+        "mth102": ["mth102_2023.pdf", "mth102_2024.pdf"],
+        "phy102": ["phy102_2023.pdf", "phy102_2024.pdf"],
+        "phy192": ["phy192_2023.pdf", "phy192_2024.pdf"],
+        "bio102": ["bio102_2023.pdf", "bio102_2024.pdf"],
+        "bio192": ["bio192_2023.pdf", "bio192_2024.pdf"],
+        "cit104": ["cit104_2023.pdf", "cit104_2024.pdf"],
+        "stt102": ["stt102_2023.pdf", "stt102_2024.pdf"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "gst201": ["gst201_2023.pdf", "gst201_2024.pdf"],
+        "gst203": ["gst203_2023.pdf", "gst203_2024.pdf"],
+        "chm201": ["chm201_2023.pdf", "chm201_2024.pdf"],
+        "chm203": ["chm203_2023.pdf", "chm203_2024.pdf"],
+        "chm205": ["chm205_2023.pdf", "chm205_2024.pdf"],
+        "chm291": ["chm291_2023.pdf", "chm291_2024.pdf"],
+        "mth281": ["mth281_2023.pdf", "mth281_2024.pdf"]
+      },
+      "second": {
+        "gst202": ["gst202_2023.pdf", "gst202_2024.pdf"],
+        "chm202": ["chm202_2023.pdf", "chm202_2024.pdf"],
+        "chm204": ["chm204_2023.pdf", "chm204_2024.pdf"],
+        "chm292": ["chm292_2023.pdf", "chm292_2024.pdf"],
+        "mth212": ["mth212_2023.pdf", "mth212_2024.pdf"],
+        "phy202": ["phy202_2023.pdf", "phy202_2024.pdf"],
+        "phy204": ["phy204_2023.pdf", "phy204_2024.pdf"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "chm301": ["chm301_2023.pdf", "chm301_2024.pdf"],
+        "chm303": ["chm303_2023.pdf", "chm303_2024.pdf"],
+        "chm305": ["chm305_2023.pdf", "chm305_2024.pdf"],
+        "chm307": ["chm307_2023.pdf", "chm307_2024.pdf"],
+        "chm309": ["chm309_2023.pdf", "chm309_2024.pdf"],
+        "chm391": ["chm391_2023.pdf", "chm391_2024.pdf"],
+        "gst302": ["gst302_2023.pdf", "gst302_2024.pdf"]
+      },
+      "second": {
+        "siwes": "Industrial Training (SIWES)"
+      }
+    },
+    "400-level": {
+      "first": {
+        "chm407": ["chm407_2023.pdf", "chm407_2024.pdf"],
+        "chm409": ["chm409_2023.pdf", "chm409_2024.pdf"],
+        "chm411": ["chm411_2023.pdf", "chm411_2024.pdf"],
+        "chm413": ["chm413_2023.pdf", "chm413_2024.pdf"],
+        "chm421": ["chm421_2023.pdf", "chm421_2024.pdf"],
+        "chm423": ["chm423_2023.pdf", "chm423_2024.pdf"]
+      },
+      "second": {
+        "chm400": ["chm400_2023.pdf", "chm400_2024.pdf"],
+        "chm406": ["chm406_2023.pdf", "chm406_2024.pdf"],
+        "chm408": ["chm408_2023.pdf", "chm408_2024.pdf"],
+        "chm414": ["chm414_2023.pdf", "chm414_2024.pdf"],
+        "chm416": ["chm416_2023.pdf", "chm416_2024.pdf"]
+      }
+    }
+  },
+  "chem-edu": {
+    "100-level": {
+      "first": {
+        "chm101": ["chm101_2023.pdf", "chm101_2024.pdf"],
+        "chm107": ["chm107_2023.pdf", "chm107_2024.pdf"],
+        "mth101": ["mth101_2023.pdf", "mth101_2024.pdf"],
+        "phy101": ["phy101_2023.pdf", "phy101_2024.pdf"],
+        "phy107": ["phy107_2023.pdf", "phy107_2024.pdf"],
+        "edu101": ["edu101_2023.pdf", "edu101_2024.pdf"],
+        "gst111": ["gst111_2023.pdf", "gst111_2024.pdf"]
+      },
+      "second": {
+        "chm102": ["chm102_2023.pdf", "chm102_2024.pdf"],
+        "chm108": ["chm108_2023.pdf", "chm108_2024.pdf"],
+        "mth102": ["mth102_2023.pdf", "mth102_2024.pdf"],
+        "phy102": ["phy102_2023.pdf", "phy102_2024.pdf"],
+        "phy108": ["phy108_2023.pdf", "phy108_2024.pdf"],
+        "edu102": ["edu102_2023.pdf", "edu102_2024.pdf"],
+        "gst112": ["gst112_2023.pdf", "gst112_2024.pdf"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "chm201": ["chm201_2023.pdf", "chm201_2024.pdf"],
+        "chm203": ["chm203_2023.pdf", "chm203_2024.pdf"],
+        "chm205": ["chm205_2023.pdf", "chm205_2024.pdf"],
+        "edu201": ["edu201_2023.pdf", "edu201_2024.pdf"],
+        "edu203": ["edu203_2023.pdf", "edu203_2024.pdf"],
+        "psy201": ["psy201_2023.pdf", "psy201_2024.pdf"],
+        "gst201": ["gst201_2023.pdf", "gst201_2024.pdf"]
+      },
+      "second": {
+        "chm202": ["chm202_2023.pdf", "chm202_2024.pdf"],
+        "chm204": ["chm204_2023.pdf", "chm204_2024.pdf"],
+        "chm206": ["chm206_2023.pdf", "chm206_2024.pdf"],
+        "edu202": ["edu202_2023.pdf", "edu202_2024.pdf"],
+        "edu204": ["edu204_2023.pdf", "edu204_2024.pdf"],
+        "ted202": ["ted202_2023.pdf", "ted202_2024.pdf"],
+        "gst202": ["gst202_2023.pdf", "gst202_2024.pdf"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "chm301": ["chm301_2023.pdf", "chm301_2024.pdf"],
+        "chm303": ["chm303_2023.pdf", "chm303_2024.pdf"],
+        "chm305": ["chm305_2023.pdf", "chm305_2024.pdf"],
+        "sed301": ["sed301_2023.pdf", "sed301_2024.pdf"],
+        "edu301": ["edu301_2023.pdf", "edu301_2024.pdf"],
+        "eme301": ["eme301_2023.pdf", "eme301_2024.pdf"],
+        "gst301": ["gst301_2023.pdf", "gst301_2024.pdf"]
+      },
+      "second": {
+        "chm302": ["chm302_2023.pdf", "chm302_2024.pdf"],
+        "chm304": ["chm304_2023.pdf", "chm304_2024.pdf"],
+        "chm306": ["chm306_2023.pdf", "chm306_2024.pdf"],
+        "sed302": ["sed302_2023.pdf", "sed302_2024.pdf"],
+        "edu302": ["edu302_2023.pdf", "edu302_2024.pdf"],
+        "ted302": ["ted302_2023.pdf", "ted302_2024.pdf"],
+        "gst302": ["gst302_2023.pdf", "gst302_2024.pdf"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "chm401": ["chm401_2023.pdf", "chm401_2024.pdf"],
+        "sed401": ["sed401_2023.pdf", "sed401_2024.pdf"],
+        "sed403": ["sed403_2023.pdf", "sed403_2024.pdf"],
+        "edu401": ["edu401_2023.pdf", "edu401_2024.pdf"],
+        "edu403": ["edu403_2023.pdf", "edu403_2024.pdf"],
+        "ted401": ["ted401_2023.pdf", "ted401_2024.pdf"],
+        "gst401": ["gst401_2023.pdf", "gst401_2024.pdf"]
+      },
+      "second": {
+        "sed402": ["sed402_2023.pdf", "sed402_2024.pdf"],
+        "sed404": ["sed404_2023.pdf", "sed404_2024.pdf"],
+        "sed406": ["sed406_2023.pdf", "sed406_2024.pdf"],
+        "edu402": ["edu402_2023.pdf", "edu402_2024.pdf"],
+        "ted402": ["ted402_2023.pdf", "ted402_2024.pdf"],
+        "sed499": ["sed499_2023.pdf", "sed499_2024.pdf"]
+      }
+    }
+  },
+  "crop-science": {
+    "100-level": {
+      "first": {
+        "bio101": ["bio101_2023.pdf", "bio101_2024.pdf"],
+        "chm101": ["chm101_2023.pdf", "chm101_2024.pdf"],
+        "mth101": ["mth101_2023.pdf", "mth101_2024.pdf"],
+        "phy101": ["phy101_2023.pdf", "phy101_2024.pdf"],
+        "gst111": ["gst111_2023.pdf", "gst111_2024.pdf"],
+        "cos101": ["cos101_2023.pdf", "cos101_2024.pdf"]
+      },
+      "second": {
+        "bio102": ["bio102_2023.pdf", "bio102_2024.pdf"],
+        "chm102": ["chm102_2023.pdf", "chm102_2024.pdf"],
+        "chm132": ["chm132_2023.pdf", "chm132_2024.pdf"],
+        "mth102": ["mth102_2023.pdf", "mth102_2024.pdf"],
+        "phy102": ["phy102_2023.pdf", "phy102_2024.pdf"],
+        "gst112": ["gst112_2023.pdf", "gst112_2024.pdf"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "csc211": ["csc211_2023.pdf", "csc211_2024.pdf"],
+        "csc221": ["csc221_2023.pdf", "csc221_2024.pdf"],
+        "ssc211": ["ssc211_2023.pdf", "ssc211_2024.pdf"],
+        "aec211": ["aec211_2023.pdf", "aec211_2024.pdf"],
+        "ans211": ["ans211_2023.pdf", "ans211_2024.pdf"],
+        "gst201": ["gst201_2023.pdf", "gst201_2024.pdf"]
+      },
+      "second": {
+        "csc222": ["csc222_2023.pdf", "csc222_2024.pdf"],
+        "aec202": ["aec202_2023.pdf", "aec202_2024.pdf"],
+        "ans222": ["ans222_2023.pdf", "ans222_2024.pdf"],
+        "fst102": ["fst102_2023.pdf", "fst102_2024.pdf"],
+        "gst202": ["gst202_2023.pdf", "gst202_2024.pdf"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "csc321": ["csc321_2023.pdf", "csc321_2024.pdf"],
+        "csc331": ["csc331_2023.pdf", "csc331_2024.pdf"],
+        "aec301": ["aec301_2023.pdf", "aec301_2024.pdf"],
+        "aex311": ["aex311_2023.pdf", "aex311_2024.pdf"],
+        "ced341": ["ced341_2023.pdf", "ced341_2024.pdf"],
+        "gst301": ["gst301_2023.pdf", "gst301_2024.pdf"]
+      },
+      "second": {
+        "csc322": ["csc322_2023.pdf", "csc322_2024.pdf"],
+        "csc342": ["csc342_2023.pdf", "csc342_2024.pdf"],
+        "agr302": ["agr302_2023.pdf", "agr302_2024.pdf"],
+        "aex312": ["aex312_2023.pdf", "aex312_2024.pdf"],
+        "ced342": ["ced342_2023.pdf", "ced342_2024.pdf"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "csc421": ["csc421_2023.pdf", "csc421_2024.pdf"],
+        "csc431": ["csc431_2023.pdf", "csc431_2024.pdf"],
+        "agr401": ["agr401_2023.pdf", "agr401_2024.pdf"],
+        "scc431": ["scc431_2023.pdf", "scc431_2024.pdf"],
+        "scc441": ["scc441_2023.pdf", "scc441_2024.pdf"],
+        "csc499": ["csc499_2023.pdf", "csc499_2024.pdf"]
+      },
+      "second": {
+        "siwes": "Students' Industrial Work Experience Scheme (SIWES)"
+      }
+    }
+  },
+  "csc": {
+    "100-level": {
+      "first": {
+        "gst111": ["gst111_2023.pdf", "gst111_2024.pdf"],
+        "gst112": ["gst112_2023.pdf", "gst112_2024.pdf"],
+        "gst113": ["gst113_2023.pdf", "gst113_2024.pdf"],
+        "mth101": ["mth101_2023.pdf", "mth101_2024.pdf"],
+        "phy101": ["phy101_2023.pdf", "phy101_2024.pdf"],
+        "phy107": ["phy107_2023.pdf", "phy107_2024.pdf"],
+        "chm101": ["chm101_2023.pdf", "chm101_2024.pdf"],
+        "csc101": ["csc101_2023.pdf", "csc101_2024.pdf"],
+        "csc107": ["csc107_2023.pdf", "csc107_2024.pdf"],
+        "bio101": ["bio101_2023.pdf", "bio101_2024.pdf"]
+      },
+      "second": {
+        "gst121": ["gst121_2023.pdf", "gst121_2024.pdf"],
+        "gst123": ["gst123_2023.pdf", "gst123_2024.pdf"],
+        "mth102": ["mth102_2023.pdf", "mth102_2024.pdf"],
+        "phy102": ["phy102_2023.pdf", "phy102_2024.pdf"],
+        "phy108": ["phy108_2023.pdf", "phy108_2024.pdf"],
+        "chm102": ["chm102_2023.pdf", "chm102_2024.pdf"],
+        "csc102": ["csc102_2023.pdf", "csc102_2024.pdf"],
+        "csc108": ["csc108_2023.pdf", "csc108_2024.pdf"]
+      }
+    },
+    "200-level": {
+      "first": {
+        "gst211": ["gst211_2023.pdf", "gst211_2024.pdf"],
+        "csc201": ["csc201_2023.pdf", "csc201_2024.pdf"],
+        "csc251": ["csc251_2023.pdf", "csc251_2024.pdf"],
+        "csc204": ["csc204_2023.pdf", "csc204_2024.pdf"],
+        "csc254": ["csc254_2023.pdf", "csc254_2024.pdf"],
+        "csc208": ["csc208_2023.pdf", "csc208_2024.pdf"],
+        "csc258": ["csc258_2023.pdf", "csc258_2024.pdf"],
+        "csc212": ["csc212_2023.pdf", "csc212_2024.pdf"],
+        "csc252": ["csc252_2023.pdf", "csc252_2024.pdf"],
+        "gst223": ["gst223_2023.pdf", "gst223_2024.pdf"]
+      },
+      "second": {
+        "csc202": ["csc202_2023.pdf", "csc202_2024.pdf"],
+        "csc252": ["csc252_2023.pdf", "csc252_2024.pdf"],
+        "csc205": ["csc205_2023.pdf", "csc205_2024.pdf"],
+        "csc255": ["csc255_2023.pdf", "csc255_2024.pdf"],
+        "csc218": ["csc218_2023.pdf", "csc218_2024.pdf"],
+        "csc208": ["csc208_2023.pdf", "csc208_2024.pdf"],
+        "get210": ["get210_2023.pdf", "get210_2024.pdf"],
+        "get299": ["get299_2023.pdf", "get299_2024.pdf"],
+        "gst211": ["gst211_2023.pdf", "gst211_2024.pdf"]
+      }
+    },
+    "300-level": {
+      "first": {
+        "csc301": ["csc301_2023.pdf", "csc301_2024.pdf"],
+        "csc314": ["csc314_2023.pdf", "csc314_2024.pdf"],
+        "csc304": ["csc304_2023.pdf", "csc304_2024.pdf"],
+        "csc302": ["csc302_2023.pdf", "csc302_2024.pdf"],
+        "csc333": ["csc333_2023.pdf", "csc333_2024.pdf"],
+        "gst311": ["gst311_2023.pdf", "gst311_2024.pdf"],
+        "csc310": ["csc310_2023.pdf", "csc310_2024.pdf"],
+        "csc321": ["csc321_2023.pdf", "csc321_2024.pdf"],
+        "csc351": ["csc351_2023.pdf", "csc351_2024.pdf"]
+      },
+      "second": {
+        "csc305": ["csc305_2023.pdf", "csc305_2024.pdf"],
+        "csc355": ["csc355_2023.pdf", "csc355_2024.pdf"],
+        "csc315": ["csc315_2023.pdf", "csc315_2024.pdf"],
+        "csc316": ["csc316_2023.pdf", "csc316_2024.pdf"],
+        "csc332": ["csc332_2023.pdf", "csc332_2024.pdf"],
+        "csc352": ["csc352_2023.pdf", "csc352_2024.pdf"],
+        "csc399": ["csc399_2023.pdf", "csc399_2024.pdf"]
+      }
+    },
+    "400-level": {
+      "first": {
+        "csc401": ["csc401_2023.pdf", "csc401_2024.pdf"],
+        "csc403": ["csc403_2023.pdf", "csc403_2024.pdf"],
+        "csc453": ["csc453_2023.pdf", "csc453_2024.pdf"],
+        "csc404": ["csc404_2023.pdf", "csc404_2024.pdf"],
+        "csc454": ["csc454_2023.pdf", "csc454_2024.pdf"],
+        "csc422": ["csc422_2023.pdf", "csc422_2024.pdf"],
+        "csc452": ["csc452_2023.pdf", "csc452_2024.pdf"],
+        "csc441": ["csc441_2023.pdf", "csc441_2024.pdf"],
+        "csc433": ["csc433_2023.pdf", "csc433_2024.pdf"],
+        "csc453": ["csc453_2023.pdf", "csc453_2024.pdf"]
+      },
+      "second": {
+        "csc423": ["csc423_2023.pdf", "csc423_2024.pdf"],
+        "csc453": ["csc453_2023.pdf", "csc453_2024.pdf"],
+        "csc441": ["csc441_2023.pdf", "csc441_2024.pdf"],
+        "csc432": ["csc432_2023.pdf", "csc432_2024.pdf"],
+        "csc452": ["csc452_2023.pdf", "csc452_2024.pdf"],
+        "get499": ["get499_2023.pdf", "get499_2024.pdf"]
+      }
+    }
+  }
+}
