@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2T89W78LJ3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2T89W78LJ3');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SAZUG Past Questions Portal – Access Sa'adu Zungur University's past examination questions by course.">
+  <title>Past Questions | SAZUG Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/viewerjs@1.11.1/dist/viewer.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/viewerjs@1.11.1/dist/viewer.min.css">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #3b82f6;
+      --primary-dark: #1e40af;
+      --secondary: #059669;
+      --secondary-dark: #047857;
+      --accent: #7c3aed;
+      --accent-dark: #6d28d9;
+      --neutral-dark: #1f2937;
+      --neutral-light: #6b7280;
+      --neutral-bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border-color: #e5e7eb;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f8fafc 0%, #f0f9ff 100%);
+      color: var(--neutral-dark);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .academic-font {
+      font-family: 'Merriweather', serif;
+    }
+    
+    /* Header */
+    .header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      box-shadow: 0 4px 20px rgba(30, 58, 138, 0.15);
+      padding: 1.5rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .header-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+    
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .university-name {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: -0.5px;
+    }
+    
+    .university-subtitle {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 400;
+    }
+    
+    /* Loading Screen */
+    #loading {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      transition: opacity 0.3s ease;
+    }
+    
+    .loading-spinner {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 4px solid rgba(255, 255, 255, 0.2);
+      border-top-color: white;
+      animation: spin 1s linear infinite;
+      margin-bottom: 1.5rem;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    .loading-text {
+      color: white;
+      font-size: 1.125rem;
+      font-weight: 500;
+    }
+    
+    /* Main Content Container */
+    .content-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    
+    /* Page Header */
+    .page-header {
+      background: var(--card-bg);
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-color);
+      padding: 3rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 50%, var(--accent) 100%);
+    }
+    
+    .page-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--neutral-dark);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+    
+    .page-subtitle {
+      color: var(--neutral-light);
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+    }
+    
+    .info-badges {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .info-badge {
+      padding: 0.75rem 1.5rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.875rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .info-badge.department {
+      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+      color: var(--primary);
+    }
+    
+    .info-badge.level {
+      background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+      color: var(--accent);
+    }
+    
+    .info-badge.semester {
+      background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+      color: var(--secondary);
+    }
+    
+    /* Training Message */
+    .training-message {
+      background: var(--card-bg);
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-color);
+      padding: 3rem;
+      margin-bottom: 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .training-message::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+    }
+    
+    .training-message.siwes::before {
+      background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+    }
+    
+    .training-message.teaching-practice::before {
+      background: linear-gradient(90deg, #059669 0%, #10b981 100%);
+    }
+    
+    .training-message.clinical-posting::before {
+      background: linear-gradient(90deg, #f59e0b 0%, #fbbf24 100%);
+    }
+    
+    .training-message.industrial-training::before {
+      background: linear-gradient(90deg, #8b5cf6 0%, #a78bfa 100%);
+    }
+    
+    .message-icon {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    .message-icon.siwes { color: #3b82f6; }
+    .message-icon.teaching-practice { color: #059669; }
+    .message-icon.clinical-posting { color: #f59e0b; }
+    .message-icon.industrial-training { color: #8b5cf6; }
+    
+    .message-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--neutral-dark);
+    }
+    
+    .message-description {
+      color: var(--neutral-light);
+      font-size: 1.125rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+    
+    /* Search Bar */
+    .search-container {
+      max-width: 600px;
+      margin: 0 auto 3rem;
+    }
+    
+    .search-wrapper {
+      position: relative;
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 0.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-color);
+    }
+    
+    .search-input {
+      width: 100%;
+      padding: 1.25rem 4.5rem 1.25rem 1.5rem;
+      border: none;
+      background: transparent;
+      font-size: 1rem;
+      color: var(--neutral-dark);
+      outline: none;
+    }
+    
+    .search-input::placeholder {
+      color: var(--neutral-light);
+    }
+    
+    .search-button {
+      position: absolute;
+      right: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      border: none;
+      border-radius: 12px;
+      width: 48px;
+      height: 48px;
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.125rem;
+      transition: all 0.3s ease;
+    }
+    
+    .search-button:hover {
+      transform: translateY(-50%) scale(1.05);
+      box-shadow: 0 6px 20px rgba(59, 130, 246, 0.3);
+    }
+    
+    .search-results-count {
+      text-align: center;
+      margin-top: 0.75rem;
+      color: var(--neutral-light);
+      font-size: 0.875rem;
+    }
+    
+    /* Courses Grid */
+    .courses-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+    
+    .course-card {
+      background: var(--card-bg);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-color);
+      padding: 2rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .course-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+    }
+    
+    .course-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+    }
+    
+    .course-header {
+      margin-bottom: 1.5rem;
+    }
+    
+    .course-code {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--neutral-dark);
+      margin-bottom: 0.25rem;
+    }
+    
+    .course-files-count {
+      color: var(--neutral-light);
+      font-size: 0.875rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    
+    .year-group {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .year-group:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    
+    .year-header {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--neutral-dark);
+      margin-bottom: 1rem;
+      padding-left: 0.5rem;
+      border-left: 4px solid var(--primary-light);
+    }
+    
+    .files-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 1rem;
+    }
+    
+    .file-item {
+      background: var(--neutral-bg);
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      transition: all 0.2s ease;
+      border: 1px solid var(--border-color);
+    }
+    
+    .file-item:hover {
+      background: white;
+      border-color: var(--primary-light);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+    
+    .file-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .file-icon.image { color: var(--primary); }
+    .file-icon.pdf { color: #dc2626; }
+    .file-icon.other { color: var(--neutral-light); }
+    
+    .file-name {
+      font-size: 0.75rem;
+      color: var(--neutral-light);
+      word-break: break-all;
+      margin-bottom: 0.5rem;
+    }
+    
+    .file-action {
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    
+    .file-action:hover {
+      color: var(--primary-dark);
+    }
+    
+    /* No Results */
+    #noResults {
+      background: var(--card-bg);
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-color);
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    
+    .no-results-icon {
+      font-size: 4rem;
+      color: var(--neutral-light);
+      margin-bottom: 1.5rem;
+    }
+    
+    .no-results-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--neutral-dark);
+      margin-bottom: 1rem;
+    }
+    
+    .no-results-description {
+      color: var(--neutral-light);
+      margin-bottom: 2rem;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      gap: 0.75rem;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
+    }
+    
+    /* Footer */
+    .footer {
+      background: #111827;
+      color: white;
+      padding: 3rem 1rem 2rem;
+      margin-top: auto;
+    }
+    
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .footer-disclaimer {
+      color: #9ca3af;
+      font-size: 0.875rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .copyright {
+      color: #9ca3af;
+      font-size: 0.875rem;
+    }
+    
+    /* Image Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+    
+    .close {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 300;
+      cursor: pointer;
+      transition: color 0.2s ease;
+      width: 3rem;
+      height: 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .close:hover {
+      color: #ccc;
+      background: rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 1024px) {
+      .courses-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .page-header {
+        padding: 2rem 1.5rem;
+      }
+      
+      .page-title {
+        font-size: 2rem;
+      }
+      
+      .courses-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .files-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      }
+      
+      .info-badges {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .header-content {
+        padding: 0 1rem;
+      }
+      
+      .logo {
+        width: 48px;
+        height: 48px;
+      }
+      
+      .university-name {
+        font-size: 1.5rem;
+      }
+      
+      .page-header {
+        padding: 1.5rem 1rem;
+      }
+      
+      .page-title {
+        font-size: 1.75rem;
+      }
+      
+      .training-message {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="loading">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Loading past questions...</div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-content">
+      <div class="logo-container">
+        <img src="logo.jpg" alt="SAZUG Past Questions Portal Logo" class="logo">
+        <div class="logo-text">
+          <div class="university-name">SAZUG Past Questions</div>
+          <div class="university-subtitle">Powered by AGI Innovations</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <div class="content-container">
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1 id="pageTitle" class="page-title">Past Questions</h1>
+        <p id="pageSubtitle" class="page-subtitle">Select a course to view available past questions</p>
+        <div class="info-badges">
+          <span id="currentDept" class="info-badge department">
+            <i class="fas fa-graduation-cap"></i>
+            <span id="deptText"></span>
+          </span>
+          <span id="currentLevel" class="info-badge level">
+            <i class="fas fa-layer-group"></i>
+            <span id="levelText"></span>
+          </span>
+          <span id="currentSemester" class="info-badge semester">
+            <i class="fas fa-calendar-alt"></i>
+            <span id="semesterText"></span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Training Message Container -->
+      <div id="trainingMessageContainer"></div>
+
+      <!-- Search Bar -->
+      <div class="search-container" id="searchContainer">
+        <div class="search-wrapper">
+          <input type="text" id="searchInput" class="search-input" placeholder="Search for a course (e.g., CSC101, Mathematics)">
+          <button id="searchButton" class="search-button">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <div id="searchResultsCount" class="search-results-count"></div>
+      </div>
+
+      <!-- Courses Grid -->
+      <div id="coursesContainer" class="courses-grid">
+        <!-- Courses will be dynamically inserted here -->
+      </div>
+
+      <!-- No Results Message -->
+      <div id="noResults" class="hidden">
+        <div class="no-results-content">
+          <div class="no-results-icon">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <h2 class="no-results-title">No Past Questions Available</h2>
+          <p class="no-results-description">There are no past questions available for the selected department, level, and semester combination.</p>
+          <button onclick="window.location.href='home.html'" class="btn btn-primary">
+            <i class="fas fa-arrow-left"></i>
+            Back to Home
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-disclaimer">
+        <strong>Disclaimer:</strong> SAZUG Past Questions Portal is an independent student-created platform and is not officially affiliated with Sa'adu Zungur University. All materials are provided for educational and revision purposes only.
+      </div>
+      <div class="copyright">
+        &copy; 2025 SAZUG Past Questions Portal. All Rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Image Modal -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+
+  <script>
+    // Global variables
+    let dept, level, semester;
+    let questionsData = {};
+    let allCourses = [];
+
+    // DOM elements
+    const loadingElement = document.getElementById('loading');
+    const coursesContainer = document.getElementById('coursesContainer');
+    const noResultsElement = document.getElementById('noResults');
+    const pageTitle = document.getElementById('pageTitle');
+    const pageSubtitle = document.getElementById('pageSubtitle');
+    const deptText = document.getElementById('deptText');
+    const levelText = document.getElementById('levelText');
+    const semesterText = document.getElementById('semesterText');
+    const imageModal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    const searchResultsCount = document.getElementById('searchResultsCount');
+    const trainingMessageContainer = document.getElementById('trainingMessageContainer');
+    const searchContainer = document.getElementById('searchContainer');
+
+    // Department classifications for training programs
+    const trainingConfig = {
+      siwes: {
+        departments: [
+          'csc', 'math', 'stat', 'phy', 'physics', 'physics-edu', 'chem', 'bio', 'biochemistry', 'mic', 'microbiology',
+          'agric-economics-extension', 'animal-science', 'crop-science', 'soil-science', 'environmental-science',
+          'botany', 'zoology'
+        ],
+        level: '300-level',
+        semester: 'second',
+        message: {
+          title: 'Industrial Training (SIWES)',
+          description: 'This semester is dedicated to the Student Industrial Work Experience Scheme (SIWES). Check your faculty calendar for placement details and registration information.',
+          type: 'siwes',
+          icon: 'fas fa-industry'
+        }
+      },
+      
+      teachingPractice: {
+        departments: [
+          'bio-edu', 'chem-edu', 'csc-edu', 'english-edu', 'math-edu', 'phy-edu', 'physics-edu'
+        ],
+        level: '300-level',
+        semester: 'second',
+        message: {
+          title: 'Teaching Practice',
+          description: 'This semester is dedicated to Teaching Practice for Education students. Check your faculty calendar for placement details and registration information.',
+          type: 'teaching-practice',
+          icon: 'fas fa-chalkboard-teacher'
+        }
+      },
+      
+      clinicalPosting300: {
+        departments: [
+          'nurs', 'anatomy', 'physiology', 'pharmacology'
+        ],
+        level: '300-level',
+        semester: 'second',
+        message: {
+          title: 'Clinical Posting',
+          description: 'This semester is dedicated to Clinical Posting for Medical and Health Science students. Check your faculty calendar for placement details and registration information.',
+          type: 'clinical-posting',
+          icon: 'fas fa-hospital-user'
+        }
+      },
+      
+      clinicalPosting400: {
+        departments: [
+          'phh'
+        ],
+        level: '400-level',
+        semester: 'second',
+        message: {
+          title: 'Clinical Posting',
+          description: 'This semester is dedicated to Clinical Posting for Health Science students. Check your faculty calendar for placement details and registration information.',
+          type: 'clinical-posting',
+          icon: 'fas fa-hospital-user'
+        }
+      },
+      
+      pharmacyTraining: {
+        departments: ['pharm'],
+        level: '500-level',
+        semester: 'second',
+        message: {
+          title: 'Clinical Training / Externship',
+          description: 'This semester is dedicated to Clinical Training or Professional Externship for Pharmacy students. Check your faculty calendar for placement details and registration information.',
+          type: 'clinical-posting',
+          icon: 'fas fa-pills'
+        }
+      },
+      
+      industrialTraining: {
+        departments: ['environmental-science'],
+        level: '400-level',
+        semester: 'second',
+        message: {
+          title: 'Industrial Training',
+          description: 'This semester is dedicated to Industrial Training for Environmental Science students. Check your faculty calendar for placement details and registration information.',
+          type: 'industrial-training',
+          icon: 'fas fa-hard-hat'
+        }
+      }
+    };
+
+    // Initialize the page
+    document.addEventListener('DOMContentLoaded', function() {
+      // Get URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      dept = urlParams.get('dept');
+      level = urlParams.get('level');
+      semester = urlParams.get('semester');
+
+      // Validate parameters
+      if (!dept || !level || !semester) {
+        showError('Invalid parameters. Please go back and select department, level, and semester.');
+        return;
+      }
+
+      // Update page info
+      updatePageInfo();
+      
+      // Load questions data
+      loadQuestionsData();
+
+      // Add search functionality
+      searchButton.addEventListener('click', performSearch);
+      searchInput.addEventListener('input', performSearch);
+      searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          performSearch();
+        }
+      });
+      
+      // Close modal when clicking outside
+      imageModal.addEventListener('click', function(event) {
+        if (event.target === imageModal) {
+          closeModal();
+        }
+      });
+    });
+
+    // Update page information based on URL parameters
+    function updatePageInfo() {
+      const deptDisplay = formatDepartment(dept);
+      const levelDisplay = level.charAt(0).toUpperCase() + level.slice(1).replace('-', ' ');
+      const semesterDisplay = semester === 'first' ? 'First Semester' : 'Second Semester';
+
+      pageTitle.textContent = `${deptDisplay} Past Questions`;
+      pageSubtitle.textContent = `${levelDisplay} - ${semesterDisplay}`;
+      deptText.textContent = deptDisplay;
+      levelText.textContent = levelDisplay;
+      semesterText.textContent = semesterDisplay;
+    }
+
+    // Load questions data from JSON file
+    function loadQuestionsData() {
+      fetch('data/questions.json')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Failed to load questions data');
+          }
+          return response.json();
+        })
+        .then(data => {
+          questionsData = data;
+          displayCourses();
+        })
+        .catch(error => {
+          console.error('Error loading questions data:', error);
+          showError('Failed to load past questions. Please try again later.');
+        });
+    }
+
+    // Display courses based on selected parameters
+    function displayCourses() {
+      loadingElement.style.display = 'none';
+
+      const trainingInfo = checkTrainingSemester();
+      
+      if (trainingInfo) {
+        showTrainingMessage(trainingInfo);
+        return;
+      }
+
+      if (!questionsData[dept] || !questionsData[dept][level] || !questionsData[dept][level][semester]) {
+        noResultsElement.classList.remove('hidden');
+        searchContainer.style.display = 'none';
+        return;
+      }
+
+      const courses = questionsData[dept][level][semester];
+      const courseCodes = Object.keys(courses);
+
+      if (courseCodes.length === 0) {
+        noResultsElement.classList.remove('hidden');
+        searchContainer.style.display = 'none';
+        return;
+      }
+
+      allCourses = courseCodes.map(courseCode => {
+        return {
+          code: courseCode,
+          files: courses[courseCode],
+          element: createCourseCard(courseCode, courses[courseCode])
+        };
+      });
+
+      displayFilteredCourses(allCourses);
+    }
+
+    // Check if current semester is for training
+    function checkTrainingSemester() {
+      if (dept === 'law') return null;
+      
+      for (const [trainingType, config] of Object.entries(trainingConfig)) {
+        if (config.departments.includes(dept) && 
+            level === config.level && 
+            semester === config.semester) {
+          return config.message;
+        }
+      }
+      
+      return null;
+    }
+
+    // Show training message
+    function showTrainingMessage(trainingInfo) {
+      const messageHtml = `
+        <div class="training-message ${trainingInfo.type}">
+          <div class="message-icon ${trainingInfo.type}">
+            <i class="${trainingInfo.icon}"></i>
+          </div>
+          <h2 class="message-title">${trainingInfo.title}</h2>
+          <p class="message-description">${trainingInfo.description}</p>
+          <button onclick="window.location.href='home.html'" class="btn btn-primary">
+            <i class="fas fa-arrow-left"></i>
+            Back to Home
+          </button>
+        </div>
+      `;
+      
+      trainingMessageContainer.innerHTML = messageHtml;
+      searchContainer.style.display = 'none';
+      coursesContainer.style.display = 'none';
+    }
+
+    // Display filtered courses based on search
+    function displayFilteredCourses(courses) {
+      coursesContainer.innerHTML = '';
+      
+      courses.forEach(course => {
+        coursesContainer.appendChild(course.element);
+      });
+      
+      updateSearchResultsCount(courses.length);
+    }
+
+    // Update search results count display
+    function updateSearchResultsCount(count) {
+      const totalCourses = allCourses.length;
+      
+      if (count === totalCourses) {
+        searchResultsCount.textContent = `Showing all ${totalCourses} courses`;
+      } else if (count === 0) {
+        searchResultsCount.textContent = 'No courses match your search';
+      } else {
+        searchResultsCount.textContent = `Showing ${count} of ${totalCourses} courses`;
+      }
+    }
+
+    // Perform search based on input
+    function performSearch() {
+      const searchTerm = searchInput.value.trim().toLowerCase();
+      
+      if (searchTerm === '') {
+        displayFilteredCourses(allCourses);
+        return;
+      }
+      
+      const filteredCourses = allCourses.filter(course => {
+        return course.code.toLowerCase().includes(searchTerm);
+      });
+      
+      displayFilteredCourses(filteredCourses);
+    }
+
+    // Create a course card with files grouped by year
+    function createCourseCard(courseCode, files) {
+      const filesByYear = groupFilesByYear(files);
+      const years = Object.keys(filesByYear).sort((a, b) => b - a);
+
+      const courseCard = document.createElement('div');
+      courseCard.className = 'course-card';
+      courseCard.setAttribute('data-course-code', courseCode);
+      
+      const courseHeader = document.createElement('div');
+      courseHeader.className = 'course-header';
+      
+      const courseTitle = document.createElement('h3');
+      courseTitle.className = 'course-code';
+      courseTitle.textContent = courseCode.toUpperCase();
+      
+      const fileCount = document.createElement('p');
+      fileCount.className = 'course-files-count';
+      fileCount.innerHTML = `<i class="fas fa-file"></i> ${files.length} file${files.length !== 1 ? 's' : ''} available`;
+      
+      courseHeader.appendChild(courseTitle);
+      courseHeader.appendChild(fileCount);
+      courseCard.appendChild(courseHeader);
+
+      years.forEach(year => {
+        const yearGroup = document.createElement('div');
+        yearGroup.className = 'year-group';
+        
+        const yearHeader = document.createElement('h4');
+        yearHeader.className = 'year-header';
+        yearHeader.textContent = year;
+        
+        yearGroup.appendChild(yearHeader);
+        
+        const filesGrid = document.createElement('div');
+        filesGrid.className = 'files-grid';
+        
+        filesByYear[year].forEach(file => {
+          const fileElement = createFileElement(file);
+          filesGrid.appendChild(fileElement);
+        });
+        
+        yearGroup.appendChild(filesGrid);
+        courseCard.appendChild(yearGroup);
+      });
+
+      return courseCard;
+    }
+
+    // Group files by year extracted from filename
+    function groupFilesByYear(files) {
+      const grouped = {};
+      
+      files.forEach(file => {
+        const yearMatch = file.match(/_(\d{4})/);
+        const year = yearMatch ? yearMatch[1] : 'Unknown';
+        
+        if (!grouped[year]) {
+          grouped[year] = [];
+        }
+        
+        grouped[year].push(file);
+      });
+      
+      return grouped;
+    }
+
+    // Create a file element based on file type
+    function createFileElement(filename) {
+      const fileExtension = filename.split('.').pop().toLowerCase();
+      const filePath = `data/images/${filename}`;
+      
+      const fileElement = document.createElement('div');
+      fileElement.className = 'file-item';
+      
+      if (['jpg', 'jpeg', 'png', 'gif', 'webp'].includes(fileExtension)) {
+        const fileIcon = document.createElement('div');
+        fileIcon.className = 'file-icon image';
+        fileIcon.innerHTML = '<i class="fas fa-image"></i>';
+        
+        const fileName = document.createElement('div');
+        fileName.className = 'file-name';
+        fileName.textContent = filename;
+        
+        const fileAction = document.createElement('a');
+        fileAction.className = 'file-action';
+        fileAction.href = '#';
+        fileAction.textContent = 'View';
+        fileAction.onclick = (e) => {
+          e.preventDefault();
+          openImageModal(filePath);
+        };
+        
+        fileElement.appendChild(fileIcon);
+        fileElement.appendChild(fileName);
+        fileElement.appendChild(fileAction);
+      } else if (fileExtension === 'pdf') {
+        const fileIcon = document.createElement('div');
+        fileIcon.className = 'file-icon pdf';
+        fileIcon.innerHTML = '<i class="fas fa-file-pdf"></i>';
+        
+        const fileName = document.createElement('div');
+        fileName.className = 'file-name';
+        fileName.textContent = filename;
+        
+        const fileAction = document.createElement('a');
+        fileAction.className = 'file-action';
+        fileAction.href = filePath;
+        fileAction.target = '_blank';
+        fileAction.textContent = 'Open PDF';
+        
+        fileElement.appendChild(fileIcon);
+        fileElement.appendChild(fileName);
+        fileElement.appendChild(fileAction);
+      } else {
+        const fileIcon = document.createElement('div');
+        fileIcon.className = 'file-icon other';
+        fileIcon.innerHTML = '<i class="fas fa-file"></i>';
+        
+        const fileName = document.createElement('div');
+        fileName.className = 'file-name';
+        fileName.textContent = filename;
+        
+        const fileAction = document.createElement('a');
+        fileAction.className = 'file-action';
+        fileAction.href = filePath;
+        fileAction.target = '_blank';
+        fileAction.textContent = 'Download';
+        
+        fileElement.appendChild(fileIcon);
+        fileElement.appendChild(fileName);
+        fileElement.appendChild(fileAction);
+      }
+      
+      return fileElement;
+    }
+
+    // Open image in modal
+    function openImageModal(src) {
+      modalImage.src = src;
+      imageModal.style.display = 'flex';
+    }
+
+    // Close image modal
+    function closeModal() {
+      imageModal.style.display = 'none';
+    }
+
+    // Format department name for display
+    function formatDepartment(deptCode) {
+      const deptMap = {
+        'accounting': 'Accounting',
+        'agric-economics-extension': 'Agricultural Economics and Extension',
+        'anatomy': 'Anatomy',
+        'animal-science': 'Animal Science',
+        'arabic': 'Arabic',
+        'biochemistry': 'Biochemistry',
+        'bio': 'Biology',
+        'bio-edu': 'Biology Education',
+        'botany': 'Botany',
+        'bus-admin': 'Business Administration',
+        'chem': 'Chemistry',
+        'chem-edu': 'Chemistry Education',
+        'crop-science': 'Crop Science',
+        'csc': 'Computer Science',
+        'csc-edu': 'Computer Education',
+        'economics': 'Economics',
+        'eng': 'English',
+        'english-edu': 'English Education',
+        'environmental-science': 'Environmental Science',
+        'hausa': 'Hausa',
+        'isl': 'Islamic Studies',
+        'law': 'Law',
+        'linguistics': 'Linguistics',
+        'lis': 'Library & Information Science',
+        'literature': 'Literature',
+        'math': 'Mathematics',
+        'math-edu': 'Mathematics Education',
+        'mic': 'Microbiology',
+        'nurs': 'Nursing',
+        'pharm': 'Pharmacy',
+        'pharmacology': 'Pharmacology',
+        'phy': 'Physics',
+        'phy-edu': 'Physics Education',
+        'physics-edu': 'Physics Education',
+        'physiology': 'Physiology',
+        'pols': 'Political Science',
+        'pub-admin': 'Public Administration',
+        'phh': 'Public Health',
+        'soc': 'Sociology',
+        'soil-science': 'Soil Science',
+        'stat': 'Statistics',
+        'zoology': 'Zoology'
+      };
+      
+      return deptMap[deptCode] || deptCode.toUpperCase();
+    }
+
+    // Show error message
+    function showError(message) {
+      loadingElement.style.display = 'none';
+      coursesContainer.innerHTML = `
+        <div class="course-card">
+          <div class="course-header">
+            <h3 class="course-code">Error</h3>
+            <p class="course-files-count"><i class="fas fa-exclamation-circle"></i> Unable to load content</p>
+          </div>
+          <div class="year-group">
+            <p style="color: var(--neutral-light); margin-bottom: 1.5rem;">${message}</p>
+            <button onclick="window.location.href='home.html'" class="btn btn-primary">
+              <i class="fas fa-arrow-left"></i>
+              Back to Home
+            </button>
+          </div>
+        </div>
+      `;
+    }
+  </script>
+</body>
+</html>
