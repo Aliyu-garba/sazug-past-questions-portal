@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2T89W78LJ3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2T89W78LJ3');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | SAZUG Past Questions Portal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    .hero-pattern {
+      background-color: #4a6cf7;
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    
+    .feature-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 70px;
+      height: 70px;
+      margin-bottom: 1rem;
+      background: #4a6cf7;
+      border-radius: 50%;
+      color: white;
+      font-size: 1.8rem;
+      box-shadow: 0 10px 20px rgba(74, 108, 247, 0.25);
+    }
+    
+    .team-member {
+      transition: all 0.3s ease;
+    }
+    
+    .team-member:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    }
+    
+    .mission-card {
+      background: linear-gradient(135deg, #4a6cf7 0%, #2e4fd0 100%);
+      color: white;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    
+    .value-item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .value-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Team Section Styles from Home Page */
+    .team-img { 
+      height: 280px; 
+      display: flex; 
+      justify-content: center; 
+      align-items: center; 
+      background: linear-gradient(135deg, #2b6cb0 0%, #1a365d 100%);
+      color: white;
+      flex-direction: column;
+      padding: 20px;
+      text-align: center;
+    }
+    .team-name { 
+      font-size: 1.8rem; 
+      font-weight: 700; 
+      margin-bottom: 10px;
+    }
+    .team-role-main { 
+      font-size: 1.2rem; 
+      font-style: italic;
+    }
+    .team-info { 
+      padding: 2rem; 
+      text-align: center;
+    }
+    .team-info h3 { 
+      color: #2b6cb0; 
+      margin-bottom: 0.5rem;
+    }
+    .team-role { 
+      color: #e9b949; 
+      font-weight: 600; 
+      margin-bottom: 1rem; 
+    }
+
+    /* Additional styles for professional team cards */
+    .professional-team-card {
+      background: white; 
+      border-radius: 12px; 
+      overflow: hidden; 
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); 
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .professional-team-card:hover { 
+      transform: translateY(-10px); 
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+    
+    .team-container { 
+      display: grid; 
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+      gap: 2rem; 
+      margin-top: 2rem; 
+    }
+
+    /* === New minimal, modern student team card styles (simple, short, small) === */
+    .student-team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .student-card {
+      background: white;
+      border-radius: 20px;
+      padding: 1.5rem 1rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.02);
+      text-align: center;
+      transition: all 0.2s ease;
+      border: 1px solid #f0f2f5;
+    }
+    .student-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 25px rgba(74,108,247,0.08);
+      border-color: #e0e7ff;
+    }
+    .student-avatar {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(145deg, #4a6cf7, #6d8cff);
+      border-radius: 50%;
+      margin: 0 auto 1rem auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.8rem;
+      font-weight: 600;
+      box-shadow: 0 10px 15px -5px rgba(74,108,247,0.3);
+    }
+    .student-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #1e293b;
+      line-height: 1.3;
+      margin-bottom: 0.25rem;
+    }
+    .student-role {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #4a6cf7;
+      background: #eef2ff;
+      display: inline-block;
+      padding: 0.2rem 1rem;
+      border-radius: 30px;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.3px;
+    }
+    .student-bio {
+      font-size: 0.9rem;
+      color: #475569;
+      line-height: 1.4;
+      margin-bottom: 0;
+    }
+    /* end new styles */
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white shadow-md py-4 px-6 flex justify-between items-center">
+    <div class="flex items-center space-x-3">
+      <img src="logo.jpg" alt="SAZUG Past Questions Logo" class="h-10 w-10 object-contain rounded-full">
+      <h1 class="text-xl md:text-2xl font-bold text-gray-800">SAZUG Past Questions Portal</h1>
+    </div>
+    <div class="flex items-center space-x-4">
+      <nav class="hidden md:flex space-x-6 text-gray-700">
+        <a href="index.html" class="hover:text-blue-600 font-medium transition-colors">Register</a>
+        <a href="login.html" class="hover:text-blue-600 font-medium transition-colors">Login</a>
+        <a href="home.html" class="hover:text-blue-600 font-medium transition-colors">Home</a>
+        <a href="about.html" class="text-blue-600 font-medium transition-colors">About</a>
+      </nav>
+      <!-- AGI Company Logo removed as requested -->
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-pattern text-white py-16 md:py-24">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">About SAZUG Past Questions Portal</h1>
+      <p class="text-xl max-w-3xl mx-auto opacity-90">Empowering students with the resources they need for academic excellence and success</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow px-6 py-12 max-w-6xl mx-auto w-full">
+    <!-- Intro Section -->
+    <section class="mb-16">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Who We Are</h2>
+        <div class="h-1 w-20 bg-blue-600 mx-auto"></div>
+      </div>
+      
+      <div class="bg-white p-8 rounded-2xl shadow-md leading-relaxed text-gray-700 space-y-6">
+        <p class="text-lg">
+          The <strong class="text-blue-600">SAZUG Past Questions Portal</strong> is a comprehensive digital academic resource platform designed specifically for students of 
+          <strong>Sa'adu Zungur University, Bauchi</strong>. We provide organized, easy access to past examination questions 
+          for all faculties, departments, and academic levels.
+        </p>
+
+        <p>
+          Our mission is to simplify academic preparation by providing a structured platform where students 
+          can download relevant past questions, study effectively, and gain insight into exam formats and expectations. 
+          We believe that access to the right materials can make a significant difference in academic performance.
+        </p>
+
+        <p>
+          This project is a product of dedication, teamwork, and innovation by <strong class="text-blue-600">AGI – Aliyu Garba Innovations</strong>. 
+          We combined our skills in coding, research, design, and guidance to build a platform that benefits the entire student community. 
+        </p>
+      </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="mb-16">
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="mission-card p-8">
+          <div class="feature-icon">
+            <i class="fas fa-bullseye"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
+          <p>To empower SAZUG students with easily accessible, well-organized past examination questions that enhance their study efficiency and academic performance.</p>
+        </div>
+        
+        <div class="bg-white p-8 rounded-2xl shadow-md">
+          <div class="feature-icon bg-purple-600">
+            <i class="fas fa-eye"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-gray-800">Our Vision</h3>
+          <p class="text-gray-700">To become the leading academic resource platform for Nigerian university students, supporting educational excellence through technology and innovation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="mb-16">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Values</h2>
+        <div class="h-1 w-20 bg-blue-600 mx-auto"></div>
+      </div>
+      
+      <div class="values-grid">
+        <div class="value-item">
+          <div class="feature-icon bg-green-500">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-gray-800">Academic Excellence</h3>
+          <p class="text-gray-600">We're committed to supporting students in achieving their highest academic potential.</p>
+        </div>
+        
+        <div class="value-item">
+          <div class="feature-icon bg-red-500">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-gray-800">Innovation</h3>
+          <p class="text-gray-600">We continuously seek new ways to improve the learning experience through technology.</p>
+        </div>
+        
+        <div class="value-item">
+          <div class="feature-icon bg-yellow-500">
+            <i class="fas fa-hand-holding-heart"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-gray-800">Accessibility</h3>
+          <p class="text-gray-600">We believe quality educational resources should be available to every student.</p>
+        </div>
+        
+        <div class="value-item">
+          <div class="feature-icon bg-indigo-500">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 text-gray-800">Community</h3>
+          <p class="text-gray-600">We foster collaboration and knowledge sharing among students and faculty.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works: Collection & Verification System (NEW SECTION) -->
+    <section class="mb-16">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Our Structured Contribution System</h2>
+        <div class="h-1 w-20 bg-blue-600 mx-auto"></div>
+        <p class="text-gray-600 max-w-2xl mx-auto mt-4">A transparent, student-powered process ensuring quality and authenticity</p>
+      </div>
+      
+      <div class="bg-white p-8 rounded-2xl shadow-md">
+        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+          The SAZUG Past Questions Portal is built <strong class="text-blue-600">by students, for students</strong>. 
+          Our collection and verification system relies entirely on voluntary contributions from the student community, 
+          coordinated through a structured hierarchy that ensures accuracy, authenticity, and reliability.
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8 items-start mb-8">
+          <!-- Left Column: Visual/Emphasis on Student Power -->
+          <div class="bg-blue-50 p-6 rounded-xl border border-blue-100">
+            <div class="flex items-center justify-center w-16 h-16 bg-blue-600 text-white rounded-full mb-4 mx-auto">
+              <i class="fas fa-users text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">100% Student-Powered</h3>
+            <p class="text-gray-700 text-center">
+              Every past question you access has been voluntarily contributed, reviewed, and verified 
+              by fellow SAZUG students. This is a collaborative academic support system—not an official 
+              university repository.
+            </p>
+          </div>
+          
+          <!-- Right Column: Visual/Emphasis on Contribution -->
+          <div class="bg-green-50 p-6 rounded-xl border border-green-100">
+            <div class="flex items-center justify-center w-16 h-16 bg-green-600 text-white rounded-full mb-4 mx-auto">
+              <i class="fas fa-hand-holding-heart text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-gray-800 mb-3 text-center">Contribution-Based</h3>
+            <p class="text-gray-700 text-center">
+              Materials are shared willingly by students who want to help their peers succeed. 
+              We do not claim official ownership—this is a community-driven initiative.
+            </p>
+          </div>
+        </div>
+
+        <div class="relative py-6">
+          <!-- Timeline/Process Flow (Styled as connected steps) -->
+          <div class="space-y-6">
+            <!-- Step 1: Department Representatives -->
+            <div class="flex flex-col md:flex-row gap-4 items-start">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">1</div>
+              <div class="flex-grow bg-gray-50 p-5 rounded-lg border-l-4 border-blue-600">
+                <h4 class="text-xl font-semibold text-gray-800 mb-2">Department-Level Collection</h4>
+                <p class="text-gray-700">
+                  Every department at SAZUG has dedicated <span class="font-semibold">student representatives</span> who coordinate the collection of past questions. 
+                  Additionally, we have representatives for each academic level <span class="font-semibold">(100L, 200L, 300L, 400L)</span> to ensure 
+                  comprehensive coverage across all years of study.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Step 2: Forward to Faculty -->
+            <div class="flex flex-col md:flex-row gap-4 items-start">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">2</div>
+              <div class="flex-grow bg-gray-50 p-5 rounded-lg border-l-4 border-blue-600">
+                <h4 class="text-xl font-semibold text-gray-800 mb-2">Faculty-Level Aggregation</h4>
+                <p class="text-gray-700">
+                  Once each department has gathered and organized their past questions, the materials are forwarded to the 
+                  <span class="font-semibold">faculty level</span>, where a designated <span class="font-semibold">Faculty Coordinator</span> takes responsibility for the next stage.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Step 3: Faculty Coordinator Verification -->
+            <div class="flex flex-col md:flex-row gap-4 items-start">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">3</div>
+              <div class="flex-grow bg-gray-50 p-5 rounded-lg border-l-4 border-blue-600">
+                <h4 class="text-xl font-semibold text-gray-800 mb-2">Verification by Faculty Coordinator</h4>
+                <p class="text-gray-700">
+                  The <span class="font-semibold">Faculty Coordinator carefully reviews and verifies</span> all submitted past questions for 
+                  accuracy, authenticity, and completeness. This step ensures that only quality, error-free materials proceed further.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Step 4: Admin Final Check -->
+            <div class="flex flex-col md:flex-row gap-4 items-start">
+              <div class="flex-shrink-0 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-xl">4</div>
+              <div class="flex-grow bg-gray-50 p-5 rounded-lg border-l-4 border-blue-600">
+                <h4 class="text-xl font-semibold text-gray-800 mb-2">Admin Review & Upload</h4>
+                <p class="text-gray-700">
+                  Verified materials are sent to the <span class="font-semibold">Admin (Platform Owner)</span>, who performs a final check 
+                  for consistency and formatting before uploading the past questions to the portal, making them accessible to all students.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Important Clarification Note -->
+        <div class="mt-8 p-5 bg-amber-50 rounded-lg border border-amber-200">
+          <div class="flex items-start gap-3">
+            <i class="fas fa-info-circle text-amber-600 text-xl mt-1"></i>
+            <div>
+              <p class="text-amber-800 font-medium">Important Note:</p>
+              <p class="text-amber-700">
+                All materials on this platform are <span class="font-semibold">voluntarily contributed by students</span>. 
+                This is not an official university repository but a student-led initiative to promote academic collaboration 
+                and peer support. We acknowledge and appreciate every student who contributes to this growing resource.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section - Redesigned for students team (simple, short, small, modern) -->
+    <section class="mb-16">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800 mb-4">Meet Our Team</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">The dedicated Team behind the SAZUG Past Questions Portal</p>
+        <div class="h-1 w-20 bg-blue-600 mx-auto"></div>
+      </div>
+      
+      <!-- Modern minimal student cards (simple, short, small) -->
+      <div class="student-team-grid">
+        <!-- Aliyu Garba card (modern) -->
+        <div class="student-card">
+          <div class="student-avatar">AG</div>
+          <div class="student-name">Aliyu Garba</div>
+          <div class="student-role">Lead Developer</div>
+          <p class="student-bio">Architected the portal & core systems. Owner @ AGI Innovations.</p>
+        </div>
+        <!-- Habibu Rabiu Wanka card (modern) -->
+        <div class="student-card">
+          <div class="student-avatar">HR</div>
+          <div class="student-name">Habibu R. Wanka</div>
+          <div class="student-role">Project Advisor</div>
+          <p class="student-bio">Provided strategic guidance and valuable advice throughout the project.</p>
+        </div>
+        <!-- Ashiru Muhammad yahuza card (modern) -->
+        <div class="student-card">
+          <div class="student-avatar">AM</div>
+          <div class="student-name">Ashiru M. Yahuza</div>
+          <div class="student-role">Student Outreach Coordinator</div>
+          <p class="student-bio">Led student outreach efforts and encouraged departmental participation in the platform.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing Note -->
+    <section class="bg-white p-8 rounded-2xl shadow-md text-gray-700 leading-relaxed">
+      <div class="feature-icon bg-gray-700 mx-auto">
+        <i class="fas fa-quote-left"></i>
+      </div>
+      <p class="text-center text-lg italic mb-4">
+        "This portal is more than just an archive of past questions—it is a community-driven initiative to 
+        promote learning, discipline, and academic excellence. By leveraging technology, we aim to make studying 
+        easier, smarter, and more collaborative for every student at SAZUG."
+      </p>
+      <p class="text-center font-semibold text-gray-900">
+        With gratitude,<br>
+        <span class="text-blue-600">The AGI – Aliyu Garba Innovations Team</span>
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center p-8 bg-gray-800 text-white mt-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex justify-center space-x-6 mb-6">
+        <a href="https://www.facebook.com/profile.php?id=61552291692259" class="text-gray-300 hover:text-white transition-colors"><i class="fab fa-facebook-f fa-lg"></i></a>
+        <a href="https://x.com/aliyu_garb18641" class="text-gray-300 hover:text-white transition-colors"><i class="fab fa-twitter fa-lg"></i></a>
+        <a href="https://www.instagram.com/sazug2026?igsh=MmZnZXh4c3d6b21j" class="text-gray-300 hover:text-white transition-colors"><i class="fab fa-instagram fa-lg"></i></a>
+        <a href="https://www.linkedin.com/in/aliyu-garba-34b2833a0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="text-gray-300 hover:text-white transition-colors"><i class="fab fa-linkedin-in fa-lg"></i></a>
+        <a href="https://youtube.com/@aliyugarbainnovations?si=nUetaDDBa6SSKt19" class="text-gray-300 hover:text-white transition-colors"><i class="fab fa-youtube fa-lg"></i></a>
+      </div>
+      <p>&copy; 2025 SaZUG Past Questions Portal. All Rights Reserved.</p>
+      <p class="mt-2 text-gray-400">Powered by AGI – Aliyu Garba Innovations.</p>
+    </div>
+  </footer>
+</body>
+</html>
