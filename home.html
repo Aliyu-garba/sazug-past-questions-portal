@@ -1,0 +1,1571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2T89W78LJ3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2T89W78LJ3');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SAZUG Past Questions Portal – access Sa'adu Zungur University's past exam questions and 100-level tutorial materials for all departments.">
+  <title>SAZUG Past Questions Portal | Sa'adu Zungur University</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-light: #3b82f6;
+      --primary-dark: #1e40af;
+      --secondary: #059669;
+      --secondary-dark: #047857;
+      --accent: #7c3aed;
+      --accent-dark: #6d28d9;
+      --neutral-dark: #1f2937;
+      --neutral-light: #6b7280;
+      --neutral-bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border-color: #e5e7eb;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--neutral-bg);
+      color: var(--neutral-dark);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .academic-font {
+      font-family: 'Merriweather', serif;
+    }
+    
+    /* Header & Navigation - UPDATED: Reduced vertical height */
+    .header {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      box-shadow: 0 4px 20px rgba(30, 58, 138, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.75rem 0;
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .university-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+      letter-spacing: -0.5px;
+    }
+    
+    .university-subtitle {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.85);
+      font-weight: 400;
+    }
+    
+    .nav-link {
+      color: rgba(255, 255, 255, 0.9);
+      padding: 0.75rem 1.25rem;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+    
+    .nav-link:hover {
+      color: white;
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .mobile-menu-button {
+      display: none;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 12px;
+      padding: 0.75rem;
+      cursor: pointer;
+    }
+    
+    /* Hero Section - UPDATED: Reduced padding to create more space */
+    .hero-section {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 5rem 1rem; /* Reduced from 6rem 1rem */
+    }
+    
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 20%);
+      pointer-events: none;
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .hero-title {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.9);
+      max-width: 800px;
+      margin: 0 auto 3rem;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+    
+    .stat-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      padding: 2rem;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: white;
+      display: block;
+      line-height: 1;
+    }
+    
+    .stat-label {
+      font-size: 0.875rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin-top: 0.5rem;
+      font-weight: 500;
+    }
+    
+    /* Main Content Container - UPDATED: Added margin-top for more space */
+    .content-container {
+      max-width: 1200px;
+      margin: 2rem auto 0; /* Added margin-top: 2rem */
+      padding: 2rem 1rem; /* Reduced from 4rem 1rem */
+    }
+    
+    /* Selection Card - UPDATED: Increased negative margin to bring card closer to hero */
+    .selection-card {
+      background: var(--card-bg);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-color);
+      padding: 2.5rem; /* Reduced from 3rem */
+      margin: -4rem auto 2rem; /* Changed from -5rem to -4rem for more space */
+      position: relative;
+      z-index: 10;
+      max-width: 800px;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--neutral-dark);
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+    
+    .section-subtitle {
+      color: var(--neutral-light);
+      text-align: center;
+      margin-bottom: 2.5rem;
+      font-size: 1.125rem;
+    }
+    
+    /* Form Elements */
+    .form-group {
+      margin-bottom: 1.75rem;
+    }
+    
+    .form-label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--neutral-dark);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    
+    .form-select {
+      width: 100%;
+      padding: 1rem 1.25rem;
+      border: 2px solid var(--border-color);
+      border-radius: 12px;
+      font-size: 1rem;
+      font-family: 'Inter', sans-serif;
+      color: var(--neutral-dark);
+      background-color: var(--card-bg);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%231e3a8a'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      background-size: 1.5em;
+      appearance: none;
+      transition: all 0.3s ease;
+    }
+    
+    .form-select:focus {
+      outline: none;
+      border-color: var(--primary-light);
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    }
+    
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      gap: 0.75rem;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(30, 58, 138, 0.3);
+    }
+    
+    .btn-secondary {
+      background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+      color: white;
+    }
+    
+    .btn-secondary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(5, 150, 105, 0.3);
+    }
+    
+    .btn-tertiary {
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+      color: white;
+    }
+    
+    .btn-tertiary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
+    }
+    
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    /* UPDATED: Tools & Assistant Grid - Modern horizontal layout */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    
+    .tool-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 1.5rem;
+      text-align: center;
+      border: 2px solid var(--border-color);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 150px;
+    }
+    
+    .tool-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      border-color: var(--primary-light);
+    }
+    
+    .tool-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      font-size: 1.75rem;
+      color: white;
+    }
+    
+    .tool-icon.tools {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); /* Amber gradient for tools */
+    }
+    
+    .tool-icon.chatbot {
+      background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); /* Purple gradient for AI */
+    }
+    
+    .tool-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: var(--neutral-dark);
+      margin-bottom: 0.5rem;
+    }
+    
+    .tool-description {
+      color: var(--neutral-light);
+      font-size: 0.875rem;
+      line-height: 1.4;
+    }
+    
+    /* Tutorials Section - UPDATED: Reduced top padding */
+    .tutorials-section {
+      background: linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%);
+      padding: 2.5rem 1rem; /* Reduced from 4rem 1rem */
+    }
+    
+    .tutorials-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .tutorial-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+    
+    .tutorial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+    }
+    
+    .tutorial-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.75rem;
+    }
+    
+    .tutorial-icon.primary {
+      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+      color: var(--primary);
+    }
+    
+    .tutorial-icon.secondary {
+      background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+      color: var(--secondary);
+    }
+    
+    .tutorial-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--neutral-dark);
+      margin-bottom: 1rem;
+    }
+    
+    .tutorial-description {
+      color: var(--neutral-light);
+      margin-bottom: 1.5rem;
+    }
+    
+    /* Departments Section */
+    .departments-section {
+      padding: 4rem 1rem;
+      background: var(--card-bg);
+    }
+    
+    .departments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+      max-width: 1200px;
+      margin: 2rem auto 0;
+    }
+    
+    .department-card {
+      background: var(--neutral-bg);
+      border-radius: 12px;
+      padding: 1.75rem;
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    
+    .department-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--primary-light);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    }
+    
+    .department-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    
+    .department-name {
+      font-weight: 600;
+      color: var(--neutral-dark);
+      margin-bottom: 0.25rem;
+    }
+    
+    .department-description {
+      font-size: 0.875rem;
+      color: var(--neutral-light);
+    }
+    
+    /* Social Media Section */
+    .social-section {
+      background: var(--neutral-dark);
+      padding: 3rem 1rem;
+    }
+    
+    .social-title {
+      color: white;
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+    }
+    
+    .social-grid {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 12px;
+      color: white;
+      font-size: 1.25rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    
+    /* Updated social link gradients */
+    .social-link.whatsapp { background: linear-gradient(135deg, #25D366 0%, #128C7E 100%); }
+    .social-link.tiktok { background: linear-gradient(135deg, #000000 0%, #333333 100%); }
+    .social-link.facebook { background: linear-gradient(135deg, #1877F2 0%, #0d5cb6 100%); }
+    .social-link.instagram { background: linear-gradient(135deg, #E4405F 0%, #C13584 100%); }
+    .social-link.twitter { background: linear-gradient(135deg, #1DA1F2 0%, #0d8bd9 100%); }
+    .social-link.youtube { background: linear-gradient(135deg, #FF0000 0%, #cc0000 100%); }
+    .social-link.telegram { background: linear-gradient(135deg, #26A5E4 0%, #1e8bc3 100%); }
+    
+    .social-link:hover {
+      transform: translateY(-5px) scale(1.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Footer */
+    .footer {
+      background: #111827;
+      color: white;
+      padding: 4rem 1rem 2rem;
+    }
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3rem;
+      max-width: 1200px;
+      margin: 0 auto 3rem;
+    }
+    
+    .footer-column-title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: white;
+    }
+    
+    .footer-links {
+      list-style: none;
+    }
+    
+    .footer-link {
+      color: #d1d5db;
+      text-decoration: none;
+      margin-bottom: 0.75rem;
+      display: block;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-link:hover {
+      color: white;
+    }
+    
+    .footer-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+      color: #d1d5db;
+    }
+    
+    .footer-info a {
+      color: #d1d5db;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-info a:hover {
+      color: white;
+    }
+    
+    .footer-disclaimer {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 2rem;
+      border-top: 1px solid #374151;
+      text-align: center;
+      color: #9ca3af;
+      font-size: 0.875rem;
+      line-height: 1.6;
+    }
+    
+    .copyright {
+      text-align: center;
+      padding-top: 2rem;
+      color: #9ca3af;
+      font-size: 0.875rem;
+    }
+    
+    /* WhatsApp Banner - UPDATED: Positioned at top right */
+    .whatsapp-banner {
+      position: fixed;
+      top: 80px;
+      right: 20px;
+      max-width: 380px;
+      width: 90%;
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      z-index: 9999;
+      border: 1px solid #e0e0e0;
+      overflow: hidden;
+      animation: slideInUp 0.5s ease-out;
+      display: none;
+    }
+    
+    .banner-content {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      gap: 12px;
+    }
+    
+    .banner-icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+    }
+    
+    .banner-text {
+      flex-grow: 1;
+    }
+    
+    .banner-title {
+      font-weight: 600;
+      color: #1f2937;
+      margin-bottom: 4px;
+      font-size: 0.95rem;
+      line-height: 1.3;
+    }
+    
+    .banner-subtitle {
+      color: #6b7280;
+      font-size: 0.85rem;
+      line-height: 1.3;
+    }
+    
+    .banner-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+      flex-shrink: 0;
+    }
+    
+    .banner-button {
+      background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+      color: white;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(37, 211, 102, 0.2);
+    }
+    
+    .banner-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(37, 211, 102, 0.3);
+    }
+    
+    .banner-close {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #f3f4f6;
+      border: none;
+      color: #6b7280;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+    
+    .banner-close:hover {
+      background: #e5e7eb;
+      color: var(--neutral-dark);
+    }
+    
+    @keyframes slideInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Offline Message */
+    #offlineMessage {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.95);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .offline-content {
+      background: white;
+      padding: 3rem;
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      text-align: center;
+      border: 1px solid var(--border-color);
+    }
+    
+    /* ========== ENHANCED MOBILE DESIGN (MODERN MENU + STATS GRID FIX) ========== */
+    @media (max-width: 768px) {
+      /* Fix: 2x2 grid for stats so "98% Satisfaction" is fully visible */
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        margin-top: 2rem;
+      }
+      .stat-card {
+        padding: 1rem 0.75rem;
+        border-radius: 20px;
+      }
+      .stat-number {
+        font-size: 1.8rem;
+      }
+      .stat-label {
+        font-size: 0.7rem;
+        margin-top: 0.25rem;
+      }
+      
+      /* MODERN & BEAUTIFUL HAMBURGER BUTTON (three lines) */
+      .mobile-menu-button {
+        display: block;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(6px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 14px;
+        padding: 0.75rem;
+        transition: all 0.25s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      .mobile-menu-button:hover {
+        background: rgba(255, 255, 255, 0.25);
+        transform: scale(1.02);
+      }
+      .mobile-menu-button:active {
+        transform: scale(0.96);
+      }
+      
+      /* MODERN, PROFESSIONAL MOBILE MENU (full revamp) */
+      .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(18, 32, 58, 0.98);
+        backdrop-filter: blur(20px);
+        border-radius: 0 0 28px 28px;
+        box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.4);
+        padding: 1.75rem 1.25rem;
+        display: none;
+        flex-direction: column;
+        z-index: 1000;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-top: none;
+        gap: 0.75rem;
+      }
+      
+      .nav-menu.active {
+        display: flex;
+        animation: slideDownFade 0.35s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+      }
+      
+      @keyframes slideDownFade {
+        0% {
+          opacity: 0;
+          transform: translateY(-25px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      /* Each nav link - glassmorphic, sleek style */
+      .nav-link {
+        color: white;
+        padding: 1rem 1.25rem;
+        border-radius: 18px;
+        font-size: 1rem;
+        font-weight: 550;
+        margin-bottom: 0;
+        text-align: left;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        transition: all 0.25s ease;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        letter-spacing: 0.3px;
+      }
+      
+      .nav-link i {
+        width: 26px;
+        font-size: 1.2rem;
+        text-align: center;
+      }
+      
+      .nav-link:hover {
+        background: rgba(255, 255, 255, 0.18);
+        transform: translateX(6px);
+        border-color: rgba(255, 255, 255, 0.35);
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+      }
+      
+      /* Preserve distinct styles for tools & assistant */
+      .nav-link.tools-link {
+        background: linear-gradient(105deg, rgba(245, 158, 11, 0.18), rgba(217, 119, 6, 0.08));
+        border-left: 3px solid #f59e0b;
+      }
+      
+      .nav-link.assistant-link {
+        background: linear-gradient(105deg, rgba(139, 92, 246, 0.18), rgba(124, 58, 237, 0.08));
+        border-left: 3px solid #8b5cf6;
+      }
+      
+      .nav-link.tools-link:hover,
+      .nav-link.assistant-link:hover {
+        background: rgba(255, 255, 255, 0.22);
+        transform: translateX(6px);
+      }
+      
+      .hero-title {
+        font-size: 2.25rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.125rem;
+      }
+      
+      .selection-card {
+        padding: 2rem;
+        margin: -3rem auto 2rem;
+      }
+      
+      .tutorials-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .departments-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .social-grid {
+        gap: 0.75rem;
+      }
+      
+      .whatsapp-banner {
+        top: 70px;
+        right: 10px;
+        left: 10px;
+        width: auto;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1rem;
+      }
+      
+      /* maintain 2 columns on very small screens as well */
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+      }
+      .stat-number {
+        font-size: 1.5rem;
+      }
+      .stat-label {
+        font-size: 0.65rem;
+      }
+      
+      .section-title {
+        font-size: 1.75rem;
+      }
+      
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .tools-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .whatsapp-banner {
+        top: 70px;
+        right: 10px;
+        left: 10px;
+        width: auto;
+      }
+      
+      .banner-content {
+        padding: 14px;
+        gap: 10px;
+      }
+      
+      .banner-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.3rem;
+      }
+      
+      .banner-title {
+        font-size: 0.9rem;
+      }
+      
+      .banner-subtitle {
+        font-size: 0.8rem;
+      }
+      
+      .nav-menu {
+        padding: 1.5rem 1rem;
+      }
+      .nav-link {
+        padding: 0.9rem 1rem;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Offline Message -->
+  <div id="offlineMessage">
+    <div class="offline-content">
+      <div class="text-red-500 text-5xl mb-4">
+        <i class="fas fa-wifi"></i>
+      </div>
+      <h2 class="text-2xl font-bold text-gray-800 mb-2">No Internet Connection</h2>
+      <p class="text-gray-600 mb-4">Please connect to the internet to continue using the SAZUG Past Questions Portal.</p>
+      <div class="text-gray-400 text-sm">
+        <p>This portal requires internet connection to function properly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="content-container" style="padding: 0 1rem;">
+      <div class="flex justify-between items-center">
+        <div class="logo-container">
+          <img src="logo.jpg" alt="SAZUG Past Questions Portal Logo" class="logo">
+          <div>
+            <div class="university-name">SAZUG Past Questions</div>
+            <div class="university-subtitle">Powered by AGI Innovations</div>
+          </div>
+        </div>
+        
+        <button class="mobile-menu-button" onclick="toggleMenu()" aria-label="Toggle menu">
+          <i class="fas fa-bars text-white text-xl"></i>
+        </button>
+        
+        <nav id="navMenu" class="nav-menu">
+          <a href="about.html" class="nav-link">About Us</a>
+          <a href="contact.html" class="nav-link">Contact Us</a>
+          <a href="disclaimer.html" class="nav-link">Disclaimer</a>
+          <a href="privacy.html" class="nav-link">Privacy & Policy</a>
+          <a href="terms.html" class="nav-link">Terms & Conditions</a>
+          <a href="freshers-guide.html" class="nav-link">Freshers Guide</a>
+          <a href="students-tools.html" class="nav-link tools-link">
+            <i class="fas fa-tools"></i>
+            Students Tools
+          </a>
+          <a href="chatbot.html" class="nav-link assistant-link">
+            <i class="fas fa-robot"></i>
+            SAZUG Assistant
+          </a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1 class="hero-title academic-font text-center">
+        Welcome to <span class="text-yellow-300">Sa'adu Zungur University</span> Past Questions Portal
+      </h1>
+      <p class="hero-subtitle text-center">
+        Access past examination questions to enhance your preparation and excel in your studies. 
+        Select your department, level, and semester to get started.
+      </p>
+      
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">40+</span>
+          <span class="stat-label">Departments</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">1000+</span>
+          <span class="stat-label">Past Questions</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">5000+</span>
+          <span class="stat-label">Students</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">98%</span>
+          <span class="stat-label">Satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="flex-grow">
+    <!-- Selection Card -->
+    <div class="content-container">
+      <div class="selection-card">
+        <h2 class="section-title">Find Your Past Questions</h2>
+        <p class="section-subtitle">Select your department, level, and semester to access relevant past examination questions.</p>
+        
+        <div class="form-group">
+          <label for="department" class="form-label">Department</label>
+          <select id="department" class="form-select">
+            <option value="">-- Choose Department --</option>
+            <option value="accounting">Accounting</option>
+            <option value="agric-economics-extension">Agricultural Economics and Extension</option>
+            <option value="anatomy">Anatomy</option>
+            <option value="animal-science">Animal Science</option>
+            <option value="arabic">Arabic</option>
+            <option value="biochemistry">Biochemistry</option>
+            <option value="bio">Biology</option>
+            <option value="bio-edu">Biology Education</option>
+            <option value="botany">Botany</option>
+            <option value="bus-admin">Business Administration</option>
+            <option value="chem">Chemistry</option>
+            <option value="chem-edu">Chemistry Education</option>
+            <option value="crop-science">Crop Science</option>
+            <option value="csc">Computer Science</option>
+            <option value="csc-edu">Computer Education</option>
+            <option value="economics">Economics</option>
+            <option value="eng">English</option>
+            <option value="english-edu">English Education</option>
+            <option value="environmental-science">Environmental Science</option>
+            <option value="hausa">Hausa</option>
+            <option value="isl">Islamic Studies</option>
+            <option value="law">Law</option>
+            <option value="linguistics">Linguistics</option>
+            <option value="lis">Library & Information Science</option>
+            <option value="literature">Literature</option>
+            <option value="math">Mathematics</option>
+            <option value="math-edu">Mathematics Education</option>
+            <option value="mic">Microbiology</option>
+            <option value="nurs">Nursing</option>
+            <option value="pharm">Pharmacy</option>
+            <option value="pharmacology">Pharmacology</option>
+            <option value="phy">Physics</option>
+            <option value="phy-edu">Physics Education</option>
+            <option value="physiology">Physiology</option>
+            <option value="pols">Political Science</option>
+            <option value="pub-admin">Public Administration</option>
+            <option value="phh">Public Health</option>
+            <option value="soc">Sociology</option>
+            <option value="soil-science">Soil Science</option>
+            <option value="stat">Statistics</option>
+            <option value="zoology">Zoology</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="level" class="form-label">Level</label>
+          <select id="level" class="form-select">
+            <option value="">-- Choose Level --</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="semester" class="form-label">Semester</label>
+          <select id="semester" class="form-select">
+            <option value="">-- Choose Semester --</option>
+            <option value="first">First Semester</option>
+            <option value="second">Second Semester</option>
+          </select>
+        </div>
+
+        <button id="proceedBtn" class="btn btn-primary" style="margin-top: 2rem;">
+          <i class="fas fa-arrow-right"></i>
+          Proceed to Questions
+        </button>
+        
+        <div class="tools-grid">
+          <div class="tool-card" onclick="window.location.href='students-tools.html'">
+            <div class="tool-icon tools">
+              <i class="fas fa-tools"></i>
+            </div>
+            <h4 class="tool-title">Student Tools</h4>
+            <p class="tool-description">Essential tools and resources for academic success</p>
+          </div>
+          
+          <div class="tool-card" onclick="window.location.href='chatbot.html'">
+            <div class="tool-icon chatbot">
+              <i class="fas fa-robot"></i>
+            </div>
+            <h4 class="tool-title">SAZUG Assistant</h4>
+            <p class="tool-description">AI-powered help for all your academic questions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tutorials Section -->
+    <section class="tutorials-section">
+      <div class="content-container">
+        <h2 class="section-title">100-Level Tutorials</h2>
+        <p class="section-subtitle">Comprehensive video tutorials and study materials designed specifically for 100-level students</p>
+        
+        <div class="tutorials-grid">
+          <div class="tutorial-card">
+            <div class="tutorial-icon primary">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <h3 class="tutorial-title">100-Level First Semester Notes Tutorials And Cbt Exams</h3>
+            <p class="tutorial-description">Covers Math 101, Physics 101, Chemistry 101, GST 111, and other general courses.</p>
+            <button onclick="window.location.href='.ht'" class="btn btn-primary">
+              <i class="fas fa-play-circle"></i>
+              Access Tutorials
+            </button>
+          </div>
+          
+          <div class="tutorial-card">
+            <div class="tutorial-icon secondary">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <h3 class="tutorial-title">100-Level Second Semester Notes Tutorials And Cbt Exams</h3>
+            <p class="tutorial-description">Includes Math 102, Physics 102, Chemistry 102, GST 112, and other core courses.</p>
+            <button onclick="window.location.href='#.html'" class="btn btn-secondary">
+              <i class="fas fa-book-reader"></i>
+              Access Tutorials
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section class="departments-section">
+      <div class="content-container">
+        <h2 class="section-title">Popular Departments</h2>
+        <p class="section-subtitle">Browse past questions from our most popular departments</p>
+        
+        <div class="departments-grid">
+          <div class="department-card">
+            <div class="department-icon">
+              <i class="fas fa-calculator"></i>
+            </div>
+            <div>
+              <h4 class="department-name">Accounting</h4>
+              <p class="department-description">Financial and managerial accounting</p>
+            </div>
+          </div>
+          
+          <div class="department-card">
+            <div class="department-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div>
+              <h4 class="department-name">Computer Science</h4>
+              <p class="department-description">Programming and algorithms</p>
+            </div>
+          </div>
+          
+          <div class="department-card">
+            <div class="department-icon">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <div>
+              <h4 class="department-name">Law</h4>
+              <p class="department-description">Legal studies and jurisprudence</p>
+            </div>
+          </div>
+          
+          <div class="department-card">
+            <div class="department-icon">
+              <i class="fas fa-flask"></i>
+            </div>
+            <div>
+              <h4 class="department-name">Biochemistry</h4>
+              <p class="department-description">Molecular biology and chemistry</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center mt-8">
+          <button onclick="document.getElementById('department').scrollIntoView({behavior: 'smooth'})" 
+                  class="btn btn-primary w-auto px-8">
+            View All Departments
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section">
+      <h3 class="social-title">Connect With Us</h3>
+      <div class="social-grid">
+        <a href="https://whatsapp.com/channel/0029VbBO1U40VycLsR8zx609" target="_blank" class="social-link whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://tiktok.com/@sazug.past.questi" target="_blank" class="social-link tiktok">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61552291692259" target="_blank" class="social-link facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/sazug2026?igsh=MmZnZXh4c3d6b21j" target="_blank" class="social-link instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://x.com/aliyu_garb18641" target="_blank" class="social-link twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://youtube.com/@aliyugarbainnovations?si=nUetaDDBa6SSKt19" target="_blank" class="social-link youtube">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://t.me/+zS_kKGdf_V85NmM0" target="_blank" class="social-link telegram">
+          <i class="fab fa-telegram"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <h4 class="footer-column-title">Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="about.html" class="footer-link">About Us</a></li>
+          <li><a href="contact.html" class="footer-link">Contact Us</a></li>
+          <li><a href="freshers-guide.html" class="footer-link">Freshers Guide</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="footer-column-title">Legal</h4>
+        <ul class="footer-links">
+          <li><a href="privacy.html" class="footer-link">Privacy Policy</a></li>
+          <li><a href="disclaimer.html" class="footer-link">Disclaimer</a></li>
+          <li><a href="terms.html" class="footer-link">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="footer-column-title">Resources</h4>
+        <ul class="footer-links">
+          <li><a href="students-tools.html" class="footer-link">Students Tools</a></li>
+          <li><a href="chatbot.html" class="footer-link">SAZUG Assistant</a></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="footer-column-title">Contact Info</h4>
+        <div class="footer-info">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:sazugpastquestions@gmail.com">support@sazug</a>
+        </div>
+        <div class="footer-info">
+          <i class="fas fa-phone"></i>
+          <span>08032469896</span>
+        </div>
+        <div class="footer-info">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Sa'adu Zungur University</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-disclaimer">
+      SAZUG Past Questions Portal is an independent student-created platform and is not officially affiliated with Sa'adu Zungur University. All materials are provided for educational and revision purposes only.
+    </div>
+    
+    <div class="copyright">
+      © 2025 SAZUG Past Questions Portal. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- WhatsApp Banner -->
+  <div id="whatsappBanner" class="whatsapp-banner">
+    <div class="banner-content">
+      <div class="banner-icon">
+        <i class="fab fa-whatsapp"></i>
+      </div>
+      <div class="banner-text">
+        <p class="banner-title">📢 Get notified when new past questions are added.</p>
+        <p class="banner-subtitle">Join our official SAZUG WhatsApp Updates Channel.</p>
+      </div>
+      <div class="banner-actions">
+        <a href="https://whatsapp.com/channel/0029VbBO1U40VycLsR8zx609" target="_blank" class="banner-button">
+          Join Channel
+        </a>
+        <button id="closeBanner" class="banner-close" aria-label="Close notification">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Internet Connection Check
+    window.addEventListener('load', function() {
+      checkInternetConnection();
+      window.addEventListener('online', function() {
+        document.getElementById('offlineMessage').style.display = 'none';
+        enablePageFunctionality(true);
+      });
+      window.addEventListener('offline', function() {
+        showOfflineMessage();
+        enablePageFunctionality(false);
+      });
+    });
+
+    function checkInternetConnection() {
+      if (!navigator.onLine) {
+        showOfflineMessage();
+        enablePageFunctionality(false);
+      }
+    }
+
+    function showOfflineMessage() {
+      document.getElementById('offlineMessage').style.display = 'flex';
+    }
+
+    function enablePageFunctionality(enable) {
+      const interactiveElements = document.querySelectorAll('button, select, a');
+      interactiveElements.forEach(element => {
+        if (enable) {
+          element.removeAttribute('disabled');
+          element.style.pointerEvents = 'auto';
+          element.style.opacity = '1';
+        } else {
+          element.setAttribute('disabled', 'disabled');
+          element.style.pointerEvents = 'none';
+          element.style.opacity = '0.7';
+        }
+      });
+    }
+
+    // Mobile Menu Toggle
+    function toggleMenu() {
+      const navMenu = document.getElementById('navMenu');
+      navMenu.classList.toggle('active');
+    }
+
+    document.addEventListener('click', function(event) {
+      const navMenu = document.getElementById('navMenu');
+      const menuButton = document.querySelector('.mobile-menu-button');
+      
+      if (!navMenu.contains(event.target) && !menuButton.contains(event.target)) {
+        navMenu.classList.remove('active');
+      }
+    });
+
+    // Department and Level Selection Logic (Preserved from original)
+    const departmentSelect = document.getElementById("department");
+    const levelSelect = document.getElementById("level");
+    const semesterSelect = document.getElementById("semester");
+
+    const levels = {
+      "accounting": ["100-level", "200-level", "300-level", "400-level"],
+      "agric-economics-extension": ["100-level", "200-level", "300-level", "400-level"],
+      "anatomy": ["100-level", "200-level", "300-level", "400-level"],
+      "animal-science": ["100-level", "200-level", "300-level", "400-level"],
+      "arabic": ["100-level", "200-level", "300-level", "400-level"],
+      "biochemistry": ["100-level", "200-level", "300-level", "400-level"],
+      "bio": ["100-level", "200-level", "300-level", "400-level"],
+      "bio-edu": ["100-level", "200-level", "300-level", "400-level"],
+      "botany": ["100-level", "200-level", "300-level", "400-level"],
+      "bus-admin": ["100-level", "200-level", "300-level", "400-level"],
+      "chem": ["100-level", "200-level", "300-level", "400-level"],
+      "chem-edu": ["100-level", "200-level", "300-level", "400-level"],
+      "crop-science": ["100-level", "200-level", "300-level", "400-level"],
+      "csc": ["100-level", "200-level", "300-level", "400-level"],
+      "csc-edu": ["100-level", "200-level", "300-level", "400-level"],
+      "economics": ["100-level", "200-level", "300-level", "400-level"],
+      "eng": ["100-level", "200-level", "300-level", "400-level"],
+      "english-edu": ["100-level", "200-level", "300-level", "400-level"],
+      "environmental-science": ["100-level", "200-level", "300-level", "400-level"],
+      "hausa": ["100-level", "200-level", "300-level", "400-level"],
+      "isl": ["100-level", "200-level", "300-level", "400-level"],
+      "law": ["100-level", "200-level", "300-level", "400-level", "500-level"],
+      "linguistics": ["100-level", "200-level", "300-level", "400-level"],
+      "lis": ["100-level", "200-level", "300-level", "400-level"],
+      "literature": ["100-level", "200-level", "300-level", "400-level"],
+      "math": ["100-level", "200-level", "300-level", "400-level"],
+      "math-edu": ["100-level", "200-level", "300-level", "400-level"],
+      "mic": ["100-level", "200-level", "300-level", "400-level"],
+      "nurs": ["100-level", "200-level", "300-level", "400-level", "500-level"],
+      "pharm": ["100-level", "200-level", "300-level", "400-level", "500-level", "600-level"],
+      "pharmacology": ["100-level", "200-level", "300-level", "400-level"],
+      "phy": ["100-level", "200-level", "300-level", "400-level"],
+      "phy-edu": ["100-level", "200-level", "300-level", "400-level"],
+      "physiology": ["100-level", "200-level", "300-level", "400-level"],
+      "pols": ["100-level", "200-level", "300-level", "400-level"],
+      "pub-admin": ["100-level", "200-level", "300-level", "400-level"],
+      "phh": ["100-level", "200-level", "300-level", "400-level"],
+      "soc": ["100-level", "200-level", "300-level", "400-level"],
+      "soil-science": ["100-level", "200-level", "300-level", "400-level"],
+      "stat": ["100-level", "200-level", "300-level", "400-level"],
+      "zoology": ["100-level", "200-level", "300-level", "400-level"]
+    };
+
+    departmentSelect.addEventListener("change", function() {
+      const dept = this.value;
+      levelSelect.innerHTML = '<option value="">-- Choose Level --</option>';
+      if (levels[dept]) {
+        levels[dept].forEach(lvl => {
+          const option = document.createElement("option");
+          option.value = lvl;
+          option.textContent = lvl;
+          levelSelect.appendChild(option);
+        });
+      }
+    });
+
+    document.getElementById("proceedBtn").addEventListener("click", function() {
+      const dept = departmentSelect.value;
+      const lvl = levelSelect.value;
+      const sem = semesterSelect.value;
+
+      if (!dept || !lvl || !sem) {
+        alert("Please select department, level, and semester to proceed.");
+        return;
+      }
+
+      const deptMap = {
+        "accounting": "accounting",
+        "agric-economics-extension": "agric-economics-extension",
+        "anatomy": "anatomy",
+        "animal-science": "animal-science",
+        "arabic": "arabic",
+        "biochemistry": "biochemistry",
+        "bio": "bio",
+        "bio-edu": "bio-edu",
+        "botany": "botany",
+        "bus-admin": "bus-admin",
+        "chem": "chem",
+        "chem-edu": "chem-edu",
+        "crop-science": "crop-science",
+        "csc": "csc",
+        "csc-edu": "csc-edu",
+        "economics": "economics",
+        "eng": "eng",
+        "english-edu": "english-edu",
+        "environmental-science": "environmental-science",
+        "hausa": "hausa",
+        "isl": "isl",
+        "law": "law",
+        "linguistics": "linguistics",
+        "lis": "lis",
+        "literature": "literature",
+        "math": "math",
+        "math-edu": "math-edu",
+        "mic": "mic",
+        "nurs": "nurs",
+        "pharm": "pharm",
+        "pharmacology": "pharmacology",
+        "phy": "phy",
+        "phy-edu": "phy-edu",
+        "physiology": "physiology",
+        "pols": "pols",
+        "pub-admin": "pub-admin",
+        "phh": "phh",
+        "soc": "soc",
+        "soil-science": "soil-science",
+        "stat": "stat",
+        "zoology": "zoology"
+      };
+
+      const redirectDept = deptMap[dept] || dept;
+      window.location.href = `questions.html?dept=${redirectDept}&level=${lvl}&semester=${sem}`;
+    });
+    
+    // WhatsApp Banner Functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const whatsappBanner = document.getElementById('whatsappBanner');
+      const closeBannerBtn = document.getElementById('closeBanner');
+      
+      const bannerClosed = sessionStorage.getItem('whatsappBannerClosed');
+      
+      if (!bannerClosed && navigator.onLine) {
+        setTimeout(() => {
+          whatsappBanner.style.display = 'block';
+        }, 1500);
+      }
+      
+      if (closeBannerBtn) {
+        closeBannerBtn.addEventListener('click', function() {
+          whatsappBanner.style.display = 'none';
+          sessionStorage.setItem('whatsappBannerClosed', 'true');
+        });
+      }
+      
+      window.addEventListener('offline', function() {
+        whatsappBanner.style.display = 'none';
+      });
+      
+      window.addEventListener('online', function() {
+        if (!sessionStorage.getItem('whatsappBannerClosed')) {
+          whatsappBanner.style.display = 'block';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
