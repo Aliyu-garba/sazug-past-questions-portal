@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="The future of exam preparation — Past Questions Portal is coming soon. Get ready to access thousands of past questions, tutorials, and study guides.">
+  <meta name="theme-color" content="#0a0c10">
+  <title>Past Questions Portal — Coming Soon 2027</title>
+  
+  <!-- Google Fonts + Font Awesome (Icons only for extra elements) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: radial-gradient(circle at 10% 20%, #0B0F1C, #05070F);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* animated gradient orbs (modern tech vibe) */
+    body::before {
+      content: "";
+      position: fixed;
+      top: -30%;
+      left: -20%;
+      width: 120%;
+      height: 120%;
+      background: radial-gradient(circle, rgba(56, 128, 255, 0.08) 0%, rgba(6, 182, 212, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      bottom: -20%;
+      right: -10%;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle, rgba(139, 92, 246, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* main card container — glassmorphism + premium shadow */
+    .coming-soon-card {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      width: 100%;
+      background: rgba(12, 18, 28, 0.75);
+      backdrop-filter: blur(16px);
+      border-radius: 2.5rem;
+      padding: 3rem 2rem;
+      border: 1px solid rgba(72, 187, 255, 0.2);
+      box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(56, 189, 248, 0.1) inset;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: fadeSlideUp 0.9s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    }
+
+    .coming-soon-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 30px 50px -18px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(56, 189, 248, 0.4) inset;
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    @keyframes fadeSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* logo container — circular premium look */
+    .logo-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1.8rem;
+    }
+    .logo-circle {
+      background: linear-gradient(145deg, #1E2A47, #0F172A);
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 25px -8px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(56, 189, 248, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s;
+      overflow: hidden;
+      background: #0a0f1c;
+    }
+    .logo-circle:hover {
+      transform: scale(1.05);
+      box-shadow: 0 18px 30px -10px rgba(59, 130, 246, 0.3);
+    }
+    .logo-circle img {
+      width: 85%;
+      height: 85%;
+      object-fit: contain;
+      border-radius: 50%;
+      display: block;
+    }
+
+    h1 {
+      font-size: 3.3rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      background: linear-gradient(120deg, #FFFFFF, #94A3F8);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+      text-align: center;
+    }
+
+    .coming-soon-badge {
+      display: inline-block;
+      background: rgba(56, 189, 248, 0.12);
+      backdrop-filter: blur(4px);
+      padding: 0.5rem 1.2rem;
+      border-radius: 60px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.4px;
+      color: #7DD3FC;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      margin: 1rem 0 0.5rem 0;
+    }
+
+    .launch-date {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #CBD5E1;
+      margin-bottom: 2rem;
+      border-left: 3px solid #3B82F6;
+      padding-left: 1rem;
+      background: linear-gradient(90deg, rgba(59,130,246,0.1), transparent);
+      display: inline-block;
+    }
+
+    .description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #CBD5E1;
+      margin: 1.8rem 0 2rem 0;
+      font-weight: 400;
+    }
+
+    /* countdown timer styles */
+    .countdown-container {
+      background: rgba(0, 0, 0, 0.35);
+      border-radius: 2rem;
+      padding: 1.5rem 1rem;
+      margin: 2rem 0 1.8rem 0;
+      border: 1px solid rgba(71, 85, 105, 0.5);
+      backdrop-filter: blur(4px);
+    }
+
+    .countdown-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #94A3B8;
+      margin-bottom: 1.5rem;
+    }
+
+    .countdown-title i {
+      color: #38BDF8;
+      font-size: 1rem;
+    }
+
+    .timer {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+
+    .time-block {
+      background: #0F172A;
+      min-width: 85px;
+      padding: 1rem 0.5rem;
+      border-radius: 1.5rem;
+      text-align: center;
+      transition: all 0.2s;
+      border-bottom: 2px solid #3B82F6;
+      box-shadow: 0 8px 14px -8px rgba(0, 0, 0, 0.4);
+    }
+
+    .time-number {
+      font-size: 2.3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #F0F9FF, #A5F3FC);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      line-height: 1;
+      letter-spacing: 2px;
+    }
+
+    .time-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: #7E8AA2;
+      margin-top: 0.5rem;
+      letter-spacing: 1px;
+    }
+
+    /* button */
+    .notify-btn {
+      background: linear-gradient(95deg, #3B82F6, #8B5CF6);
+      border: none;
+      padding: 1rem 2rem;
+      width: 100%;
+      max-width: 280px;
+      margin: 1rem auto 0.5rem;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px -8px rgba(59, 130, 246, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .notify-btn:hover {
+      transform: scale(1.02);
+      background: linear-gradient(95deg, #2563EB, #7C3AED);
+      box-shadow: 0 12px 28px -8px #3B82F6;
+      letter-spacing: 0.3px;
+    }
+
+    .notify-btn:active {
+      transform: scale(0.98);
+    }
+
+    /* footer */
+    .footer-note {
+      margin-top: 2.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(71, 85, 105, 0.4);
+      text-align: center;
+      font-size: 0.8rem;
+      color: #5B6B8C;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-note span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .footer-note i {
+      font-size: 0.75rem;
+      color: #3B82F6;
+    }
+
+    /* responsiveness */
+    @media (max-width: 600px) {
+      .coming-soon-card {
+        padding: 2rem 1.5rem;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      .time-number {
+        font-size: 1.7rem;
+      }
+      .time-block {
+        min-width: 68px;
+        padding: 0.7rem 0.3rem;
+      }
+      .timer {
+        gap: 0.7rem;
+      }
+      .launch-date {
+        font-size: 1rem;
+      }
+      .description {
+        font-size: 1rem;
+      }
+      .logo-circle {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .time-block {
+        min-width: 60px;
+      }
+      .time-number {
+        font-size: 1.4rem;
+      }
+      .countdown-container {
+        padding: 1rem 0.5rem;
+      }
+    }
+
+    /* subtle heading glow */
+    @keyframes softGlow {
+      0% { text-shadow: 0 0 0px rgba(56, 189, 248, 0);}
+      100% { text-shadow: 0 0 8px rgba(56, 189, 248, 0.3);}
+    }
+    h1 {
+      animation: softGlow 2.5s infinite alternate ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+<div class="coming-soon-card">
+  <!-- Logo image instead of graduation cap icon -->
+  <div class="logo-wrapper">
+    <div class="logo-circle">
+      <img src="logo.jpg" alt="Past Questions Portal Logo">
+    </div>
+  </div>
+
+  <!-- project name -->
+  <h1>Past Questions Portal</h1>
+  
+  <!-- coming soon badge + date -->
+  <div style="text-align: center;">
+    <div class="coming-soon-badge">
+      <i class="fas fa-hourglass-half" style="margin-right: 6px;"></i> Coming Soon
+    </div>
+  </div>
+  
+  <div style="text-align: left; margin-top: 0.8rem;">
+    <div class="launch-date">
+      <i class="fas fa-calendar-alt" style="margin-right: 10px; color: #3B82F6;"></i> Launching March 2027
+    </div>
+  </div>
+
+  <!-- description -->
+  <div class="description">
+    We are building a powerful portal for students to access past questions easily.<br>
+    Streamlined search, organized by departments, levels & semesters your exam success starts here.
+  </div>
+
+  <!-- Countdown timer section -->
+  <div class="countdown-container">
+    <div class="countdown-title">
+      <i class="fas fa-rocket"></i>
+      <span>COUNTDOWN TO LAUNCH</span>
+      <i class="fas fa-chart-line"></i>
+    </div>
+    <div class="timer" id="timerContainer">
+      <div class="time-block">
+        <div class="time-number" id="days">00</div>
+        <div class="time-label">Days</div>
+      </div>
+      <div class="time-block">
+        <div class="time-number" id="hours">00</div>
+        <div class="time-label">Hours</div>
+      </div>
+      <div class="time-block">
+        <div class="time-number" id="minutes">00</div>
+        <div class="time-label">Minutes</div>
+      </div>
+      <div class="time-block">
+        <div class="time-number" id="seconds">00</div>
+        <div class="time-label">Seconds</div>
+      </div>
+    </div>
+    <!-- small message while waiting -->
+    <div style="text-align: center; margin-top: 1rem; font-size: 0.75rem; color: #5F7F9E;">
+      <i class="fas fa-brain"></i> Get ready to revolutionize your exam prep
+    </div>
+  </div>
+
+  <!-- Notify Me button -->
+  <div style="display: flex; justify-content: center;">
+    <button class="notify-btn" id="notifyBtn">
+      <i class="fas fa-bell"></i> Notify Me
+      <i class="fas fa-arrow-right"></i>
+    </button>
+  </div>
+
+  <!-- footer with small details -->
+  <div class="footer-note">
+    <span><i class="fas fa-database"></i> 10,000+ past questions</span>
+    <span><i class="fas fa-mobile-alt"></i> Mobile ready</span>
+    <span><i class="fas fa-shield-alt"></i> Free for SAZUG students</span>
+  </div>
+  <div style="text-align: center; margin-top: 0.7rem; font-size: 0.7rem; color: #475569;">
+    © 2025 Past Questions Portal — Empowering academic excellence
+  </div>
+</div>
+
+<script>
+  (function() {
+    // Launch target: March 1, 2027 (00:00:00 local time)
+    const targetDate = new Date(2027, 2, 1, 0, 0, 0);
+    
+    const daysEl = document.getElementById('days');
+    const hoursEl = document.getElementById('hours');
+    const minutesEl = document.getElementById('minutes');
+    const secondsEl = document.getElementById('seconds');
+    
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const targetTime = targetDate.getTime();
+      const distance = targetTime - now;
+      
+      if (distance < 0) {
+        if (daysEl && hoursEl && minutesEl && secondsEl) {
+          daysEl.innerText = "00";
+          hoursEl.innerText = "00";
+          minutesEl.innerText = "00";
+          secondsEl.innerText = "00";
+        }
+        const timerContainer = document.querySelector('.countdown-container');
+        if (timerContainer && !document.getElementById('launchedMsg')) {
+          const launchedDiv = document.createElement('div');
+          launchedDiv.id = 'launchedMsg';
+          launchedDiv.style.textAlign = 'center';
+          launchedDiv.style.marginTop = '0.8rem';
+          launchedDiv.style.fontWeight = '600';
+          launchedDiv.style.background = 'linear-gradient(120deg, #22C55E, #3B82F6)';
+          launchedDiv.style.webkitBackgroundClip = 'text';
+          launchedDiv.style.backgroundClip = 'text';
+          launchedDiv.style.color = 'transparent';
+          launchedDiv.innerHTML = '<i class="fas fa-check-circle"></i> Now Live! Portal is ready.';
+          timerContainer.appendChild(launchedDiv);
+        }
+        return;
+      }
+      
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      
+      if (daysEl) daysEl.innerText = days < 10 ? '0' + days : days;
+      if (hoursEl) hoursEl.innerText = hours < 10 ? '0' + hours : hours;
+      if (minutesEl) minutesEl.innerText = minutes < 10 ? '0' + minutes : minutes;
+      if (secondsEl) secondsEl.innerText = seconds < 10 ? '0' + seconds : seconds;
+    }
+    
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+    
+    // Notify Me button interaction (smooth feedback)
+    const notifyButton = document.getElementById('notifyBtn');
+    if (notifyButton) {
+      notifyButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        const feedbackDiv = document.createElement('div');
+        feedbackDiv.innerText = 'Thanks! We’ll notify you as soon as we launch. Stay tuned!';
+        feedbackDiv.style.position = 'fixed';
+        feedbackDiv.style.bottom = '30px';
+        feedbackDiv.style.left = '50%';
+        feedbackDiv.style.transform = 'translateX(-50%)';
+        feedbackDiv.style.backgroundColor = '#0F172A';
+        feedbackDiv.style.backdropFilter = 'blur(12px)';
+        feedbackDiv.style.border = '1px solid #3B82F6';
+        feedbackDiv.style.color = '#E2E8F0';
+        feedbackDiv.style.padding = '12px 24px';
+        feedbackDiv.style.borderRadius = '60px';
+        feedbackDiv.style.fontSize = '0.9rem';
+        feedbackDiv.style.fontWeight = '500';
+        feedbackDiv.style.zIndex = '9999';
+        feedbackDiv.style.boxShadow = '0 10px 25px -5px rgba(0,0,0,0.3)';
+        feedbackDiv.style.fontFamily = "'Inter', sans-serif";
+        feedbackDiv.style.display = 'flex';
+        feedbackDiv.style.alignItems = 'center';
+        feedbackDiv.style.gap = '10px';
+        const iconSpan = document.createElement('i');
+        iconSpan.className = 'fas fa-envelope';
+        iconSpan.style.color = '#60A5FA';
+        feedbackDiv.prepend(iconSpan);
+        document.body.appendChild(feedbackDiv);
+        
+        setTimeout(() => {
+          feedbackDiv.style.opacity = '0';
+          feedbackDiv.style.transition = 'opacity 0.4s ease';
+          setTimeout(() => {
+            if (feedbackDiv && feedbackDiv.remove) feedbackDiv.remove();
+          }, 400);
+        }, 3000);
+      });
+    }
+    
+    window.addEventListener('beforeunload', () => {
+      if (interval) clearInterval(interval);
+    });
+  })();
+</script>
+</body>
+</html>
