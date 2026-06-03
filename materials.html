@@ -1,0 +1,795 @@
+<!-- index.html (Main Page with Light Theme & Logo) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Access comprehensive course materials, lecture notes, handouts, and academic PDFs for Sa'adu Zungur University. Select your department, level, and semester to get started.">
+    <title>SAZUG Course Materials | Lecture Notes & PDF Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #f8fafc;
+            --bg-secondary: #f1f5f9;
+            --bg-card: #ffffff;
+            --bg-card-hover: #f9fafb;
+            --bg-input: #f1f5f9;
+            --border-subtle: #e2e8f0;
+            --border-active: #4f46e5;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            --accent: #4f46e5;
+            --accent-glow: #6366f1;
+            --accent-soft: rgba(79, 70, 229, 0.08);
+            --accent-gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 50%, #a78bfa 100%);
+            --accent-gradient-warm: linear-gradient(135deg, #f59e0b 0%, #f97316 60%, #ef4444 100%);
+            --success: #10b981;
+            --radius-sm: 10px;
+            --radius-md: 16px;
+            --radius-lg: 22px;
+            --radius-xl: 28px;
+            --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.04), 0 8px 32px rgba(0, 0, 0, 0.05);
+            --shadow-card-hover: 0 1px 3px rgba(0, 0, 0, 0.08), 0 16px 48px rgba(0, 0, 0, 0.08);
+            --shadow-glow: 0 0 60px rgba(79, 70, 229, 0.12);
+            --transition-fast: 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-smooth: 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: var(--text-primary);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        /* Subtle animated background */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            background:
+                radial-gradient(ellipse at 20% 20%, rgba(79, 70, 229, 0.04) 0%, transparent 55%),
+                radial-gradient(ellipse at 75% 60%, rgba(124, 58, 237, 0.03) 0%, transparent 55%),
+                radial-gradient(ellipse at 50% 85%, rgba(245, 158, 11, 0.03) 0%, transparent 50%),
+                radial-gradient(ellipse at 85% 15%, rgba(79, 70, 229, 0.02) 0%, transparent 50%);
+            background-size: 100% 100%;
+            animation: ambientShift 18s ease-in-out infinite;
+        }
+
+        @keyframes ambientShift {
+            0%, 100% { opacity: 0.8; }
+            25% { opacity: 1; }
+            50% { opacity: 0.7; }
+            75% { opacity: 0.9; }
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 0;
+            background-image: radial-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+            background-size: 28px 28px;
+            mask-image: radial-gradient(ellipse at center, black 35%, transparent 70%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 35%, transparent 70%);
+        }
+
+        /* Hero Section */
+        .material-hero {
+            position: relative;
+            z-index: 1;
+            padding: 4.5rem 1.5rem 5rem;
+            text-align: center;
+            overflow: visible;
+            background: linear-gradient(135deg, #eef2ff 0%, #e0e7ff 50%, #c7d2fe 100%);
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 3;
+            max-width: 780px;
+            margin: 0 auto;
+        }
+
+        .hero-icon-ring {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.7);
+            border: 2px solid rgba(79, 70, 229, 0.25);
+            margin-bottom: 1.6rem;
+            position: relative;
+            animation: floatIcon 5s ease-in-out infinite;
+            overflow: hidden;
+        }
+
+        .hero-icon-ring img {
+            width: 70%;
+            height: 70%;
+            object-fit: contain;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
+        }
+
+        @keyframes floatIcon {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 0.45rem 1.1rem;
+            border-radius: 60px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            letter-spacing: 0.6px;
+            margin-bottom: 1.8rem;
+            border: 1px solid rgba(79, 70, 229, 0.15);
+            text-transform: uppercase;
+        }
+
+        .hero-badge .pulse-dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: var(--success);
+            animation: pulseDot 2s ease-in-out infinite;
+        }
+
+        @keyframes pulseDot {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6); }
+            50% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+        }
+
+        .hero-title {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 3.6rem;
+            font-weight: 800;
+            color: #0f172a;
+            line-height: 1.1;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero-title .accent-text {
+            background: var(--accent-gradient);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-title .accent-text::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--accent-gradient);
+            border-radius: 4px;
+            opacity: 0.5;
+        }
+
+        .hero-desc {
+            font-size: 1.08rem;
+            color: var(--text-secondary);
+            max-width: 540px;
+            margin: 1.1rem auto 0;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        /* Selection Panel */
+        .selection-panel {
+            max-width: 700px;
+            margin: -1.8rem auto 3rem;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .glass-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-card);
+            padding: 2.6rem 2.4rem 2.8rem;
+            border: 1px solid var(--border-subtle);
+            transition: box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: 20%;
+            right: 20%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(79, 70, 229, 0.2), transparent);
+            border-radius: 50%;
+        }
+
+        .glass-card:hover {
+            box-shadow: var(--shadow-card-hover);
+            border-color: rgba(79, 70, 229, 0.15);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2.4rem;
+        }
+
+        .section-header .step-count {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--accent-glow);
+            margin-bottom: 0.6rem;
+            background: var(--accent-soft);
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+        }
+
+        .section-header h2 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #0f172a;
+            letter-spacing: -0.02em;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+            font-weight: 400;
+            font-size: 0.9rem;
+        }
+
+        .form-modern {
+            display: flex;
+            flex-direction: column;
+            gap: 1.4rem;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-left: 0.2rem;
+        }
+
+        .input-group label i {
+            font-size: 0.85rem;
+            color: var(--accent-glow);
+            opacity: 0.8;
+        }
+
+        .custom-select-wrapper {
+            position: relative;
+        }
+
+        .custom-select {
+            width: 100%;
+            padding: 0.95rem 1.1rem;
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            background-color: var(--bg-input);
+            border: 1.5px solid var(--border-subtle);
+            border-radius: var(--radius-md);
+            color: var(--text-primary);
+            transition: all var(--transition-fast);
+            cursor: pointer;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="%234f46e5" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /></svg>');
+            background-repeat: no-repeat;
+            background-position: right 0.9rem center;
+            background-size: 1.1rem;
+            outline: none;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .custom-select:hover {
+            border-color: rgba(79, 70, 229, 0.35);
+            background-color: #ffffff;
+        }
+
+        .custom-select:focus {
+            border-color: var(--border-active);
+            box-shadow: 0 0 0 5px rgba(79, 70, 229, 0.08), 0 1px 3px rgba(0,0,0,0.02);
+            background-color: #ffffff;
+        }
+
+        .custom-select:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            background-color: #e9eef3;
+            border-color: #d1d5db;
+            color: #6b7280;
+        }
+
+        .custom-select option {
+            background: #ffffff;
+            color: #1e293b;
+            padding: 0.8rem;
+            font-weight: 500;
+        }
+
+        /* Button */
+        .btn-glow {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+            width: 100%;
+            background: var(--accent-gradient);
+            border: none;
+            padding: 1.05rem 1.5rem;
+            font-size: 1rem;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            color: #ffffff;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: all var(--transition-bounce);
+            margin-top: 0.6rem;
+            box-shadow: 0 8px 28px rgba(79, 70, 229, 0.25), 0 2px 6px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.01em;
+        }
+
+        .btn-glow::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, transparent 55%);
+            border-radius: 60px;
+            pointer-events: none;
+        }
+
+        .btn-glow::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: var(--accent-gradient);
+            border-radius: 62px;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity var(--transition-smooth);
+            filter: blur(16px);
+        }
+
+        .btn-glow:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 16px 40px rgba(79, 70, 229, 0.4), 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .btn-glow:hover::after {
+            opacity: 0.7;
+        }
+
+        .btn-glow:active {
+            transform: translateY(0px) scale(0.98);
+            transition: all 0.08s ease;
+            box-shadow: 0 4px 16px rgba(79, 70, 229, 0.2), 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .btn-glow i {
+            font-size: 0.95rem;
+            transition: transform var(--transition-fast);
+        }
+
+        .btn-glow:hover i.fa-arrow-right {
+            transform: translateX(4px);
+        }
+
+        /* Feature Tiles */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+            margin-top: 2.2rem;
+        }
+
+        .feature-tile {
+            background: var(--bg-input);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: var(--radius-md);
+            padding: 1.1rem 0.5rem;
+            text-align: center;
+            border: 1px solid transparent;
+            transition: all var(--transition-smooth);
+            cursor: default;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-tile::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background: var(--accent-gradient);
+            border-radius: 0 0 4px 4px;
+            transition: width var(--transition-smooth);
+        }
+
+        .feature-tile i {
+            font-size: 1.5rem;
+            color: var(--accent-glow);
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            transition: transform var(--transition-bounce);
+        }
+
+        .feature-tile span {
+            font-size: 0.72rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            display: block;
+            letter-spacing: 0.02em;
+        }
+
+        .feature-tile:hover {
+            background: #ffffff;
+            border-color: rgba(79, 70, 229, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.05);
+        }
+
+        .feature-tile:hover::before {
+            width: 70%;
+        }
+
+        .feature-tile:hover i {
+            transform: scale(1.15);
+            color: #4f46e5;
+        }
+
+        /* Footer */
+        .modern-footer {
+            margin-top: auto;
+            text-align: center;
+            padding: 2.5rem 1rem 2rem;
+            background: transparent;
+            border-top: 1px solid var(--border-subtle);
+            color: var(--text-muted);
+            font-size: 0.78rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .modern-footer p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.35rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-divider {
+            display: inline-block;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: var(--accent-glow);
+            margin: 0 0.4rem;
+            opacity: 0.6;
+        }
+
+        .mt-2 { margin-top: 0.5rem; }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.4rem; }
+            .glass-card { padding: 1.8rem 1.4rem; border-radius: var(--radius-lg); }
+            .feature-grid { grid-template-columns: repeat(3, 1fr); gap: 0.5rem; }
+            .feature-tile { padding: 0.9rem 0.3rem; border-radius: var(--radius-sm); }
+            .feature-tile span { font-size: 0.65rem; }
+            .section-header h2 { font-size: 1.4rem; }
+            .custom-select { padding: 0.85rem 0.9rem; font-size: 0.9rem; }
+            .btn-glow { padding: 0.9rem 1.2rem; font-size: 0.9rem; }
+            .hero-icon-ring { width: 55px; height: 55px; }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title { font-size: 1.9rem; }
+            .hero-desc { font-size: 0.85rem; }
+            .glass-card { padding: 1.4rem 1rem; border-radius: var(--radius-md); }
+            .feature-grid { grid-template-columns: 1fr 1fr 1fr; gap: 0.4rem; }
+            .feature-tile i { font-size: 1.2rem; }
+            .feature-tile span { font-size: 0.6rem; }
+            .custom-select { font-size: 0.82rem; padding: 0.8rem; }
+            .btn-glow { font-size: 0.85rem; padding: 0.85rem 1rem; }
+            .section-header h2 { font-size: 1.2rem; }
+            .hero-icon-ring { width: 48px; height: 48px; }
+            .material-hero { padding: 2.5rem 0.8rem 3.5rem; }
+            .selection-panel { padding: 0 0.8rem; margin-top: -1.4rem; }
+        }
+
+        @keyframes fadeSlideUp {
+            0% { opacity: 0; transform: translateY(28px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .glass-card { animation: fadeSlideUp 0.55s ease-out both; }
+        .hero-inner { animation: fadeSlideUp 0.5s ease-out both; animation-delay: 0.05s; }
+    </style>
+</head>
+<body>
+    <div class="material-hero">
+        <div class="hero-inner">
+            <div class="hero-icon-ring">
+                <img src="logo.jpg" alt="SAZUG Logo">
+            </div>
+            <div class="hero-badge">
+                <span class="pulse-dot"></span> Digital Library · Always Available
+            </div>
+            <h1 class="hero-title">
+                Course <span class="accent-text">Materials</span> Repository
+            </h1>
+            <p class="hero-desc">
+                Access lecture notes, handouts, PDFs, and essential academic resources tailored for every department and level at Sa'adu Zungur University.
+            </p>
+        </div>
+    </div>
+
+    <div class="selection-panel">
+        <div class="glass-card">
+            <div class="section-header">
+                <span class="step-count">3 Simple Steps</span>
+                <h2>Explore Materials</h2>
+                <p>Choose your department, level, and semester to access curated PDF resources & study guides</p>
+            </div>
+
+            <div class="form-modern">
+                <div class="input-group">
+                    <label><i class="fas fa-building-columns"></i> Department</label>
+                    <div class="custom-select-wrapper">
+                        <select id="departmentSelect" class="custom-select">
+                            <option value="">— Select your department —</option>
+                            <option value="accounting">Accounting</option>
+                            <option value="agric-economics-extension">Agricultural Economics and Extension</option>
+                            <option value="anatomy">Anatomy</option>
+                            <option value="animal-science">Animal Science</option>
+                            <option value="arabic">Arabic</option>
+                            <option value="biochemistry">Biochemistry</option>
+                            <option value="bio">Biology</option>
+                            <option value="bio-edu">Biology Education</option>
+                            <option value="botany">Botany</option>
+                            <option value="bus-admin">Business Administration</option>
+                            <option value="chem">Chemistry</option>
+                            <option value="chem-edu">Chemistry Education</option>
+                            <option value="crop-science">Crop Science</option>
+                            <option value="csc">Computer Science</option>
+                            <option value="csc-edu">Computer Education</option>
+                            <option value="economics">Economics</option>
+                            <option value="eng">English</option>
+                            <option value="english-edu">English Education</option>
+                            <option value="environmental-science">Environmental Science</option>
+                            <option value="hausa">Hausa</option>
+                            <option value="isl">Islamic Studies</option>
+                            <option value="law">Law</option>
+                            <option value="linguistics">Linguistics</option>
+                            <option value="lis">Library &amp; Information Science</option>
+                            <option value="literature">Literature</option>
+                            <option value="math">Mathematics</option>
+                            <option value="math-edu">Mathematics Education</option>
+                            <option value="mic">Microbiology</option>
+                            <option value="nurs">Nursing</option>
+                            <option value="pharm">Pharmacy</option>
+                            <option value="pharmacology">Pharmacology</option>
+                            <option value="phy">Physics</option>
+                            <option value="phy-edu">Physics Education</option>
+                            <option value="physiology">Physiology</option>
+                            <option value="pols">Political Science</option>
+                            <option value="pub-admin">Public Administration</option>
+                            <option value="phh">Public Health</option>
+                            <option value="soc">Sociology</option>
+                            <option value="soil-science">Soil Science</option>
+                            <option value="stat">Statistics</option>
+                            <option value="zoology">Zoology</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fas fa-layer-group"></i> Level</label>
+                    <div class="custom-select-wrapper">
+                        <select id="levelSelect" class="custom-select" disabled>
+                            <option value="">— Choose Level —</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label><i class="fas fa-calendar-alt"></i> Semester</label>
+                    <div class="custom-select-wrapper">
+                        <select id="semesterSelect" class="custom-select">
+                            <option value="">— Choose Semester —</option>
+                            <option value="first">First Semester</option>
+                            <option value="second">Second Semester</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button id="accessMaterialsBtn" class="btn-glow">
+                    <i class="fas fa-file-pdf"></i> Access Materials
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-tile">
+                    <i class="fas fa-chalkboard-user"></i>
+                    <span>Lecture Notes</span>
+                </div>
+                <div class="feature-tile">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Handouts & Summaries</span>
+                </div>
+                <div class="feature-tile">
+                    <i class="fas fa-database"></i>
+                    <span>PDF Repository</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="modern-footer">
+        <p>
+            <i class="far fa-copyright"></i> 2025 SAZUG Course Materials Hub
+            <span class="footer-divider"></span> Empowering academic excellence
+        </p>
+        <p class="mt-2" style="font-size: 0.68rem; opacity: 0.7;">
+            All materials are for educational purposes only &nbsp;|&nbsp;
+            <i class="fas fa-cloud-arrow-up"></i> Updated regularly
+        </p>
+    </footer>
+
+    <script>
+        (function() {
+            function getLevelsForDepartment(deptValue) {
+                const standardLevels = ["100-level", "200-level", "300-level", "400-level"];
+                if (deptValue === "law") {
+                    return ["100-level", "200-level", "300-level", "400-level", "500-level"];
+                } else if (deptValue === "pharm") {
+                    return ["100-level", "200-level", "300-level", "400-level", "500-level", "600-level"];
+                } else if (deptValue === "nurs") {
+                    return ["100-level", "200-level", "300-level", "400-level", "500-level"];
+                }
+                return [...standardLevels];
+            }
+
+            const departmentSelect = document.getElementById('departmentSelect');
+            const levelSelect = document.getElementById('levelSelect');
+            const semesterSelect = document.getElementById('semesterSelect');
+            const accessBtn = document.getElementById('accessMaterialsBtn');
+
+            function populateLevels() {
+                const selectedDept = departmentSelect.value;
+                levelSelect.innerHTML = '<option value="">— Choose Level —</option>';
+                levelSelect.disabled = true;
+
+                if (!selectedDept) {
+                    levelSelect.disabled = true;
+                    return;
+                }
+
+                const levelsArray = getLevelsForDepartment(selectedDept);
+                if (levelsArray && levelsArray.length > 0) {
+                    levelsArray.forEach(level => {
+                        const option = document.createElement('option');
+                        option.value = level;
+                        option.textContent = level;
+                        levelSelect.appendChild(option);
+                    });
+                    levelSelect.disabled = false;
+                } else {
+                    levelSelect.disabled = true;
+                }
+            }
+
+            departmentSelect.addEventListener('change', function() {
+                populateLevels();
+            });
+
+            populateLevels();
+
+            function redirectToPDF() {
+                const dept = departmentSelect.value;
+                const level = levelSelect.value;
+                const semester = semesterSelect.value;
+
+                if (!dept) {
+                    alert("❌ Please select your department to continue.");
+                    return;
+                }
+                if (!level) {
+                    alert("📚 Please select your academic level.");
+                    return;
+                }
+                if (!semester) {
+                    alert("📅 Please select the semester (First or Second).");
+                    return;
+                }
+
+                const url = `pdf.html?dept=${encodeURIComponent(dept)}&level=${encodeURIComponent(level)}&semester=${encodeURIComponent(semester)}`;
+                window.location.href = url;
+            }
+
+            accessBtn.addEventListener('click', redirectToPDF);
+
+            const selects = [departmentSelect, levelSelect, semesterSelect];
+            selects.forEach(select => {
+                if (select) {
+                    select.addEventListener('keypress', (e) => {
+                        if (e.key === 'Enter') {
+                            e.preventDefault();
+                            if (departmentSelect.value && levelSelect.value && semesterSelect.value) {
+                                redirectToPDF();
+                            } else {
+                                alert("⚠️ Please fill all fields before accessing materials.");
+                            }
+                        }
+                    });
+                }
+            });
+
+            departmentSelect.addEventListener('change', () => {
+                if (!departmentSelect.value) {
+                    levelSelect.disabled = true;
+                    levelSelect.innerHTML = '<option value="">— Choose Level —</option>';
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

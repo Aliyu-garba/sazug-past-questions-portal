@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "dept": "csc",
+    "level": "200-level",
+    "semester": "first",
+    "title": "Introduction to Programming (CSC 201)",
+    "type": "Lecture Notes",
+    "pdf": "pdfs/csc201-intro.pdf"
+  },
+  {
+    "id": 2,
+    "dept": "csc",
+    "level": "200-level",
+    "semester": "first",
+    "title": "Data Structures & Algorithms Basics",
+    "type": "Handout",
+    "pdf": "pdfs/csc202-datastructures.pdf"
+  },
+  {
+    "id": 3,
+    "dept": "csc",
+    "level": "300-level",
+    "semester": "second",
+    "title": "Operating Systems Concepts",
+    "type": "PDF",
+    "pdf": "pdfs/csc302-os.pdf"
+  },
+  {
+    "id": 4,
+    "dept": "math",
+    "level": "100-level",
+    "semester": "first",
+    "title": "Calculus I - Limits & Derivatives",
+    "type": "Lecture Notes",
+    "pdf": "pdfs/mth101-calculus1.pdf"
+  },
+  {
+    "id": 5,
+    "dept": "math",
+    "level": "200-level",
+    "semester": "second",
+    "title": "Linear Algebra Summary",
+    "type": "Summary",
+    "pdf": "pdfs/mth204-linearalgebra.pdf"
+  },
+  {
+    "id": 6,
+    "dept": "eng",
+    "level": "100-level",
+    "semester": "first",
+    "title": "Communication in English I",
+    "type": "Handout",
+    "pdf": "pdfs/eng101-communication.pdf"
+  },
+  {
+    "id": 7,
+    "dept": "law",
+    "level": "400-level",
+    "semester": "first",
+    "title": "Constitutional Law Overview",
+    "type": "PDF",
+    "pdf": "pdfs/law401-constitution.pdf"
+  },
+  {
+    "id": 8,
+    "dept": "pharm",
+    "level": "500-level",
+    "semester": "second",
+    "title": "Advanced Pharmacology",
+    "type": "Lecture Notes",
+    "pdf": "pdfs/phm501-pharmacology.pdf"
+  },
+  {
+    "id": 9,
+    "dept": "nurs",
+    "level": "300-level",
+    "semester": "first",
+    "title": "Nursing Ethics & Practice",
+    "type": "PDF",
+    "pdf": "pdfs/nur301-ethics.pdf"
+  },
+  {
+    "id": 10,
+    "dept": "accounting",
+    "level": "200-level",
+    "semester": "second",
+    "title": "Financial Accounting II",
+    "type": "Handout",
+    "pdf": "pdfs/acc202-financial.pdf"
+  }
+]
