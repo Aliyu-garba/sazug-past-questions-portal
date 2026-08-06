@@ -813,10 +813,10 @@
     },
     "200-level": {
       "first": {
-        "csc211": ["csc211_2023.pdf", "csc211_2024.pdf"],
-        "csc221": ["csc221_2023.pdf", "csc221_2024.pdf"],
-        "ssc211": ["ssc211_2023.pdf", "ssc211_2024.pdf"],
-        "aec211": ["aec211_2023.pdf", "aec211_2024.pdf"],
+        "csc211": ["csc204_2024.pdf", "csc211_2024.pdf"],
+        "csc221": ["csc208_2024.pdf", "csc221_2024.pdf"],
+        "ssc211": ["mth202_2024.pdf", "ssc211_2024.pdf"],
+        "aec211": ["ift211_2024.pdf", "aec211_2024.pdf"],
         "ans211": ["ans211_2023.pdf", "ans211_2024.pdf"],
         "gst201": ["gst201_2023.pdf", "gst201_2024.pdf"]
       },
